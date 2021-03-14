@@ -1,0 +1,53 @@
+<template>
+  <header :class="$style.header">
+    <div :class="$style.logo">
+      <img
+        src="@/assets/images/timeswap-logo.svg"
+        alt
+      />
+    </div>
+    <div :class="$style.info">
+      <span :class="$style.text">whitepaper</span>
+      <button type="button" :class="['btn']">
+        App
+      </button>
+    </div>
+  </header>
+</template>
+
+<style lang="scss" module>
+
+.header {
+  position: relative;
+  padding: 35px 160px 0;
+  display: flex;
+  justify-content: space-between; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+    
+  .logo{
+    display: block;
+    max-width: 157px;
+    width: 100%;
+    img{
+      display: block;
+    }
+  } 
+
+  .info{
+    display: flex;
+    align-items: center;  
+  }
+
+  .text{
+    font-size: 14px;
+    opacity: 0.6;
+    color: $white;
+    padding-right: 24px;
+  }
+}
+
+</style>

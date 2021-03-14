@@ -1,13 +1,16 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  server: {
+    port: 8000 // default: 3000
+  },
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'vue-timeswap',
+    title: 'Timeswap',
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,7 +23,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['./assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -30,12 +33,22 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
   ],
+  styleResources: {
+    scss: ['@/assets/scss/base.scss'],
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['bootstrap-vue/nuxt'],
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
+    components: [],
+    directives: ['VBToggle'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
