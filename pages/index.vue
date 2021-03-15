@@ -7,6 +7,8 @@
       <OurProduct />
       <KeyFeature />
       <TimeToken />
+      <OurTeam />
+      <Advisor />
     </main>
   </div>
 </template>
@@ -19,7 +21,7 @@ export default {}
 
 .main_page{
   display: flex;
-  width: 600vw;
+  width: 655vw;
 }
 
 </style>
