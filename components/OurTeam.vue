@@ -1,31 +1,31 @@
 <template>
-  <section :class="$style.team_page">
+  <section :class="$style.teamPage">
     <div :class="$style.content">
-      <h2 :class="$style.main_title">Our Team</h2>
-      <p :class="$style.main_description">
+      <h2 :class="$style.mainTitle">Our Team</h2>
+      <p :class="$style.mainDescription">
         Want to work with some of the best global talent and build a tool used
         by all the companies you know and love? Join the Timeswap team and help
         shape the future of Defi.
       </p>
-      <div :class="$style.team_list">
+      <div :class="$style.teamList">
         <div
           v-for="(team, index) in teams"
           :key="index"
-          :class="$style.team_wrap"
+          :class="$style.teamWrap"
         >
           <div
-            :class="$style.team_single"
+            :class="$style.teamSingle"
             :style="{
               backgroundImage: `url(${getImgUrl(
                 team.image
               )}), linear-gradient(to right, #a0d2eb 15%, #7b78ff 78%)`,
             }"
           >
-            <div :class="$style.img_caption">
+            <div :class="$style.imgCaption">
               <h4 :class="$style.name">{{ team.name }}</h4>
               <p :class="$style.designation">{{ team.designation }}</p>
             </div>
-            <div :class="$style.team_details">
+            <div :class="$style.teamDetails">
               <div :class="$style.info">
                 <h6 :class="$style.name">
                   {{ team.name }}
@@ -33,11 +33,11 @@
                 <div :class="$style.designation">
                   {{ team.designation }}
                 </div>
-                <p :class="$style.team_content">
+                <p :class="$style.teamContent">
                   {{ team.description }}
                 </p>
               </div>
-              <ul :class="$style.social_links">
+              <ul :class="$style.socialLinks">
                 <li
                   v-for="(social, socialIndex) in team.socials"
                   :key="socialIndex"
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div :class="$style.team_wrap">
+        <div :class="$style.teamWrap">
           <div :class="$style.join_us">Join us</div>
         </div>
       </div>
@@ -142,42 +142,46 @@ export default {
 </script>
 
 <style lang="scss" module>
-.team_page {
-  height: 100vh;
-  min-height: 500px;
+.teamPage {
   position: relative;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1100px !important;
   padding: 100px 160px;
   padding-right: 0;
   display: flex;
   align-items: center;
+
   .content {
     width: 100%;
-    .main_title {
+
+    .mainTitle {
       font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.2;
       color: $white;
       margin-bottom: 16px;
     }
-    .main_description {
+
+    .mainDescription {
       font-size: 14px;
       color: $white;
       opacity: 0.6;
       line-height: 1.5;
       margin-bottom: 57px;
     }
-    .team_list {
+
+    .teamList {
       width: 100%;
-      margin: 0 -5px;
+      margin: 0 -15px;
       display: flex;
       flex-wrap: wrap;
-      .team_wrap {
-        padding: 0 5px;
-        max-width: 231px;
+
+      .teamWrap {
+        padding: 0 15px;
+        max-width: 230px;
         width: 100%;
-        .team_single {
+
+        .teamSingle {
           border-radius: 10px;
           position: relative;
           overflow: hidden;
@@ -187,9 +191,11 @@ export default {
           background-blend-mode: luminosity;
           background-size: cover;
           width: 100%;
-          .img_caption {
+
+          .imgCaption {
             width: 100%;
             padding: 16px;
+
             .name {
               font-size: 16px;
               font-family: $hk_bold;
@@ -197,6 +203,7 @@ export default {
               color: $white;
               margin-bottom: 8px;
             }
+
             .designation {
               font-size: 16px;
               line-height: 1.5;
@@ -205,7 +212,8 @@ export default {
               margin-bottom: 0;
             }
           }
-          .team_details {
+
+          .teamDetails {
             position: absolute;
             top: 0;
             width: 100%;
@@ -221,6 +229,7 @@ export default {
             transition: all 0.5s;
             transform: translateY(30px);
             border-radius: 10px;
+
             .info {
               .name {
                 font-size: 16px;
@@ -229,38 +238,49 @@ export default {
                 color: $gray-900;
                 margin-bottom: 0;
               }
+
               .designation {
                 font-size: 16px;
                 line-height: 1.5;
                 color: $gray-900;
                 margin-bottom: 16px;
               }
-              .team_content {
+
+              .teamContent {
                 font-size: 14px;
                 color: $gray-900;
                 margin: 0;
               }
             }
-            .social_links {
+
+            .socialLinks {
               display: flex;
               width: 100%;
               justify-content: flex-start;
               margin: 0;
               padding: 0;
               list-style: none;
+
               li {
                 margin-right: 4px;
               }
             }
           }
+
           &:hover {
-            .team_details {
+            .teamDetails {
               opacity: 1;
               pointer-events: auto;
               transform: translateY(0);
             }
           }
         }
+
+        &:nth-child(2n) {
+          top: 72px;
+          position: relative;
+        }
+
         .join_us {
           width: 100%;
           color: $white;

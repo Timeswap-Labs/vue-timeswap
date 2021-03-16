@@ -1,23 +1,23 @@
 <template>
-  <section :class="$style.advisor_page">
-    <div :class="$style.advisor_row">
+  <section :class="$style.advisorPage">
+    <div :class="$style.advisorRow">
       <div :class="$style.content">
-        <h2 :class="$style.main_title">Advisor</h2>
-        <div :class="$style.advisor_list">
+        <h2 :class="$style.mainTitle">Advisor</h2>
+        <div :class="$style.advisorList">
           <div
             v-for="(advisor, index) in advisors"
             :key="index"
             :class="$style.advisor_wrap"
           >
             <div
-              :class="$style.advisor_single"
+              :class="$style.advisorSingle"
               :style="{
                 backgroundImage: `url(${getImgUrl(
                   advisor.image
                 )}), linear-gradient(to right, #a0d2eb 15%, #7b78ff 78%)`,
               }"
             >
-              <div :class="$style.img_caption">
+              <div :class="$style.imgCaption">
                 <h4 :class="$style.name">{{ advisor.name }}</h4>
                 <p :class="$style.designation">{{ advisor.designation }}</p>
               </div>
@@ -25,18 +25,18 @@
           </div>
         </div>
       </div>
-      <div :class="$style.advisor_form">
-        <div :class="$style.form_info">
+      <div :class="$style.advisorForm">
+        <div :class="$style.formInfo">
           <div :class="$style.logo">
             <img src="@/assets/images/logo-wihout-text.png" alt />
           </div>
-          <h6 :class="$style.form_title">
+          <h6 :class="$style.formTitle">
             World’s first Fully decentralized AMM based money market protocol
           </h6>
         </div>
         <div :class="$style.form">
-          <h6 :class="$style.form_title">Get early updates</h6>
-          <p :class="$style.form_content">
+          <h6 :class="$style.formTitle">Get early updates</h6>
+          <p :class="$style.formContent">
             Subscribe to our newsletter for updates and to get testnet invite.
           </p>
           <form>
@@ -83,39 +83,43 @@ export default {
 </script>
 
 <style lang="scss" module>
-.advisor_page {
-  height: 100vh;
-  min-height: 500px;
+.advisorPage {
   position: relative;
   width: 100%;
-  max-width: 1360px;
+  max-width: 1400px !important;
   padding: 100px 160px;
   padding-right: 0;
   display: flex;
   align-items: center;
-  .advisor_row {
+
+  .advisorRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
+
     .content {
       width: 100%;
-      .main_title {
+
+      .mainTitle {
         font-size: $h2-font-size;
         font-family: $hk_bold;
         line-height: 1.2;
         color: $white;
         margin-bottom: 90px;
       }
-      .advisor_list {
+
+      .advisorList {
         width: 100%;
-        margin: 0 -5px;
+        margin: 0 -15px;
         display: flex;
         flex-wrap: wrap;
+
         .advisor_wrap {
-          padding: 0 5px;
-          max-width: 231px;
+          padding: 0 15px;
+          max-width: 230px;
           width: 100%;
-          .advisor_single {
+
+          .advisorSingle {
             border-radius: 10px;
             position: relative;
             overflow: hidden;
@@ -125,9 +129,11 @@ export default {
             background-blend-mode: luminosity;
             background-size: cover;
             width: 100%;
-            .img_caption {
+
+            .imgCaption {
               width: 100%;
               padding: 16px;
+
               .name {
                 font-size: 16px;
                 font-family: $hk_bold;
@@ -135,6 +141,7 @@ export default {
                 color: $white;
                 margin-bottom: 8px;
               }
+
               .designation {
                 font-size: 16px;
                 line-height: 1.5;
@@ -144,21 +151,30 @@ export default {
               }
             }
           }
+
+          &:nth-child(2n) {
+            top: 72px;
+            position: relative;
+          }
         }
       }
     }
-    .advisor_form {
+
+    .advisorForm {
       max-width: 410px;
       width: 100%;
-      .form_info {
+
+      .formInfo {
         padding: 24px 39px;
         background: $dark-blue;
+
         .logo {
           max-width: 35px;
           width: 100%;
           margin-bottom: 16px;
         }
-        .form_title {
+
+        .formTitle {
           background: linear-gradient(to right, #a0d2eb 0%, #7b78ff 70%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -168,20 +184,24 @@ export default {
           padding-right: 20px;
         }
       }
+
       .form {
         background: $corn-flower;
         padding: 48px 39px;
-        .form_title {
+
+        .formTitle {
           font-size: 16px;
           font-family: $hk_bold;
           line-height: 1.2;
           color: $gray-900;
         }
-        .form_content {
+
+        .formContent {
           font-size: 14px;
           line-height: 1.5;
           color: $gray-900;
         }
+
         .input_field {
           .form_control {
             color: $black;

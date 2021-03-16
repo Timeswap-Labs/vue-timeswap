@@ -1,25 +1,23 @@
 <template>
-  <section :class="$style.firstpage">
+  <section :class="$style.firstPage">
     <div :class="$style.content">
-      <h5 :class="$style.subtitle">World's first</h5>
-      <h1 :class="$style.maintitle">
+      <h5 :class="$style.subTitle">World's first</h5>
+      <h1 :class="$style.mainTitle">
         Fully decentralized AMM based money market protocol
       </h1>
-      <div :class="$style.commingtxt">COMING SOON</div>
+      <div :class="$style.commingTxt">Coming soon</div>
     </div>
   </section>
 </template>
 
 <style lang="scss" module>
-.firstpage {
-  height: 100vh;
-  min-height: 500px;
+.firstPage {
   padding: 100px 0;
   position: relative;
-  width: 100vw;
   padding-left: 160px;
   display: flex;
   align-items: center;
+
   &::before {
     content: '';
     position: absolute;
@@ -27,30 +25,35 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: url('@/assets/images/hm-left-side.png');
+    background: url('@/assets/images/first-left-bg.png');
     background-size: cover;
+    background-position: left;
   }
+
   &::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    right: -40%;
     width: 50%;
     height: 100%;
-    background: url('@/assets/images/hm-right-side.png');
-    background-size: cover;
+    background: url('@/assets/images/hm-right-side.png') no-repeat;
+    background-size: 100% 100%;
   }
+
   .content {
     width: 100%;
     max-width: 750px;
     position: relative;
     z-index: 9;
-    .subtitle {
+
+    .subTitle {
       font-size: $h5-font-size;
       line-height: 1.5;
       color: $secondary;
     }
-    .maintitle {
+
+    .mainTitle {
       font-size: $h1-font-size;
       line-height: 1.2;
       color: $white;
@@ -58,9 +61,11 @@
       font-family: $hk_bold;
       margin-bottom: 20px;
     }
-    .commingtxt {
+
+    .commingTxt {
       color: $white;
       opacity: 0.6;
+      text-transform: uppercase;
     }
   }
 }

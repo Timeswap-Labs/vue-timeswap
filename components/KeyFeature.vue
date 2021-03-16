@@ -1,21 +1,21 @@
 <template>
-  <section :class="$style.feature_page">
+  <section :class="$style.featurePage">
     <div :class="$style.content">
-      <h2 :class="$style.main_title">Key Features</h2>
-      <div :class="$style.feature_list">
+      <h2 :class="$style.mainTitle">Key Features</h2>
+      <div :class="$style.featureList">
         <div
           v-for="(feature, index) in features"
           :key="index"
-          :class="$style.feature_wrap"
+          :class="$style.featureWrap"
         >
-          <div :class="$style.feature_single">
+          <div :class="$style.featureSingle">
             <figure>
               <img :src="getImgUrl(feature.image)" :alt="feature.image" />
             </figure>
-            <h6 :class="$style.feature_title">
+            <h6 :class="$style.featureTitle">
               {{ feature.title }}
             </h6>
-            <p :class="$style.feature_content">
+            <p :class="$style.featureContent">
               {{ feature.description }}
             </p>
           </div>
@@ -79,34 +79,38 @@ export default {
 </script>
 
 <style lang="scss" module>
-.feature_page {
-  height: 100vh;
-  min-height: 500px;
+.featurePage {
   position: relative;
+  flex: 0 0 1600px !important;
+  max-width: 1600px !important;
   width: 100%;
-  max-width: 1700px;
   padding: 100px 0;
   padding-left: 80px;
   display: flex;
   align-items: center;
+
   .content {
     width: 100%;
-    .main_title {
+
+    .mainTitle {
       font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.5;
       color: $white;
       margin-bottom: 100px;
     }
-    .feature_list {
+
+    .featureList {
       width: 100%;
       margin: 0 -15px;
       display: flex;
       flex-wrap: wrap;
-      .feature_wrap {
+
+      .featureWrap {
         padding: 0 15px;
         max-width: 235px;
-        .feature_single {
+
+        .featureSingle {
           padding: 24px;
           border-radius: 15px;
           background: linear-gradient(
@@ -115,30 +119,35 @@ export default {
             rgba(0, 0, 0, 0) 80%
           );
           height: 100%;
+
           figure {
             max-width: 50px;
             margin: 0;
             margin-bottom: 16px;
+
             img {
               display: block;
             }
           }
-          .feature_title {
+
+          .featureTitle {
             font-size: $h6-font-size;
             font-family: $hk_bold;
-            line-height: 1.2;
+            line-height: 1.4;
             color: $white;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
           }
-          .feature_content {
+
+          .featureContent {
             font-size: 14px;
             color: $white;
             opacity: 0.6;
             margin: 0;
           }
         }
+
         &:nth-child(2n) {
-          .feature_single {
+          .featureSingle {
             background: linear-gradient(
               90deg,
               rgba(160, 210, 235, 0.24) 0%,

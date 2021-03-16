@@ -1,8 +1,8 @@
 <template>
-  <section :class="$style.feature_page">
+  <section :class="$style.featurePage">
     <div :class="$style.content">
-      <h2 :class="$style.main_title">Time Token</h2>
-      <div :class="$style.token_image">
+      <h2 :class="$style.mainTitle">Time Token</h2>
+      <div :class="$style.tokenImage">
         <img src="@/assets/images/five-pg.svg" alt />
         <img
           :class="$style.mobile"
@@ -15,28 +15,31 @@
 </template>
 
 <style lang="scss" module>
-.feature_page {
-  height: 100vh;
-  min-height: 500px;
+.featurePage {
   position: relative;
   padding: 100px 160px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(25, 29, 58, 0.7);
+  max-width: 1200px !important;
+
   .content {
     width: 100%;
     max-width: 860px;
-    .main_title {
+
+    .mainTitle {
       font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.5;
       color: $white;
       margin-bottom: 0;
     }
-    .token_image {
+
+    .tokenImage {
       width: 100%;
       display: block;
+
       .mobile {
         display: none;
       }

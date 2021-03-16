@@ -5,7 +5,7 @@
     </div>
     <div :class="$style.info">
       <span :class="$style.text">whitepaper</span>
-      <button type="button" :class="['btn']">App</button>
+      <button type="button" class="btn">App</button>
     </div>
   </header>
 </template>
@@ -21,6 +21,10 @@
   left: 0;
   width: 100%;
   z-index: 9;
+
+  @include media-breakpoint-down(lg) {
+    /* padding: 25px 30px 0; */
+  }
 
   .logo {
     display: block;

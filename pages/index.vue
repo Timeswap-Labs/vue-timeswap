@@ -6,11 +6,17 @@
 
     <main ref="page" :class="$style.main">
       <FirstPage :class="$style.section" />
+
       <SecondPage :class="$style.section" />
+
       <OurProduct :class="$style.section" />
+
       <KeyFeature :class="$style.section" />
+
       <TimeToken :class="$style.section" />
+
       <OurTeam :class="$style.section" />
+
       <Advisor :class="$style.section" />
     </main>
   </div>
@@ -37,7 +43,9 @@ export default {
   },
 
   mounted() {
-    this.setHorizontalScroll()
+    if (!this.$device.isMobile) {
+      this.setHorizontalScroll()
+    }
   },
 
   methods: {

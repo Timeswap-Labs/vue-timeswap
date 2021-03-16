@@ -1,18 +1,18 @@
 <template>
-  <section :class="$style.product_page">
+  <section :class="$style.productPage">
     <div :class="$style.content">
-      <h2 :class="$style.main_title">Our Products</h2>
-      <div :class="[$style.product_list, 'row']">
+      <h2 :class="$style.mainTitle">Our Products</h2>
+      <div :class="[$style.productList, 'row']">
         <div
           v-for="(product, index) in products"
           :key="index"
-          :class="[$style.product_wrap, 'col-md-3']"
+          :class="[$style.productWrap, 'col-md-3']"
         >
-          <div :class="$style.product_single">
-            <h4 :class="$style.product_title">
+          <div :class="$style.productSingle">
+            <h4 :class="$style.productTitle">
               {{ product.title }}
             </h4>
-            <p :class="$style.product_content">
+            <p :class="$style.productContent">
               {{ product.description }}
             </p>
           </div>
@@ -54,55 +54,66 @@ export default {
 </script>
 
 <style lang="scss" module>
-.product_page {
-  height: 100vh;
-  min-height: 500px;
+.productPage {
   position: relative;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1300px !important;
   padding: 100px 0;
   padding-left: 160px;
   display: flex;
   align-items: center;
+
   .content {
     width: 100%;
-    .main_title {
+
+    .mainTitle {
       font-size: $h2-font-size;
       font-family: $hk_bold;
-      line-height: 1.5;
+      line-height: 1.2;
       color: $white;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
-    .product_list {
+
+    .productList {
       max-width: 1030px;
       width: 100%;
       margin: 0 -15px;
-      .product_wrap {
+      align-items: stretch;
+
+      .productWrap {
         padding: 0 15px;
-        .product_single {
+
+        .productSingle {
           padding: 24px;
           border-radius: 15px;
           background: $secondary;
-          .product_title {
-            font-size: $h5-font-size;
+          height: 100%;
+
+          .productTitle {
+            font-size: $h4-font-size;
             font-family: $hk_bold;
             line-height: 1.5;
             color: $primary;
             margin-bottom: 8px;
           }
-          .product_content {
+
+          .productContent {
             color: $primary;
             margin: 0;
           }
         }
+
         &:nth-child(2n) {
-          margin-top: 55px;
-          .product_single {
+          top: 55px;
+
+          .productSingle {
             background: $light-navy;
-            .product_title {
+
+            .productTitle {
               color: $white;
             }
-            .product_content {
+
+            .productContent {
               color: $white;
             }
           }

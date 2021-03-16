@@ -36,6 +36,7 @@ export default {
     '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
+    '@nuxtjs/device',
   ],
   styleResources: {
     scss: ['@/assets/scss/base.scss'],
