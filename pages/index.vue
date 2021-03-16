@@ -37,9 +37,7 @@ export default {
   },
 
   mounted() {
-    // window.setTimeout(() => {
     this.setHorizontalScroll()
-    // }, 1000)
   },
 
   methods: {
