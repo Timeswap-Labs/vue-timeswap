@@ -1,6 +1,9 @@
 <template>
   <div>
     <Header />
+
+    <Hyperbola />
+
     <main id="page" :class="$style.main_page">
       <FirstPage />
       <SecondPage />
@@ -18,10 +21,8 @@ export default {}
 </script>
 
 <style lang="scss" module>
-
-.main_page{
+.main_page {
   display: flex;
   width: 655vw;
 }
-
 </style>
