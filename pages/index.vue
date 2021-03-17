@@ -140,6 +140,10 @@ export default {
   border: none;
   margin: none;
 
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+
   .section {
     transition: background-color 1s;
 
@@ -149,11 +153,6 @@ export default {
       min-height: 100vh;
       width: 100vw;
       max-width: 100%;
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding-left: 20px;
-      padding-right: 20px;
     }
   }
 }

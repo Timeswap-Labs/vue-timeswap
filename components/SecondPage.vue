@@ -20,19 +20,47 @@
   position: relative;
   width: 100%;
   max-width: 1000px !important;
+  flex: 0 0 1000px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: url('@/assets/images/glass-bg.png') no-repeat center right;
   background-size: 671px;
 
+  @include media-breakpoint-down(md) {
+    max-width: 900px !important;
+    flex: 0 0 900px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 60px 24px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+  }
+
   .content {
     width: 100%;
     max-width: 480px;
     padding: 100px 0;
 
+    @include media-breakpoint-down(md) {
+      padding: 80px 0;
+      max-width: 50%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 20px;
+    }
+
     .mainTitle {
-      font-size: $h5-font-size;
       line-height: 1.5;
       color: $white;
       font-weight: 400;
@@ -54,6 +82,15 @@
     background-position: right bottom;
     background-size: contain;
     align-self: flex-end;
+
+    @include media-breakpoint-down(md) {
+      max-width: 285px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 250px;
+      height: 420px;
+    }
   }
 }
 </style>

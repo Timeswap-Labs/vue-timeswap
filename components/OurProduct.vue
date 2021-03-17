@@ -57,21 +57,44 @@ export default {
 .productPage {
   position: relative;
   width: 100%;
+  flex: 0 0 1300px !important;
   max-width: 1300px !important;
   padding: 100px 0;
   padding-left: 160px;
   display: flex;
   align-items: center;
 
+  @include media-breakpoint-down(lg) {
+    flex: 0 0 1240px !important;
+    max-width: 1240px !important;
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 0 0 1200px !important;
+    max-width: 1200px !important;
+    padding: 80px 0;
+    padding-left: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 60px 24px 20px;
+  }
+
   .content {
     width: 100%;
 
     .mainTitle {
-      font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.2;
       color: $white;
       margin-bottom: 50px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
+      }
     }
 
     .productList {
@@ -80,8 +103,24 @@ export default {
       margin: 0 -15px;
       align-items: stretch;
 
+      @include media-breakpoint-down(sm) {
+        margin: 0 -10px;
+        width: auto;
+      }
+
       .productWrap {
         padding: 0 15px;
+
+        @include media-breakpoint-down(sm) {
+          padding: 0 10px;
+          width: 50%;
+          margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding: 0 10px;
+          width: 100%;
+        }
 
         .productSingle {
           padding: 24px;
@@ -89,12 +128,19 @@ export default {
           background: $secondary;
           height: 100%;
 
+          @include media-breakpoint-down(lg) {
+            padding: 20px;
+          }
+
           .productTitle {
-            font-size: $h4-font-size;
             font-family: $hk_bold;
             line-height: 1.5;
             color: $primary;
             margin-bottom: 8px;
+
+            @include media-breakpoint-down(lg) {
+              line-height: 1.3;
+            }
           }
 
           .productContent {
@@ -105,6 +151,10 @@ export default {
 
         &:nth-child(2n) {
           top: 55px;
+
+          @include media-breakpoint-down(sm) {
+            top: 0;
+          }
 
           .productSingle {
             background: $light-navy;

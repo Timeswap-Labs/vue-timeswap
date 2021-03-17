@@ -145,17 +145,37 @@ export default {
 .teamPage {
   position: relative;
   width: 100%;
-  max-width: 1100px !important;
   padding: 100px 160px;
   padding-right: 0;
   display: flex;
   align-items: center;
 
+  @include media-breakpoint-down(lg) {
+    flex: 0 0 1040px !important;
+    max-width: 1040px !important;
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 0 0 1050px !important;
+    max-width: 1050px !important;
+    padding: 80px 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 60px 24px 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 40px 24px 0;
+  }
+
   .content {
     width: 100%;
 
     .mainTitle {
-      font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.2;
       color: $white;
@@ -168,6 +188,15 @@ export default {
       opacity: 0.6;
       line-height: 1.5;
       margin-bottom: 57px;
+      max-width: 80%;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        max-width: 100%;
+      }
     }
 
     .teamList {
@@ -176,10 +205,24 @@ export default {
       display: flex;
       flex-wrap: wrap;
 
+      @include media-breakpoint-down(md) {
+        margin: 0 -10px;
+        width: auto;
+      }
+
       .teamWrap {
         padding: 0 15px;
         max-width: 230px;
         width: 100%;
+
+        @include media-breakpoint-down(md) {
+          padding: 0 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 20px;
+          max-width: 50%;
+        }
 
         .teamSingle {
           border-radius: 10px;
@@ -192,9 +235,21 @@ export default {
           background-size: cover;
           width: 100%;
 
+          @include media-breakpoint-down(md) {
+            height: 270px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            height: 207px;
+          }
+
           .imgCaption {
             width: 100%;
             padding: 16px;
+
+            @include media-breakpoint-down(md) {
+              padding: 13px;
+            }
 
             .name {
               font-size: 16px;
@@ -202,6 +257,16 @@ export default {
               line-height: 1.2;
               color: $white;
               margin-bottom: 8px;
+
+              @include media-breakpoint-down(md) {
+                font-size: 15px;
+                margin-bottom: 6px;
+              }
+
+              @include media-breakpoint-down(xs) {
+                font-size: 13px;
+                margin-bottom: 1px;
+              }
             }
 
             .designation {
@@ -210,6 +275,14 @@ export default {
               color: $white;
               opacity: 0.6;
               margin-bottom: 0;
+
+              @include media-breakpoint-down(md) {
+                font-size: 15px;
+              }
+
+              @include media-breakpoint-down(xs) {
+                font-size: 12px;
+              }
             }
           }
 
@@ -230,6 +303,10 @@ export default {
             transform: translateY(30px);
             border-radius: 10px;
 
+            @include media-breakpoint-down(md) {
+              padding: 15px;
+            }
+
             .info {
               .name {
                 font-size: 16px;
@@ -237,6 +314,10 @@ export default {
                 line-height: 1.5;
                 color: $gray-900;
                 margin-bottom: 0;
+
+                @include media-breakpoint-down(md) {
+                  font-size: 15px;
+                }
               }
 
               .designation {
@@ -244,6 +325,10 @@ export default {
                 line-height: 1.5;
                 color: $gray-900;
                 margin-bottom: 16px;
+
+                @include media-breakpoint-down(md) {
+                  font-size: 15px;
+                }
               }
 
               .teamContent {
@@ -279,6 +364,14 @@ export default {
         &:nth-child(2n) {
           top: 72px;
           position: relative;
+
+          @include media-breakpoint-down(md) {
+            top: 50px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            top: 0px;
+          }
         }
 
         .join_us {
@@ -292,6 +385,15 @@ export default {
           background: $ldark-navy;
           border-radius: 10px;
           cursor: pointer;
+
+          @include media-breakpoint-down(md) {
+            height: 270px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            height: 207px;
+            font-size: 13px;
+          }
         }
       }
     }

@@ -23,7 +23,19 @@
   z-index: 9;
 
   @include media-breakpoint-down(lg) {
-    /* padding: 25px 30px 0; */
+    padding: 25px 100px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 20px 50px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 20px 20px 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 20px 15px 0;
   }
 
   .logo {
@@ -32,6 +44,10 @@
     width: 100%;
     img {
       display: block;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 80px;
     }
   }
 
@@ -45,6 +61,11 @@
     opacity: 0.6;
     color: $white;
     padding-right: 24px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+      padding-right: 12px;
+    }
   }
 }
 </style>

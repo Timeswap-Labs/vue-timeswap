@@ -28,6 +28,12 @@
   //   $btn-line-height,
   //   $btn-border-radius
   // );
+
+  @include media-breakpoint-down(sm) {
+    padding: 4px 20px 9px;
+    font-size: 15px;
+  }
+
   @include transition($btn-transition);
 
   @include hover() {

@@ -30,12 +30,12 @@
           <div :class="$style.logo">
             <img src="@/assets/images/logo-wihout-text.png" alt />
           </div>
-          <h6 :class="$style.formTitle">
+          <h4 :class="$style.formTitle">
             World’s first Fully decentralized AMM based money market protocol
-          </h6>
+          </h4>
         </div>
         <div :class="$style.form">
-          <h6 :class="$style.formTitle">Get early updates</h6>
+          <h4 :class="$style.formTitle">Get early updates</h4>
           <p :class="$style.formContent">
             Subscribe to our newsletter for updates and to get testnet invite.
           </p>
@@ -86,26 +86,59 @@ export default {
 .advisorPage {
   position: relative;
   width: 100%;
-  max-width: 1400px !important;
   padding: 100px 160px;
   padding-right: 0;
   display: flex;
   align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    flex: 0 0 1100px !important;
+    max-width: 1100px !important;
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 0 0 1000px !important;
+    max-width: 1000px !important;
+    padding: 80px 50px;
+    padding-right: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 60px 0 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 40px 0 0;
+  }
 
   .advisorRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+
     .content {
       width: 100%;
 
+      @include media-breakpoint-down(sm) {
+        padding: 0 24px;
+      }
+
       .mainTitle {
-        font-size: $h2-font-size;
         font-family: $hk_bold;
         line-height: 1.2;
         color: $white;
         margin-bottom: 90px;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 40px;
+        }
       }
 
       .advisorList {
@@ -114,10 +147,28 @@ export default {
         display: flex;
         flex-wrap: wrap;
 
+        @include media-breakpoint-down(md) {
+          margin: 0 -10px;
+          width: auto;
+        }
+
         .advisor_wrap {
           padding: 0 15px;
           max-width: 230px;
           width: 100%;
+
+          @include media-breakpoint-down(md) {
+            padding: 0 10px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+            max-width: 50%;
+          }
 
           .advisorSingle {
             border-radius: 10px;
@@ -130,9 +181,21 @@ export default {
             background-size: cover;
             width: 100%;
 
+            @include media-breakpoint-down(md) {
+              height: 270px;
+            }
+
+            @include media-breakpoint-down(sm) {
+              margin-bottom: 20px;
+            }
+
             .imgCaption {
               width: 100%;
               padding: 16px;
+
+              @include media-breakpoint-down(md) {
+                padding: 13px;
+              }
 
               .name {
                 font-size: 16px;
@@ -140,6 +203,16 @@ export default {
                 line-height: 1.2;
                 color: $white;
                 margin-bottom: 8px;
+
+                @include media-breakpoint-down(md) {
+                  font-size: 15px;
+                  margin-bottom: 6px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                  font-size: 13px;
+                  margin-bottom: 1px;
+                }
               }
 
               .designation {
@@ -148,6 +221,14 @@ export default {
                 color: $white;
                 opacity: 0.6;
                 margin-bottom: 0;
+
+                @include media-breakpoint-down(md) {
+                  font-size: 15px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                  font-size: 12px;
+                }
               }
             }
           }
@@ -155,6 +236,14 @@ export default {
           &:nth-child(2n) {
             top: 72px;
             position: relative;
+
+            @include media-breakpoint-down(md) {
+              top: 50px;
+            }
+
+            @include media-breakpoint-down(sm) {
+              top: 0px;
+            }
           }
         }
       }
@@ -164,9 +253,21 @@ export default {
       max-width: 410px;
       width: 100%;
 
+      @include media-breakpoint-down(md) {
+        max-width: 350px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
+
       .formInfo {
         padding: 24px 39px;
         background: $dark-blue;
+
+        @include media-breakpoint-down(md) {
+          padding: 20px 35px;
+        }
 
         .logo {
           max-width: 35px;
@@ -178,7 +279,6 @@ export default {
           background: linear-gradient(to right, #a0d2eb 0%, #7b78ff 70%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-size: $h4-font-size;
           font-family: $hk_bold;
           line-height: 1.2;
           padding-right: 20px;
@@ -189,11 +289,19 @@ export default {
         background: $corn-flower;
         padding: 48px 39px;
 
+        @include media-breakpoint-down(md) {
+          padding: 40px 35px;
+        }
+
         .formTitle {
           font-size: 16px;
           font-family: $hk_bold;
           line-height: 1.2;
           color: $gray-900;
+
+          @include media-breakpoint-down(md) {
+            font-size: 15px;
+          }
         }
 
         .formContent {

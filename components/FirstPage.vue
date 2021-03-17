@@ -18,6 +18,22 @@
   display: flex;
   align-items: center;
 
+  @include media-breakpoint-down(lg) {
+    padding-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 80px 0;
+    padding-left: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    padding: 120px 24px 100px;
+    height: 100vh;
+    text-align: center;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -28,17 +44,33 @@
     background: url('@/assets/images/first-left-bg.png');
     background-size: cover;
     background-position: left;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &::after {
     content: '';
     position: absolute;
     top: 0;
-    right: -40%;
+    right: -20%;
     width: 50%;
     height: 100%;
     background: url('@/assets/images/hm-right-side.png') no-repeat;
     background-size: 100% 100%;
+
+    @include media-breakpoint-down(lg) {
+      right: -10%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   .content {
@@ -47,14 +79,24 @@
     position: relative;
     z-index: 9;
 
+    @include media-breakpoint-down(lg) {
+      max-width: 60%;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 80%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+
     .subTitle {
-      font-size: $h5-font-size;
       line-height: 1.5;
       color: $secondary;
     }
 
     .mainTitle {
-      font-size: $h1-font-size;
       line-height: 1.2;
       color: $white;
       font-weight: 700;

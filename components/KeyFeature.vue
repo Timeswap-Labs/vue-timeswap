@@ -89,15 +89,39 @@ export default {
   display: flex;
   align-items: center;
 
+  @include media-breakpoint-down(md) {
+    flex: 0 0 1570px !important;
+    max-width: 1570px !important;
+    padding: 80px 0;
+    padding-left: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 60px 24px 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 20px 24px 40px;
+  }
+
   .content {
     width: 100%;
 
     .mainTitle {
-      font-size: $h2-font-size;
       font-family: $hk_bold;
       line-height: 1.5;
       color: $white;
       margin-bottom: 100px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 50px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+      }
     }
 
     .featureList {
@@ -110,6 +134,16 @@ export default {
         padding: 0 15px;
         max-width: 235px;
 
+        @include media-breakpoint-down(sm) {
+          max-width: 50%;
+          margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding: 0 10px;
+          max-width: 100%;
+        }
+
         .featureSingle {
           padding: 24px;
           border-radius: 15px;
@@ -119,6 +153,10 @@ export default {
             rgba(0, 0, 0, 0) 80%
           );
           height: 100%;
+
+          @include media-breakpoint-down(lg) {
+            padding: 20px;
+          }
 
           figure {
             max-width: 50px;
@@ -131,7 +169,6 @@ export default {
           }
 
           .featureTitle {
-            font-size: $h6-font-size;
             font-family: $hk_bold;
             line-height: 1.4;
             color: $white;
