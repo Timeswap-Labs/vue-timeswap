@@ -19,6 +19,8 @@
 
       <Advisor :class="$style.section" />
     </main>
+
+    <Footer />
   </div>
 </template>
 
@@ -123,6 +125,55 @@ export default {
           }
           window.requestAnimationFrame(t)
         })
+      }
+
+      window.onscroll = function () {
+        myScrollFunction(), circleProgressBar();
+      };
+      function myScrollFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        console.log("scrolled", scrolled);
+        document.getElementById("myBar").style.width = scrolled + "%";
+        if (scrolled > 0 && scrolled < 25) {
+          document.getElementById("pageTitle").innerHTML = "Introduction";
+        } else if (scrolled > 26 && scrolled < 38) {
+          document.getElementById("pageTitle").innerHTML = "Our Product";
+        } else if (scrolled > 42 && scrolled < 61) {
+          document.getElementById("pageTitle").innerHTML = "Key Fetatures";
+        } else if (scrolled > 62 && scrolled < 77) {
+          document.getElementById("pageTitle").innerHTML = "Time Token";
+        } else if (scrolled > 79 && scrolled < 93) {
+          document.getElementById("pageTitle").innerHTML = "Our Team";
+        } else if (scrolled > 94 && scrolled < 110) {
+          document.getElementById("pageTitle").innerHTML = "Advisor";
+        }
+      }
+
+      function circleProgressBar() {
+        var progressPath = document.querySelector(".progress-wrap path");
+        var pathLength = progressPath.getTotalLength();
+        // progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + " " + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.stroke = "#A0D2EB";
+        progressPath.style.transition = progressPath.style.WebkitTransition =
+          "stroke-dashoffset 10ms linear";
+        var updateProgress = function () {
+          var winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+          var height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          var progress = pathLength - (winScroll * pathLength) / height;
+          progressPath.style.strokeDashoffset = progress;
+        };
+        updateProgress();
       }
 
       reszajz()

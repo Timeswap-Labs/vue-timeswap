@@ -52,6 +52,20 @@
         </div>
       </div>
     </div>
+    <div :class="$style.copyRight">
+      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <ul :class="$style.privacyMenu">
+        <li
+          v-for="(copyright, index) in copyrights"
+          :key= "index"
+          :class="$style.privacyMenuLink"
+        >
+          <a :href="copyright.link">
+            {{ copyright.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -71,6 +85,20 @@ export default {
           designation: 'Co-Founder',
         },
       ],
+      copyrights: [
+        {
+          link: "#",
+          name: "Cookies"
+        },
+        {
+          link: "#",
+          name: "Privacy Policy"
+        },
+        {
+          link: "#",
+          name: "Sitemap"
+        }
+      ]
     }
   },
 
@@ -107,7 +135,7 @@ export default {
   @include media-breakpoint-down(sm) {
     max-width: 100% !important;
     flex: 0 0 100% !important;
-    padding: 60px 0 0;
+    padding: 40px 0 0;
   }
 
   @include media-breakpoint-down(xs) {
@@ -165,7 +193,7 @@ export default {
             margin-bottom: 30px;
           }
 
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(xs) {
             margin-bottom: 20px;
             max-width: 50%;
           }
@@ -180,6 +208,7 @@ export default {
             background-blend-mode: luminosity;
             background-size: cover;
             width: 100%;
+            background-position: center;
 
             @include media-breakpoint-down(md) {
               height: 270px;
@@ -187,6 +216,10 @@ export default {
 
             @include media-breakpoint-down(sm) {
               margin-bottom: 20px;
+            }
+
+            @include media-breakpoint-down(xs) {
+              height: 207px;
             }
 
             .imgCaption {
@@ -293,6 +326,10 @@ export default {
           padding: 40px 35px;
         }
 
+        @include media-breakpoint-down(sm) {
+          padding: 35px 24px;
+        }
+
         .formTitle {
           font-size: 16px;
           font-family: $hk_bold;
@@ -329,6 +366,67 @@ export default {
               box-shadow: 0 0 0 2px #007bff40;
             }
           }
+        }
+      }
+    }
+  }
+
+  .copyRight{
+    position: absolute;
+    right: 53px;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }    
+
+    .copyrightTxt{
+      margin: 0;      
+      font-size: 12px;
+      color: $white;
+      opacity: 0.8;
+      line-height: 17px;
+    }
+
+    .privacyMenu{
+      margin: 0;
+      display: flex;
+      padding-left: 27px;
+
+      .privacyMenuLink{
+        position: relative;
+        list-style: none;
+        color: $white;
+        padding-left: 15px;
+        margin-left: 10px;
+
+        &:before{
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #fff;
+          opacity: 0.8;
+          left: 0;
+          top: 7px;
+          position: absolute;
+          display: block;
+        }
+        
+        &:first-child{
+          &:before{
+            display: none;
+          }
+        }
+
+        a{
+          font-size: 12px;
+          color: $white;
+          opacity: 0.8;
+          line-height: 17px;
+          display: block;
         }
       }
     }

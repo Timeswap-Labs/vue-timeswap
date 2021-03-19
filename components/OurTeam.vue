@@ -221,6 +221,10 @@ export default {
 
         @include media-breakpoint-down(sm) {
           margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          margin-bottom: 20px;
           max-width: 50%;
         }
 
@@ -234,6 +238,7 @@ export default {
           background-blend-mode: luminosity;
           background-size: cover;
           width: 100%;
+          background-position: center;
 
           @include media-breakpoint-down(md) {
             height: 270px;
