@@ -57,7 +57,7 @@
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
-          :key= "index"
+          :key="index"
           :class="$style.privacyMenuLink"
         >
           <a :href="copyright.link">
@@ -87,18 +87,18 @@ export default {
       ],
       copyrights: [
         {
-          link: "#",
-          name: "Cookies"
+          link: '#',
+          name: 'Cookies',
         },
         {
-          link: "#",
-          name: "Privacy Policy"
+          link: '#',
+          name: 'Privacy Policy',
         },
         {
-          link: "#",
-          name: "Sitemap"
-        }
-      ]
+          link: '#',
+          name: 'Sitemap',
+        },
+      ],
     }
   },
 
@@ -371,7 +371,7 @@ export default {
     }
   }
 
-  .copyRight{
+  .copyRight {
     position: absolute;
     right: 53px;
     bottom: 32px;
@@ -380,30 +380,30 @@ export default {
 
     @include media-breakpoint-down(sm) {
       display: none;
-    }    
+    }
 
-    .copyrightTxt{
-      margin: 0;      
+    .copyrightTxt {
+      margin: 0;
       font-size: 12px;
       color: $white;
       opacity: 0.8;
       line-height: 17px;
     }
 
-    .privacyMenu{
+    .privacyMenu {
       margin: 0;
       display: flex;
       padding-left: 27px;
 
-      .privacyMenuLink{
+      .privacyMenuLink {
         position: relative;
         list-style: none;
         color: $white;
         padding-left: 15px;
         margin-left: 10px;
 
-        &:before{
-          content: "";
+        &:before {
+          content: '';
           width: 6px;
           height: 6px;
           border-radius: 50%;
@@ -414,14 +414,14 @@ export default {
           position: absolute;
           display: block;
         }
-        
-        &:first-child{
-          &:before{
+
+        &:first-child {
+          &:before {
             display: none;
           }
         }
 
-        a{
+        a {
           font-size: 12px;
           color: $white;
           opacity: 0.8;

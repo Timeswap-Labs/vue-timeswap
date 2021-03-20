@@ -1,53 +1,49 @@
 <template>
   <footer :class="$style.footer">
-      <div :class="$style.introduction" id="pageTitle">
-        Introduction
+    <div id="pageTitle" :class="$style.introduction">Introduction</div>
+    <div :class="$style.progressContainer">
+      <div id="myBar" :class="$style.progressBar"></div>
+    </div>
+    <div :class="$style.socialWrap">
+      <div :class="[$style.progressWrap, 'progress-wrap']">
+        <svg
+          :class="$style.progressCircle"
+          width="100%"
+          height="100%"
+          viewBox="-50 -50 200 200"
+        >
+          <path
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            stroke-width="100"
+          />
+        </svg>
       </div>
-      <div :class="$style.progressContainer">
-        <div :class="$style.progressBar" id="myBar"></div>
+      <div :class="$style.socialIcons">
+        <a
+          v-for="(socialIcon, index) in socialIcons"
+          :key="index"
+          :class="$style.icons"
+          :href="socialIcon.link"
+        >
+          <img :src="getImgUrl(socialIcon.image)" :alt="socialIcon.image" />
+        </a>
       </div>
-      <div
-        :class="$style.socialWrap"
-      >
-        <div :class="[$style.progressWrap, 'progress-wrap']">
-          <svg
-            :class="$style.progressCircle"
-            width="100%"
-            height="100%"
-            viewBox="-50 -50 200 200"
-          >
-            <path
-              d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              stroke-width="100"
-            />
-          </svg>
-        </div>
-        <div :class="$style.socialIcons"> 
-          <a
-            v-for="(socialIcon, index) in socialIcons"
-            :key="index"
-            :class="$style.icons"
-            :href="socialIcon.link"
-          >         
-            <img :src="getImgUrl(socialIcon.image)" :alt="socialIcon.image" />
+    </div>
+    <div :class="$style.mobileTerms">
+      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <ul :class="$style.privacyMenu">
+        <li
+          v-for="(copyright, index) in copyrights"
+          :key="index"
+          :class="$style.privacyMenuLink"
+        >
+          <a :href="copyright.link">
+            {{ copyright.name }}
           </a>
-        </div>
-      </div>
-      <div :class="$style.mobileTerms">
-        <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
-        <ul :class="$style.privacyMenu">
-          <li
-            v-for="(copyright, index) in copyrights"
-            :key= "index"
-            :class="$style.privacyMenuLink"
-          >
-            <a :href="copyright.link">
-              {{ copyright.name }}
-            </a>
-          </li>
-        </ul>
-        <a :class="$style.sitemap" link="#">Sitemap</a>
-      </div>
+        </li>
+      </ul>
+      <a :class="$style.sitemap" link="#">Sitemap</a>
+    </div>
   </footer>
 </template>
 
@@ -79,14 +75,14 @@ export default {
       ],
       copyrights: [
         {
-          link: "#",
-          name: "Cookies"
+          link: '#',
+          name: 'Cookies',
         },
         {
-          link: "#",
-          name: "Privacy Policy"
+          link: '#',
+          name: 'Privacy Policy',
         },
-      ]
+      ],
     }
   },
 
@@ -100,7 +96,6 @@ export default {
 
 <style lang="scss" module>
 .footer {
-
   @include media-breakpoint-up(md) {
     position: fixed;
     left: 160px;
@@ -158,13 +153,18 @@ export default {
     height: 100%;
     display: flex;
     align-items: center;
-    
+
     .progressWrap {
       height: 44px;
       width: 44px;
       display: block;
       border-radius: 50px;
-      background: linear-gradient(180deg, rgba(123, 120, 255, 0.35) 0%, #9DCEEC 50.26%, rgba(123, 120, 255, 0.35) 98.47%);;
+      background: linear-gradient(
+        180deg,
+        rgba(123, 120, 255, 0.35) 0%,
+        #9dceec 50.26%,
+        rgba(123, 120, 255, 0.35) 98.47%
+      );
       z-index: 9;
       -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
@@ -172,15 +172,15 @@ export default {
       align-items: center;
       justify-content: center;
       position: relative;
-      &:after{
-        content: "";
+      &:after {
+        content: '';
         position: absolute;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         background: #0f1426;
         z-index: 0;
       }
@@ -189,7 +189,7 @@ export default {
         display: none;
       }
 
-      svg{
+      svg {
         width: 32px;
         height: 32px;
         position: relative;
@@ -203,16 +203,16 @@ export default {
             transition: all 200ms linear;
           }
         }
-      } 
+      }
 
-      svg{
+      svg {
         path {
           fill: none;
         }
-      }   
+      }
     }
 
-    .socialIcons{
+    .socialIcons {
       display: flex;
       align-items: center;
       margin-left: 22px;
@@ -222,10 +222,9 @@ export default {
         margin-bottom: 24px;
       }
 
-      .icons{
+      .icons {
         margin-right: 16px;
       }
-
     }
   }
 
@@ -236,8 +235,8 @@ export default {
       display: block;
     }
 
-    .copyrightTxt{
-      margin: 0;      
+    .copyrightTxt {
+      margin: 0;
       font-size: 12px;
       color: $white;
       opacity: 0.8;
@@ -245,21 +244,21 @@ export default {
       margin-bottom: 19px;
     }
 
-    .privacyMenu{
+    .privacyMenu {
       margin: 0;
       padding: 0;
       display: flex;
       margin-bottom: 19px;
 
-      .privacyMenuLink{
+      .privacyMenuLink {
         position: relative;
         list-style: none;
         color: $white;
         padding-left: 15px;
         margin-left: 10px;
 
-        &:before{
-          content: "";
+        &:before {
+          content: '';
           width: 6px;
           height: 6px;
           border-radius: 50%;
@@ -270,16 +269,16 @@ export default {
           position: absolute;
           display: block;
         }
-        
-        &:first-child{
+
+        &:first-child {
           padding-left: 0;
           margin-left: 0;
-          &:before{
+          &:before {
             display: none;
           }
         }
 
-        a{
+        a {
           font-size: 12px;
           color: $white;
           opacity: 0.8;
@@ -289,7 +288,7 @@ export default {
       }
     }
 
-    .sitemap{
+    .sitemap {
       font-size: 12px;
       color: $white;
       opacity: 0.8;
@@ -298,5 +297,4 @@ export default {
     }
   }
 }
-
 </style>

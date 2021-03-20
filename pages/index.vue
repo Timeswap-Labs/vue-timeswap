@@ -128,52 +128,52 @@ export default {
       }
 
       window.onscroll = function () {
-        myScrollFunction(), circleProgressBar();
-      };
+        myScrollFunction(), circleProgressBar()
+      }
       function myScrollFunction() {
-        var winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop;
-        var height =
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop
+        const height =
           document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        console.log("scrolled", scrolled);
-        document.getElementById("myBar").style.width = scrolled + "%";
+          document.documentElement.clientHeight
+        const scrolled = (winScroll / height) * 100
+        console.log('scrolled', scrolled)
+        document.getElementById('myBar').style.width = scrolled + '%'
         if (scrolled > 0 && scrolled < 25) {
-          document.getElementById("pageTitle").innerHTML = "Introduction";
+          document.getElementById('pageTitle').innerHTML = 'Introduction'
         } else if (scrolled > 26 && scrolled < 38) {
-          document.getElementById("pageTitle").innerHTML = "Our Product";
+          document.getElementById('pageTitle').innerHTML = 'Our Product'
         } else if (scrolled > 42 && scrolled < 61) {
-          document.getElementById("pageTitle").innerHTML = "Key Fetatures";
+          document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
         } else if (scrolled > 62 && scrolled < 77) {
-          document.getElementById("pageTitle").innerHTML = "Time Token";
+          document.getElementById('pageTitle').innerHTML = 'Time Token'
         } else if (scrolled > 79 && scrolled < 93) {
-          document.getElementById("pageTitle").innerHTML = "Our Team";
+          document.getElementById('pageTitle').innerHTML = 'Our Team'
         } else if (scrolled > 94 && scrolled < 110) {
-          document.getElementById("pageTitle").innerHTML = "Advisor";
+          document.getElementById('pageTitle').innerHTML = 'Advisor'
         }
       }
 
       function circleProgressBar() {
-        var progressPath = document.querySelector(".progress-wrap path");
-        var pathLength = progressPath.getTotalLength();
+        const progressPath = document.querySelector('.progress-wrap path')
+        const pathLength = progressPath.getTotalLength()
         // progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-        progressPath.style.strokeDasharray = pathLength + " " + pathLength;
-        progressPath.style.strokeDashoffset = pathLength;
-        progressPath.getBoundingClientRect();
-        progressPath.style.stroke = "#A0D2EB";
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength
+        progressPath.style.strokeDashoffset = pathLength
+        progressPath.getBoundingClientRect()
+        progressPath.style.stroke = '#A0D2EB'
         progressPath.style.transition = progressPath.style.WebkitTransition =
-          "stroke-dashoffset 10ms linear";
-        var updateProgress = function () {
-          var winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop;
-          var height =
+          'stroke-dashoffset 10ms linear'
+        const updateProgress = function () {
+          const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop
+          const height =
             document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
-          var progress = pathLength - (winScroll * pathLength) / height;
-          progressPath.style.strokeDashoffset = progress;
-        };
-        updateProgress();
+            document.documentElement.clientHeight
+          const progress = pathLength - (winScroll * pathLength) / height
+          progressPath.style.strokeDashoffset = progress
+        }
+        updateProgress()
       }
 
       reszajz()
