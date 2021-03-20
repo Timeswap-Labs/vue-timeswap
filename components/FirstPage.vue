@@ -2,7 +2,7 @@
   <section :class="$style.firstPage">
     <div :class="$style.content">
       <h5 :class="$style.subTitle">World's first</h5>
-      <h1 :class="$style.mainTitle">
+      <h1 id="bigtitle" :class="$style.mainTitle">
         Fully decentralized AMM based money market protocol
       </h1>
       <div :class="$style.commingTxt">Coming soon</div>
@@ -44,6 +44,10 @@
     background: url('@/assets/images/first-left-bg.png');
     background-size: cover;
     background-position: left;
+
+    @include media-breakpoint-down(md) {
+      background-position: center;
+    }
 
     @include media-breakpoint-down(sm) {
       display: none;
@@ -102,6 +106,9 @@
       font-weight: 700;
       font-family: $hk_bold;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out 0.4s;
     }
 
     .commingTxt {

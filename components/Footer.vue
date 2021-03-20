@@ -153,6 +153,11 @@ export default {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-bottom: 22px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
 
     .progressWrap {
       height: 44px;
@@ -216,6 +221,10 @@ export default {
       display: flex;
       align-items: center;
       margin-left: 22px;
+
+      @include media-breakpoint-down(md) {
+        margin-left: 15px;
+      }
 
       @include media-breakpoint-down(sm) {
         margin-left: 0;

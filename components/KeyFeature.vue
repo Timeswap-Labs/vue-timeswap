@@ -6,7 +6,7 @@
         <div
           v-for="(feature, index) in features"
           :key="index"
-          :class="$style.featureWrap"
+          :class="[$style.featureWrap, 'animateMe']"
         >
           <div :class="$style.featureSingle">
             <figure>
@@ -81,8 +81,8 @@ export default {
 <style lang="scss" module>
 .featurePage {
   position: relative;
-  flex: 0 0 1600px !important;
-  max-width: 1600px !important;
+  flex: 0 0 1700px !important;
+  max-width: 1700px !important;
   width: 100%;
   padding: 100px 0;
   padding-left: 80px;
@@ -132,7 +132,7 @@ export default {
 
       .featureWrap {
         padding: 0 15px;
-        max-width: 235px;
+        max-width: 250px;
 
         @include media-breakpoint-down(sm) {
           max-width: 50%;

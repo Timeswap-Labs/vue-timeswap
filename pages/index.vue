@@ -48,6 +48,11 @@ export default {
     if (!this.$device.isMobile) {
       this.setHorizontalScroll()
     }
+    this.loadAnimation()
+  },
+
+  beforeMount() {
+    this.pageLoadAnim()
   },
 
   methods: {
@@ -177,6 +182,37 @@ export default {
       }
 
       reszajz()
+    },
+
+    pageLoadAnim() {
+      document.fonts.ready.then(function () {
+        document.getElementById('bigtitle').style.opacity = 1
+        document.getElementById('bigtitle').style.transform = 'translateY(0px)'
+      })
+    },
+
+    loadAnimation() {
+      if ('ontouchstart' in document.documentElement) {
+      } else {
+        const animBlock = document.querySelectorAll('.animateMe')
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              entry.target.classList.add('addAnimation')
+            } else {
+              entry.target.classList.remove('addAnimation')
+            }
+          })
+        })
+
+        animBlock.forEach(
+          (block) => {
+            observer.observe(block)
+          },
+          { threshold: 0.5 }
+        )
+      }
     },
   },
 }

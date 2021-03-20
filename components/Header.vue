@@ -61,6 +61,7 @@
     opacity: 0.6;
     color: $white;
     padding-right: 24px;
+    text-transform: capitalize;
 
     @include media-breakpoint-down(sm) {
       font-size: 12px;

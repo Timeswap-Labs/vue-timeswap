@@ -7,7 +7,7 @@
           <div
             v-for="(advisor, index) in advisors"
             :key="index"
-            :class="$style.advisor_wrap"
+            :class="[$style.advisor_wrap, 'animateMe']"
           >
             <div
               :class="$style.advisorSingle"
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div :class="$style.advisorForm">
+      <div :class="[$style.advisorForm, 'animateMe zoomIn']">
         <div :class="$style.formInfo">
           <div :class="$style.logo">
             <img src="@/assets/images/logo-wihout-text.png" alt />
@@ -182,7 +182,7 @@ export default {
 
         .advisor_wrap {
           padding: 0 15px;
-          max-width: 230px;
+          max-width: 245px;
           width: 100%;
 
           @include media-breakpoint-down(md) {
@@ -374,9 +374,13 @@ export default {
   .copyRight {
     position: absolute;
     right: 53px;
-    bottom: 32px;
+    bottom: 35px;
     display: flex;
     align-items: center;
+
+    @include media-breakpoint-down(md) {
+      right: 40px;
+    }
 
     @include media-breakpoint-down(sm) {
       display: none;
@@ -416,6 +420,8 @@ export default {
         }
 
         &:first-child {
+          padding-left: 0;
+          margin-left: 0px;
           &:before {
             display: none;
           }

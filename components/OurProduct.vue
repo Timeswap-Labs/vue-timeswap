@@ -6,7 +6,7 @@
         <div
           v-for="(product, index) in products"
           :key="index"
-          :class="[$style.productWrap, 'col-md-3']"
+          :class="[$style.productWrap, 'col-md-3 animateMe']"
         >
           <div :class="$style.productSingle">
             <h4 :class="$style.productTitle">

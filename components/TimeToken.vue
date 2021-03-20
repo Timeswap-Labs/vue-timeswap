@@ -3,9 +3,9 @@
     <div :class="$style.content">
       <h2 :class="$style.mainTitle">Time Token</h2>
       <div :class="$style.tokenImage">
-        <img src="@/assets/images/five-pg.svg" alt />
+        <img :class="['animateMe']" src="@/assets/images/five-pg.svg" alt />
         <img
-          :class="$style.mobile"
+          :class="[$style.mobile, 'animateMe']"
           src="@/assets/images/five-pg-mobile.svg"
           alt
         />
