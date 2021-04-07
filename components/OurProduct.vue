@@ -28,24 +28,24 @@ export default {
     return {
       products: [
         {
-          title: 'Fixed Maturing Lending & Borrowing',
+          title: 'Permissionless Fixed maturity lending & borrowing',
           description:
-            'Timeswap allows fixed maturing lending & borrowing of any ERC-20 token in non-custodial fully decentralized manner',
+            'Timeswap allows anyone to do fixed maturity lending & borrowing of any ERC-20 token with any ERC20 token as collateral',
         },
         {
-          title: 'Liquidity Pools',
+          title: 'Non-Liquiditable Loans',
           description:
-            'Timeswap liquidity providers interact with our unique AMM to provide deep liquidity for our lenders & borrowers and earn transaction fees',
+            'Timeswap takes away complexity for borrowers to constantly manage their health factors. No more liquidation penalty & dependency on liquidators',
         },
         {
-          title: 'Flexible Risk Profile',
+          title: 'Flexible Risk Profiles',
           description:
-            'Timeswap offers flexibility for lenders and borrowers to decide their risk profile through flexible interest rates & insurance cover',
+            'Timeswap offers flexibility for lenders and borrowers to decide their risk profile through flexible interest rates & collateral factors.',
         },
         {
-          title: 'Bootstrap Liquidity',
+          title: 'Permissionless Debt Financing',
           description:
-            'Timeswap allows any ERC-20 projects to bootstrap liquidity by providing their native token as collateral to our liquidity pools',
+            'Timeswap enables projects to borrow debt with their native tokens as collateral. Ideal for funding fair launches & leveraged loans compared to equity financing',
         },
       ],
     }
@@ -57,22 +57,22 @@ export default {
 .productPage {
   position: relative;
   width: 100%;
-  flex: 0 0 1300px !important;
-  max-width: 1300px !important;
+  flex: 0 0 1500px !important;
+  max-width: 1500px !important;
   padding: 100px 0;
   padding-left: 160px;
   display: flex;
   align-items: center;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 1240px !important;
-    max-width: 1240px !important;
+    flex: 0 0 1340px !important;
+    max-width: 1340px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1200px !important;
-    max-width: 1200px !important;
+    flex: 0 0 1300px !important;
+    max-width: 1300px !important;
     padding: 80px 0;
     padding-left: 50px;
   }
@@ -98,7 +98,7 @@ export default {
     }
 
     .productList {
-      max-width: 1030px;
+      max-width: 1130px;
       width: 100%;
       margin: 0 -15px;
       align-items: stretch;

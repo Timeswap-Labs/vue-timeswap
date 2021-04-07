@@ -11,7 +11,7 @@
         <div
           v-for="(team, index) in teams"
           :key="index"
-          :class="[$style.teamWrap, 'animateMe']"
+          :class="$style.teamWrap"
         >
           <div
             :class="$style.teamSingle"
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div :class="[$style.teamWrap, 'animateMe']">
+        <div :class="$style.teamWrap">
           <div :class="$style.join_us">Join us</div>
         </div>
       </div>
@@ -151,14 +151,14 @@ export default {
   align-items: center;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 1140px !important;
-    max-width: 1140px !important;
+    flex: 0 0 1040px !important;
+    max-width: 1040px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1100px !important;
-    max-width: 1100px !important;
+    flex: 0 0 1050px !important;
+    max-width: 1050px !important;
     padding: 80px 50px;
   }
 
@@ -212,7 +212,7 @@ export default {
 
       .teamWrap {
         padding: 0 15px;
-        max-width: 245px;
+        max-width: 230px;
         width: 100%;
 
         @include media-breakpoint-down(md) {

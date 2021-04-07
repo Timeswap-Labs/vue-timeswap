@@ -32,21 +32,9 @@ export default {
       features: [
         {
           image: 'key-icon-1',
-          title: 'Market Driven Collateral',
+          title: 'Flexible interest rate & collateral factors',
           description:
-            'Collateral is based on prevailing market demand and supply allowing for greater capital efficiency',
-        },
-        {
-          image: 'key-icon-2',
-          title: 'Unique AMM with insurance',
-          description:
-            'AMM is an upgrade on the Uniswap Constant product function equation with insurance',
-        },
-        {
-          image: 'key-icon-3',
-          title: 'Flexible Interest Rates',
-          description:
-            'Timeswap provides users with flexibility to decide their risk profile and select a custom interest rate',
+            'Users have the flexibility to decide their risk-return profile by selecting custom Interest rates and collateral factors based on prevailing market conditions for greater capital efficiency',
         },
         {
           image: 'key-icon-4',
@@ -55,16 +43,10 @@ export default {
             'Timeswap is brutally gas efficienct and does not require oracles or liquidators',
         },
         {
-          image: 'key-icon-5',
-          title: 'Decentralized & Permission-less',
-          description:
-            'Collateral is decided based on prevailing market demand and supply',
-        },
-        {
           image: 'key-icon-6',
-          title: 'ERC20-Agnostic',
+          title: 'ERC20 agnostic',
           description:
-            'Any ERC-20 token pool can be created on Timeswap by providing necessary liquidity',
+            'Anyone can create any ERC20 pool by providing necessary liquidity',
         },
       ],
     }
@@ -81,8 +63,8 @@ export default {
 <style lang="scss" module>
 .featurePage {
   position: relative;
-  flex: 0 0 1700px !important;
-  max-width: 1700px !important;
+  flex: 0 0 1300px !important;
+  max-width: 1300px !important;
   width: 100%;
   padding: 100px 0;
   padding-left: 80px;
@@ -90,8 +72,8 @@ export default {
   align-items: center;
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1570px !important;
-    max-width: 1570px !important;
+    flex: 0 0 1200px !important;
+    max-width: 1200px !important;
     padding: 80px 0;
     padding-left: 50px;
   }
@@ -113,7 +95,7 @@ export default {
       font-family: $hk_bold;
       line-height: 1.5;
       color: $white;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
 
       @include media-breakpoint-down(lg) {
         margin-bottom: 50px;
@@ -132,7 +114,7 @@ export default {
 
       .featureWrap {
         padding: 0 15px;
-        max-width: 250px;
+        max-width: 300px;
 
         @include media-breakpoint-down(sm) {
           max-width: 50%;

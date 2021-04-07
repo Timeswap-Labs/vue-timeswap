@@ -1,12 +1,13 @@
 <template>
   <section :class="$style.firstPage">
     <div :class="$style.content">
-      <h5 :class="$style.subTitle">World's first</h5>
+      <h5 :class="$style.subTitle">World's First</h5>
       <h1 id="bigtitle" :class="$style.mainTitle">
         Fully decentralized AMM based money market protocol
       </h1>
       <div :class="$style.commingTxt">Coming soon</div>
     </div>
+    <div :class="$style.rightArrow" />
   </section>
 </template>
 
@@ -17,6 +18,7 @@
   padding-left: 160px;
   display: flex;
   align-items: center;
+  position: relative;
 
   @include media-breakpoint-down(lg) {
     padding-left: 100px;
@@ -74,6 +76,32 @@
 
     @include media-breakpoint-down(sm) {
       display: none;
+    }
+  }
+
+  .rightArrow{
+    position: absolute;
+    background: url('@/assets/images/right-arrow.svg') no-repeat;
+    width: 43px;
+    height: 44px;
+    right: 160px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-down(lg) {
+      right: 100px;
+    }
+
+    @include media-breakpoint-down(md) {
+      right: 50px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+      top: initial;
+      bottom: 60px;
     }
   }
 

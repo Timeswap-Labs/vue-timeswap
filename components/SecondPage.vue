@@ -2,9 +2,7 @@
   <section :class="$style.secondPage">
     <div :class="$style.content">
       <h5 :class="$style.mainTitle">
-        Timeswap is a self-sufficient, fully decentralized, non-custodial, fixed
-        maturity lending/borrowing protocol that works without the need of price
-        feeds, oracles & liquidators.
+        Timeswap is the first fully decentralized, oracle-less, non-liquiditable, fixed maturity lending/borrowing protocol.
       </h5>
       <p :class="$style.paragraph">
         Timeswap aims to revolutionize money markets via its unique 3 variable
