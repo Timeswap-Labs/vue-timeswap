@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.productPage">
     <div :class="$style.content">
-      <h2 :class="$style.mainTitle">Our Products</h2>
+      <h2 :class="$style.mainTitle">Our Offerings</h2>
       <div :class="[$style.productList, 'row']">
         <div
           v-for="(product, index) in products"

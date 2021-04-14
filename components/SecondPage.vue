@@ -23,7 +23,7 @@
   justify-content: space-between;
   align-items: center;
   background: url('@/assets/images/glass-bg.png') no-repeat center right;
-  background-size: 671px;
+  background-size: contain;
 
   @include media-breakpoint-down(md) {
     max-width: 900px !important;

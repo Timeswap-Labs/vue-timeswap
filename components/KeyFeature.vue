@@ -40,7 +40,7 @@ export default {
           image: 'key-icon-4',
           title: 'Oracle-less & Gas Efficient',
           description:
-            'Timeswap is brutally gas efficienct and does not require oracles or liquidators',
+            'Timeswap is brutally gas efficient and does not require oracles or liquidators',
         },
         {
           image: 'key-icon-6',

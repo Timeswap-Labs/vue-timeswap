@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.firstPage">
     <div :class="$style.content">
-      <h5 :class="$style.subTitle">World's First</h5>
+      <h5 :class="$style.subTitle">First</h5>
       <h1 id="bigtitle" :class="$style.mainTitle">
         Fully decentralized AMM based money market protocol
       </h1>
