@@ -126,6 +126,27 @@ export default {
             },
           ],
         },
+        {
+          image: 'Dalsukh',
+          name: 'Dalsukh Tapaniya',
+          designation: 'Co-Founder',
+          description:
+            'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
+          socials: [
+            {
+              link: '#',
+              image: 'twitter',
+            },
+            {
+              link: '#',
+              image: 'github',
+            },
+            {
+              link: '#',
+              image: 'fb',
+            },
+          ],
+        },
       ],
     }
   },
@@ -151,14 +172,14 @@ export default {
   align-items: center;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 1040px !important;
-    max-width: 1040px !important;
+    flex: 0 0 1270px !important;
+    max-width: 1270px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1050px !important;
-    max-width: 1050px !important;
+    flex: 0 0 1270px !important;
+    max-width: 1270px !important;
     padding: 80px 50px;
   }
 

@@ -28,7 +28,7 @@
       <div :class="[$style.advisorForm, 'animateMe zoomIn']">
         <div :class="$style.formInfo">
           <div :class="$style.logo">
-            <img src="@/assets/images/logo-wihout-text.png" alt />
+            <img src="@/assets/images/timeswap-slogo.svg" alt />
           </div>
           <h4 :class="$style.formTitle">
             World’s first Fully decentralized AMM based money market protocol
@@ -75,13 +75,13 @@ export default {
     return {
       advisors: [
         {
-          image: 'team-one',
-          name: 'Ricsson Ngo',
+          image: 'Sandeep',
+          name: 'Sandeep Nailwal',
           designation: 'Founder',
         },
         {
-          image: 'team-two',
-          name: 'Ameeth Devadas',
+          image: 'JD',
+          name: 'Jaynti Kanani',
           designation: 'Co-Founder',
         },
       ],

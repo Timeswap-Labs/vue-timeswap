@@ -43,7 +43,7 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: url('@/assets/images/first-left-bg.png');
+    background: url('@/assets/images/first-bg.png');
     background-size: cover;
     background-position: left;
 
@@ -87,6 +87,39 @@
     right: 160px;
     top: 50%;
     transform: translateY(-50%);
+    animation: bounce 3s infinite;
+    
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateX(0);
+      }
+      40% {
+        transform: translateX(-20px);
+      }
+      60% {
+        transform: translateX(-10px);
+      }
+    }
+
+    @keyframes bounceY {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translate(-50%, 0) rotate(90deg);
+      }
+      40% {
+        transform: translate(-50%, -20px) rotate(90deg);
+      }
+      60% {
+        transform: translate(-50%, -10px) rotate(90deg);
+      }
+    }
 
     @include media-breakpoint-down(lg) {
       right: 100px;
@@ -99,9 +132,9 @@
     @include media-breakpoint-down(sm) {
       right: initial;
       left: 50%;
-      transform: translateX(-50%) rotate(90deg);
       top: initial;
       bottom: 60px;
+      animation: bounceY 3s infinite;
     }
   }
 

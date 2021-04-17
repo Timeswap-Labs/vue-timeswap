@@ -160,16 +160,10 @@ export default {
     }
 
     .progressWrap {
-      height: 44px;
-      width: 44px;
+      height: 54px;
+      width: 46px;
       display: block;
       border-radius: 50px;
-      background: linear-gradient(
-        180deg,
-        rgba(123, 120, 255, 0.35) 0%,
-        #9dceec 50.26%,
-        rgba(123, 120, 255, 0.35) 98.47%
-      );
       z-index: 9;
       -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
@@ -180,14 +174,12 @@ export default {
       &:after {
         content: '';
         position: absolute;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #0f1426;
-        z-index: 0;
+        background: url('@/assets/images/timer.svg');
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
       }
 
       @include media-breakpoint-down(sm) {
@@ -195,10 +187,12 @@ export default {
       }
 
       svg {
-        width: 32px;
-        height: 32px;
+        width: 44px;
+        height: 44px;
         position: relative;
         z-index: 1;
+        top: 4.05px;
+        left: 0.2px;
 
         &.progressCircle {
           path {

@@ -166,7 +166,7 @@ export default {
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength
         progressPath.style.strokeDashoffset = pathLength
         progressPath.getBoundingClientRect()
-        progressPath.style.stroke = '#A0D2EB'
+        progressPath.style.stroke = '#6A6D7E'
         progressPath.style.transition = progressPath.style.WebkitTransition =
           'stroke-dashoffset 10ms linear'
         const updateProgress = function () {
