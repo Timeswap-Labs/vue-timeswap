@@ -77,12 +77,12 @@ export default {
         {
           image: 'Sandeep',
           name: 'Sandeep Nailwal',
-          designation: 'Founder',
+          designation: 'Advisor',
         },
         {
           image: 'JD',
           name: 'Jaynti Kanani',
-          designation: 'Co-Founder',
+          designation: 'Advisor',
         },
       ],
       copyrights: [

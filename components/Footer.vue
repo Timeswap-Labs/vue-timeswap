@@ -193,8 +193,8 @@ export default {
       }
 
       svg {
-        width: 44px;
-        height: 44px;
+        width: 46px;
+        height: 46px;
         position: relative;
         z-index: 1;
         top: 4.05px;

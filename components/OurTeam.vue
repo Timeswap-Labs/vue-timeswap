@@ -129,7 +129,7 @@ export default {
         {
           image: 'Dalsukh',
           name: 'Dalsukh Tapaniya',
-          designation: 'Co-Founder',
+          designation: 'Product Designer',
           description:
             'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
           socials: [
