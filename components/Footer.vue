@@ -15,6 +15,12 @@
           <path
             d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
             stroke-width="100"
+            style="
+              stroke-dasharray: 307.919, 307.919;
+              stroke-dashoffset: 307.919;
+              stroke: rgb(160, 210, 235);
+              transition: stroke-dashoffset 10ms linear 0s;
+            "
           />
         </svg>
       </div>

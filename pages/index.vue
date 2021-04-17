@@ -132,8 +132,20 @@ export default {
         })
       }
 
+      window.onwheel = (e) => {
+        const directionHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY)
+
+        if (directionHorizontal) {
+          const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop
+
+          window.scrollTo(0, winScroll + e.deltaX)
+        }
+      }
+
       window.onscroll = function () {
-        myScrollFunction(), circleProgressBar()
+        myScrollFunction()
+        circleProgressBar()
       }
       function myScrollFunction() {
         const winScroll =
@@ -142,7 +154,7 @@ export default {
           document.documentElement.scrollHeight -
           document.documentElement.clientHeight
         const scrolled = (winScroll / height) * 100
-        console.log('scrolled', scrolled)
+
         document.getElementById('myBar').style.width = scrolled + '%'
         if (scrolled > 0 && scrolled < 25) {
           document.getElementById('pageTitle').innerHTML = 'Introduction'
@@ -219,6 +231,12 @@ export default {
 </script>
 
 <style lang="scss" module>
+:global {
+  html,
+  body {
+    overscroll-behavior: contain;
+  }
+}
 .main {
   display: flex;
   align-items: flex-start;
