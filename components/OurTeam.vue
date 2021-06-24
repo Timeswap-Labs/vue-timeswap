@@ -18,7 +18,7 @@
             :style="{
               backgroundImage: `url(${getImgUrl(
                 team.image
-              )}), linear-gradient(to right, #a0d2eb 15%, #7b78ff 78%)`,
+              )})`,
             }"
           >
             <div :class="$style.imgCaption">
@@ -42,6 +42,7 @@
                   v-for="(social, socialIndex) in team.socials"
                   :key="socialIndex"
                   class="list-inline-item"
+                  v-if="social.link"
                 >
                   <a :href="social.link" target="_blank">
                     <img :src="getIconUrl(social.image)" :alt="social.image" />
@@ -65,85 +66,117 @@ export default {
     return {
       teams: [
         {
-          image: 'team-one',
+          image: 'ricsson',
           name: 'Ricsson Ngo',
           designation: 'Founder',
           description:
             'Previously founder @Einstar. Master in Financial Mathematics from Ateneo de Manila University.',
           socials: [
             {
-              link: '#',
+              link: 'https://twitter.com/Mathepreneur',
               image: 'twitter',
             },
             {
-              link: '#',
-              image: 'github',
-            },
-            {
-              link: '#',
-              image: 'fb',
+              link: 'https://www.linkedin.com/in/ricssontimeswap',
+              image: 'linkedin',
             },
           ],
         },
         {
-          image: 'team-two',
+          image: 'harshita',
+          name: 'Harshita Singh',
+          designation: 'Co-Founder',
+          description: 'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
+          socials: [
+            {
+              link: 'https://twitter.com/Harshita_125',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/harshita-singh-a1561a79/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'ameeth',
           name: 'Ameeth Devadas',
           designation: 'Co-Founder',
           description: 'Previously Head of Product & Technology @Aurigin',
           socials: [
             {
-              link: '#',
+              link: 'https://twitter.com/0x42069',
               image: 'twitter',
             },
             {
-              link: '#',
-              image: 'github',
-            },
-            {
-              link: '#',
-              image: 'fb',
+              link: 'https://www.linkedin.com/in/ameeth-devadas-9717679',
+              image: 'linkedin',
             },
           ],
         },
         {
-          image: 'team-three',
-          name: 'Harshita Singh',
-          designation: 'Co-Founder',
-          description:
-            'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
-          socials: [
-            {
-              link: '#',
-              image: 'twitter',
-            },
-            {
-              link: '#',
-              image: 'github',
-            },
-            {
-              link: '#',
-              image: 'fb',
-            },
-          ],
-        },
-        {
-          image: 'Dalsukh',
+          image: 'dalsukh',
           name: 'Dalsukh Tapaniya',
-          designation: 'Product Designer',
-          description:
-            'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
+          designation: 'Design Lead',
+          description: 'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
           socials: [
             {
-              link: '#',
+              link: 'https://twitter.com/djtapaniya',
               image: 'twitter',
             },
             {
-              link: '#',
-              image: 'github',
+              link: 'https://www.linkedin.com/in/dalsukhtapaniya/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'anupama',
+          name: 'Anupama Singh',
+          designation: 'Operations Lead',
+          description:
+            'Previously worked as an Assistant Professor of Engineering (PES University, JIMSEMTC IPU, Galgotia’s Group)',
+          socials: [
+            {
+              link: 'https://twitter.com/Anupama77220271',
+              image: 'twitter',
             },
             {
-              link: '#',
-              image: 'fb',
+              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'keyur',
+          name: 'Keyur Shah',
+          designation: 'Finance & Legal',
+          description:
+            'Previously @Polygon (Matic Network)',
+          socials: [
+            {
+              link: 'https://twitter.com/keyur12392',
+              image: 'twitter',
+            },
+            {
+              link: '',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'shruthi',
+          name: 'Shruthi G',
+          designation: 'Content Lead',
+          description: '',
+          socials: [
+            {
+              link: '',
+              image: 'twitter',
+            },
+            {
+              link: '',
+              image: 'github',
             },
           ],
         },
@@ -153,7 +186,7 @@ export default {
 
   methods: {
     getImgUrl(team) {
-      return require(`../assets/images/${team}.jpg`)
+      return require(`../assets/images/${team}.png`)
     },
     getIconUrl(image) {
       return require(`../assets/images/icons/${image}.svg`)
@@ -170,6 +203,9 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
+  flex: 0 0 1900px !important;
+  max-width: 1900px !important;
+  padding-left: 100px;
 
   @include media-breakpoint-down(lg) {
     flex: 0 0 1270px !important;
@@ -209,7 +245,7 @@ export default {
       opacity: 0.6;
       line-height: 1.5;
       margin-bottom: 57px;
-      max-width: 80%;
+      max-width: 900px;
 
       @include media-breakpoint-down(lg) {
         margin-bottom: 30px;
@@ -233,7 +269,7 @@ export default {
 
       .teamWrap {
         padding: 0 15px;
-        max-width: 230px;
+        max-width: 245px;
         width: 100%;
 
         @include media-breakpoint-down(md) {
@@ -255,8 +291,7 @@ export default {
           overflow: hidden;
           display: flex;
           align-items: flex-end;
-          height: 288px;
-          background-blend-mode: luminosity;
+          height: 290px;
           background-size: cover;
           width: 100%;
           background-position: center;
@@ -272,6 +307,7 @@ export default {
           .imgCaption {
             width: 100%;
             padding: 16px;
+            background: linear-gradient(180.53deg, rgba(0, 0, 0, 0) 0.45%, #000000 120.37%);
 
             @include media-breakpoint-down(md) {
               padding: 13px;
@@ -411,6 +447,7 @@ export default {
           background: $ldark-navy;
           border-radius: 10px;
           cursor: pointer;
+          display: none;
 
           @include media-breakpoint-down(md) {
             height: 270px;

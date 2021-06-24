@@ -35,6 +35,20 @@
         </a>
       </div>
     </div>
+    <div :class="$style.copyRight">
+      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <ul :class="$style.privacyMenu">
+        <li
+          v-for="(copyright, index) in copyrights"
+          :key="index"
+          :class="$style.privacyMenuLink"
+        >
+          <a :href="copyright.link">
+            {{ copyright.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
     <div :class="$style.mobileTerms">
       <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
       <ul :class="$style.privacyMenu">
@@ -48,7 +62,6 @@
           </a>
         </li>
       </ul>
-      <a :class="$style.sitemap" link="#">Sitemap</a>
     </div>
   </footer>
 </template>
@@ -60,33 +73,25 @@ export default {
       socialIcons: [
         {
           image: 'ftr-fb',
-          link: '#',
+          link: 'https://twitter.com/TimeswapLabs',
         },
         {
           image: 'ftr-telegram',
-          link: '#',
-        },
-        {
-          image: 'ftr-github',
-          link: '#',
+          link: 'https://t.me/timeswap',
         },
         {
           image: 'ftr-four-icon',
-          link: '#',
+          link: 'https://discord.gg/VwZS8BVs',
         },
         {
           image: 'ftr-five-icon',
-          link: '#',
+          link: 'https://timeswap.medium.com/',
         },
       ],
       copyrights: [
         {
-          link: '#',
-          name: 'Cookies',
-        },
-        {
-          link: '#',
-          name: 'Privacy Policy',
+          link: '/terms',
+          name: 'Terms of service',
         },
       ],
     }
@@ -108,22 +113,25 @@ export default {
     transition: all 0.6s ease;
     bottom: 0;
     z-index: 99;
-    width: 100%;
+    width: calc(100% - 160px);
     display: flex;
     flex-direction: column;
   }
 
   @include media-breakpoint-down(lg) {
     left: 100px;
+    width: calc(100% - 100px);
   }
 
   @include media-breakpoint-down(md) {
     left: 50px;
+    width: calc(100% - 50px);
   }
 
   @include media-breakpoint-down(sm) {
     padding: 24px;
     padding-bottom: 47px;
+    width: 100%;
   }
 
   .introduction {
@@ -303,6 +311,73 @@ export default {
       opacity: 0.8;
       line-height: 17px;
       display: block;
+    }
+  }
+
+  .copyRight {
+    position: absolute;
+    right: 45px;
+    bottom: 42px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      right: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    .copyrightTxt {
+      margin: 0;
+      font-size: 12px;
+      color: $white;
+      opacity: 0.8;
+      line-height: 17px;
+    }
+
+    .privacyMenu {
+      margin: 0;
+      display: flex;
+      padding-left: 27px;
+
+      .privacyMenuLink {
+        position: relative;
+        list-style: none;
+        color: $white;
+        padding-left: 15px;
+        margin-left: 10px;
+
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #fff;
+          opacity: 0.8;
+          left: 0;
+          top: 7px;
+          position: absolute;
+          display: block;
+        }
+
+        &:first-child {
+          padding-left: 0;
+          margin-left: 0px;
+          &:before {
+            display: none;
+          }
+        }
+
+        a {
+          font-size: 12px;
+          color: $white;
+          opacity: 0.8;
+          line-height: 17px;
+          display: block;
+        }
+      }
     }
   }
 }
