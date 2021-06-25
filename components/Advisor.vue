@@ -2,7 +2,7 @@
   <section :class="$style.advisorPage">
     <div :class="$style.advisorRow">
       <div :class="$style.content">
-        <h2 :class="$style.mainTitle">Advisor</h2>
+        <h2 :class="$style.mainTitle">Media Coverage</h2>
         <div :class="$style.advisorList">
           <div
             v-for="(advisor, index) in advisors"
@@ -52,20 +52,6 @@
         </div>
       </div>
     </div>
-    <div :class="$style.copyRight">
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
-      <ul :class="$style.privacyMenu">
-        <li
-          v-for="(copyright, index) in copyrights"
-          :key="index"
-          :class="$style.privacyMenuLink"
-        >
-          <a :href="copyright.link">
-            {{ copyright.name }}
-          </a>
-        </li>
-      </ul>
-    </div>
   </section>
 </template>
 
@@ -83,20 +69,6 @@ export default {
           image: 'JD',
           name: 'Jaynti Kanani',
           designation: 'Advisor',
-        },
-      ],
-      copyrights: [
-        {
-          link: '#',
-          name: 'Cookies',
-        },
-        {
-          link: '#',
-          name: 'Privacy Policy',
-        },
-        {
-          link: '#',
-          name: 'Sitemap',
         },
       ],
     }
@@ -174,6 +146,7 @@ export default {
         margin: 0 -15px;
         display: flex;
         flex-wrap: wrap;
+        display: none;
 
         @include media-breakpoint-down(md) {
           margin: 0 -10px;
@@ -366,73 +339,6 @@ export default {
               box-shadow: 0 0 0 2px #007bff40;
             }
           }
-        }
-      }
-    }
-  }
-
-  .copyRight {
-    position: absolute;
-    right: 53px;
-    bottom: 35px;
-    display: flex;
-    align-items: center;
-
-    @include media-breakpoint-down(md) {
-      right: 40px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-
-    .copyrightTxt {
-      margin: 0;
-      font-size: 12px;
-      color: $white;
-      opacity: 0.8;
-      line-height: 17px;
-    }
-
-    .privacyMenu {
-      margin: 0;
-      display: flex;
-      padding-left: 27px;
-
-      .privacyMenuLink {
-        position: relative;
-        list-style: none;
-        color: $white;
-        padding-left: 15px;
-        margin-left: 10px;
-
-        &:before {
-          content: '';
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #fff;
-          opacity: 0.8;
-          left: 0;
-          top: 7px;
-          position: absolute;
-          display: block;
-        }
-
-        &:first-child {
-          padding-left: 0;
-          margin-left: 0px;
-          &:before {
-            display: none;
-          }
-        }
-
-        a {
-          font-size: 12px;
-          color: $white;
-          opacity: 0.8;
-          line-height: 17px;
-          display: block;
         }
       }
     }

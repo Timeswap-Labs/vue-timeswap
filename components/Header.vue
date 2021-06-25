@@ -1,8 +1,8 @@
 <template>
   <header :class="$style.header">
-    <div :class="$style.logo">
+    <a href="/" :class="$style.logo">
       <img src="@/assets/images/timeswap-logo.svg" alt />
-    </div>
+    </a>
     <div :class="$style.info">
       <span :class="$style.text">whitepaper</span>
       <button type="button" class="btn">App</button>
@@ -52,7 +52,7 @@
   }
 
   .info {
-    display: flex;
+    display: none;
     align-items: center;
   }
 
