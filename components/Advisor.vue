@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.advisorPage">
     <div :class="$style.advisorRow">
-      <div :class="$style.content">
+      <!-- <div :class="$style.content">
         <h2 :class="$style.mainTitle">Media Coverage</h2>
         <div :class="$style.advisorList">
           <div
@@ -24,17 +24,17 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div :class="[$style.advisorForm, 'animateMe zoomIn']">
         <div :class="$style.formInfo">
           <div :class="$style.logo">
             <img src="@/assets/images/timeswap-slogo.svg" alt />
           </div>
           <h4 :class="$style.formTitle">
-            World’s first Fully decentralized AMM based money market protocol
+            World’s first fully decentralized AMM based money market protocol
           </h4>
         </div>
-        <div :class="$style.form">
+        <!-- <div :class="$style.form">
           <h4 :class="$style.formTitle">Get early updates</h4>
           <p :class="$style.formContent">
             Subscribe to our newsletter for updates and to get testnet invite.
@@ -49,6 +49,24 @@
               />
             </div>
           </form>
+        </div> -->
+        <div :class="$style.form">
+          <h4 :class="$style.formTitle">Join us to get all updates</h4>
+          <div :class="$style.socialWrap">
+            <a
+              v-for="(socialIcon, index) in socialIcons"
+              :key="index"
+              :class="$style.icons"
+              :href="socialIcon.link"
+              target="_blank"
+            >
+              <img
+                :src="getIconUrl(socialIcon.image)"
+                :alt="socialIcon.image"
+              />
+              {{ socialIcon.name }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -71,12 +89,32 @@ export default {
           designation: 'Advisor',
         },
       ],
+      socialIcons: [
+        {
+          image: 'twitterr',
+          link: 'https://twitter.com/TimeswapLabs',
+          name: 'Twitter',
+        },
+        {
+          image: 'telegramr',
+          link: 'https://t.me/timeswap',
+          name: 'Telegram',
+        },
+        {
+          image: 'discordr',
+          link: 'https://discord.gg/VwZS8BVs',
+          name: 'Discord',
+        },
+      ],
     }
   },
 
   methods: {
     getImgUrl(advisor) {
       return require(`../assets/images/${advisor}.jpg`)
+    },
+    getIconUrl(image) {
+      return require(`../assets/images/${image}.svg`)
     },
   },
 }
@@ -86,20 +124,22 @@ export default {
 .advisorPage {
   position: relative;
   width: 100%;
-  padding: 100px 160px;
+  padding: 100px 50px;
   padding-right: 0;
   display: flex;
   align-items: center;
+  flex: 0 0 600px !important;
+  max-width: 600px !important;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 1100px !important;
-    max-width: 1100px !important;
+    flex: 0 0 600px !important;
+    max-width: 600px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1000px !important;
-    max-width: 1000px !important;
+    flex: 0 0 600px !important;
+    max-width: 600px !important;
     padding: 80px 50px;
     padding-right: 0;
   }
@@ -116,7 +156,7 @@ export default {
 
   .advisorRow {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
 
     @include media-breakpoint-down(sm) {
@@ -268,7 +308,7 @@ export default {
       }
 
       .formInfo {
-        padding: 24px 39px;
+        padding: 32px 54px;
         background: $dark-blue;
 
         @include media-breakpoint-down(md) {
@@ -293,7 +333,7 @@ export default {
 
       .form {
         background: $corn-flower;
-        padding: 48px 39px;
+        padding: 57px 54px;
 
         @include media-breakpoint-down(md) {
           padding: 40px 35px;
@@ -304,13 +344,33 @@ export default {
         }
 
         .formTitle {
-          font-size: 16px;
+          font-size: 20px;
           font-family: $hk_bold;
           line-height: 1.2;
           color: $gray-900;
+          margin-bottom: 19px;
 
           @include media-breakpoint-down(md) {
             font-size: 15px;
+          }
+        }
+
+        .socialWrap {
+          display: flex;
+          flex-direction: column;
+
+          .icons {
+            display: flex;
+            font-size: 12px;
+            line-height: 16px;
+            color: #0f1426;
+            margin-bottom: 10px;
+            align-items: center;
+            font-weight: 700;
+
+            img {
+              margin-right: 8px;
+            }
           }
         }
 

@@ -129,7 +129,7 @@ export default {
         .featureSingle {
           padding: 24px;
           border-radius: 15px;
-          background: linear-gradient(89.97deg, #282b59 0.03%, #0e1325 94.75%);
+          background: linear-gradient(89.98deg, #282b59 -15%, #0e1325 90%);
           height: 100%;
 
           @include media-breakpoint-down(lg) {
@@ -163,11 +163,7 @@ export default {
 
         &:nth-child(2n) {
           .featureSingle {
-            background: linear-gradient(
-              89.83deg,
-              #2f3e51 0.15%,
-              #0e1325 99.85%
-            );
+            background: linear-gradient(89.83deg, #2f3e51 -15%, #0e1325 90%);
           }
         }
       }

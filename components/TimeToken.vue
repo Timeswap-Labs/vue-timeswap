@@ -3,10 +3,10 @@
     <div :class="$style.content">
       <h2 :class="$style.mainTitle">Time Token</h2>
       <div :class="$style.tokenImage">
-        <img :class="['animateMe']" src="@/assets/images/five-pg.svg" alt />
+        <img :class="['animateMe']" src="@/assets/images/timetoken.svg" alt />
         <img
           :class="[$style.mobile, 'animateMe']"
-          src="@/assets/images/five-pg-mobile.svg"
+          src="@/assets/images/timetoken-mobile.svg"
           alt
         />
       </div>
@@ -55,7 +55,7 @@
       font-family: $hk_bold;
       line-height: 1.5;
       color: $white;
-      margin-bottom: 0;
+      margin-bottom: 80px;
 
       @include media-breakpoint-down(xs) {
         margin-bottom: 30px;
@@ -65,6 +65,7 @@
     .tokenImage {
       width: 100%;
       display: block;
+      margin-bottom: 80px;
 
       img {
         width: 100%;
