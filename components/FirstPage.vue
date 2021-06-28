@@ -1,13 +1,11 @@
 <template>
   <section :class="$style.firstPage">
     <div :class="$style.content">
-      <h5 :class="$style.subTitle">First</h5>
       <h1 id="bigtitle" :class="$style.mainTitle">
         Fully decentralized AMM based money market protocol
       </h1>
-      <div :class="$style.commingTxt">Coming soon</div>
+      <div :class="$style.commingTxt">POWERED BY ETHEREUM</div>
     </div>
-    <div :class="$style.rightArrow" />
   </section>
 </template>
 
@@ -79,7 +77,7 @@
     }
   }
 
-  .rightArrow{
+  .rightArrow {
     position: absolute;
     background: url('@/assets/images/right-arrow.svg') no-repeat;
     width: 43px;
@@ -88,7 +86,7 @@
     top: 50%;
     transform: translateY(-50%);
     animation: bounce 3s infinite;
-    
+
     @keyframes bounce {
       0%,
       20%,

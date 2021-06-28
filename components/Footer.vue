@@ -30,6 +30,7 @@
           :key="index"
           :class="$style.icons"
           :href="socialIcon.link"
+          target="_blank"
         >
           <img :src="getImgUrl(socialIcon.image)" :alt="socialIcon.image" />
         </a>
@@ -130,7 +131,7 @@ export default {
 
   @include media-breakpoint-down(sm) {
     padding: 24px;
-    padding-bottom: 47px;
+    padding-bottom: 20px;
     width: 100%;
   }
 
@@ -188,7 +189,7 @@ export default {
       &:after {
         content: '';
         position: absolute;
-        background: url('@/assets/images/timer.svg');
+        background: url('@/assets/images/Clock-new.svg');
         width: 100%;
         height: 100%;
         top: 0;

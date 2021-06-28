@@ -16,9 +16,7 @@
           <div
             :class="$style.teamSingle"
             :style="{
-              backgroundImage: `url(${getImgUrl(
-                team.image
-              )})`,
+              backgroundImage: `url(${getImgUrl(team.image)})`,
             }"
           >
             <div :class="$style.imgCaption">
@@ -86,7 +84,8 @@ export default {
           image: 'harshita',
           name: 'Harshita Singh',
           designation: 'Co-Founder',
-          description: 'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
+          description:
+            'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
           socials: [
             {
               link: 'https://twitter.com/Harshita_125',
@@ -118,7 +117,8 @@ export default {
           image: 'dalsukh',
           name: 'Dalsukh Tapaniya',
           designation: 'Design Lead',
-          description: 'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
+          description:
+            'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
           socials: [
             {
               link: 'https://twitter.com/djtapaniya',
@@ -151,8 +151,7 @@ export default {
           image: 'keyur',
           name: 'Keyur Shah',
           designation: 'Finance & Legal',
-          description:
-            'Previously @Polygon (Matic Network)',
+          description: 'Previously @Polygon (Matic Network)',
           socials: [
             {
               link: 'https://twitter.com/keyur12392',
@@ -176,7 +175,87 @@ export default {
             },
             {
               link: '',
-              image: 'github',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'aditya',
+          name: 'Aditya Gupta',
+          designation: 'Smart Contract Devloper',
+          description: '',
+          socials: [
+            {
+              link: '',
+              image: 'twitter',
+            },
+            {
+              link: '',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'antony',
+          name: 'Emmanuel Antony',
+          designation: 'Engineering Intern',
+          description: 'Rust Developer and FOSS Enthusiast anong other things.',
+          socials: [
+            {
+              link: 'https://twitter.com/EmmanuelAntony5',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/emmanuel-antony/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'varun',
+          name: 'Varun Krishna',
+          designation: 'Engineering Intern',
+          description: '',
+          socials: [
+            {
+              link: 'https://twitter.com/_vhawk19_',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/vhawk19/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'satyarth',
+          name: 'Satyarth Kumar',
+          designation: 'Smart Contract Developer Intern',
+          description: '',
+          socials: [
+            {
+              link: 'https://twitter.com/ksatyarth2',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/ksatyarth2/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'jay',
+          name: 'Jay Rank',
+          designation: 'Frontend Intern',
+          description: '',
+          socials: [
+            {
+              link: 'https://twitter.com/RankJay1',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/jay-rank-019909190/',
+              image: 'linkedin',
             },
           ],
         },
@@ -203,19 +282,19 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 1900px !important;
-  max-width: 1900px !important;
+  flex: 0 0 3300px !important;
+  max-width: 3300px !important;
   padding-left: 100px;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 1270px !important;
-    max-width: 1270px !important;
+    flex: 0 0 3200px !important;
+    max-width: 3200px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 1270px !important;
-    max-width: 1270px !important;
+    flex: 0 0 3200px !important;
+    max-width: 3200px !important;
     padding: 80px 50px;
   }
 
@@ -307,7 +386,11 @@ export default {
           .imgCaption {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(180.53deg, rgba(0, 0, 0, 0) 0.45%, #000000 120.37%);
+            background: linear-gradient(
+              180.53deg,
+              rgba(0, 0, 0, 0) 0.45%,
+              #000000 120.37%
+            );
 
             @include media-breakpoint-down(md) {
               padding: 13px;

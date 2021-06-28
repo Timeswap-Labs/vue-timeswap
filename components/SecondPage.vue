@@ -2,7 +2,8 @@
   <section :class="$style.secondPage">
     <div :class="$style.content">
       <h5 :class="$style.mainTitle">
-        Timeswap is the first fully decentralized, oracle-less, non-liquiditable, fixed maturity lending/borrowing protocol.
+        Timeswap is the first fully decentralized, oracle-less,
+        non-liquiditable, fixed maturity lending/borrowing protocol.
       </h5>
       <p :class="$style.paragraph">
         Timeswap aims to revolutionize money markets via its unique 3 variable
@@ -62,13 +63,37 @@
       line-height: 1.5;
       color: $white;
       font-weight: 400;
-      margin-bottom: 16px;
+      margin-bottom: 21px;
     }
 
     .paragraph {
       line-height: 1.5;
       opacity: 0.6;
       color: $white;
+      padding: 10px 15px;
+      position: relative;
+      color: #a0d2eb;
+
+      &:after {
+        content: '';
+        width: 90%;
+        height: 100%;
+        background: linear-gradient(89.83deg, #2f3e51 0.15%, #0e132500 99.85%);
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      &:before {
+        content: '';
+        width: 5px;
+        height: 100%;
+        background: #a0d2eb;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
     }
   }
 
