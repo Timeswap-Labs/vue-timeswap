@@ -28,9 +28,9 @@ export default {
     return {
       products: [
         {
-          title: 'Permissionless Fixed maturity lending & borrowing',
+          title: 'Permissionless fixed maturity lending & borrowing',
           description:
-            'Timeswap allows anyone to do fixed maturity lending & borrowing of any ERC-20 token with any ERC20 token as collateral',
+            'Timeswap allows anyone to do fixed maturity lending & borrowing of any ERC20 token with any other ERC20 token as collateral',
         },
         {
           title: 'Non-Liquidatable Loans',

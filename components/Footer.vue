@@ -1,6 +1,6 @@
 <template>
   <footer :class="$style.footer">
-    <div id="pageTitle" :class="$style.introduction">Introduction</div>
+    <div id="pageTitle" :class="$style.introduction"></div>
     <div :class="$style.progressContainer">
       <div id="myBar" :class="$style.progressBar"></div>
     </div>

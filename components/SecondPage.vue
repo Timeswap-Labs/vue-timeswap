@@ -3,7 +3,7 @@
     <div :class="$style.content">
       <h5 :class="$style.mainTitle">
         Timeswap is the first fully permissionless, oracle-less,
-        non-liquiditable, fixed maturity lending/borrowing protocol.
+        non-liquidatable, fixed maturity lending & borrowing protocol.
       </h5>
       <p :class="$style.paragraph">
         Timeswap aims to revolutionize money markets via its unique 3 variable

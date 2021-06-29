@@ -156,19 +156,20 @@ export default {
         const scrolled = (winScroll / height) * 100
 
         document.getElementById('myBar').style.width = scrolled + '%'
-        if (scrolled > 0 && scrolled < 25) {
-          document.getElementById('pageTitle').innerHTML = 'Introduction'
-        } else if (scrolled > 26 && scrolled < 38) {
-          document.getElementById('pageTitle').innerHTML = 'Our Product'
-        } else if (scrolled > 42 && scrolled < 61) {
-          document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
-        } else if (scrolled > 62 && scrolled < 77) {
-          document.getElementById('pageTitle').innerHTML = 'Time Token'
-        } else if (scrolled > 79 && scrolled < 93) {
-          document.getElementById('pageTitle').innerHTML = 'Our Team'
-        } else if (scrolled > 94 && scrolled < 110) {
-          document.getElementById('pageTitle').innerHTML = 'Advisor'
-        }
+        document.getElementById('pageTitle').innerHTML = ''
+        // if (scrolled > 0 && scrolled < 25) {
+        //   document.getElementById('pageTitle').innerHTML = 'Introduction'
+        // } else if (scrolled > 26 && scrolled < 38) {
+        //   document.getElementById('pageTitle').innerHTML = 'Our Product'
+        // } else if (scrolled > 42 && scrolled < 61) {
+        //   document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
+        // } else if (scrolled > 62 && scrolled < 77) {
+        //   document.getElementById('pageTitle').innerHTML = 'Time Token'
+        // } else if (scrolled > 79 && scrolled < 93) {
+        //   document.getElementById('pageTitle').innerHTML = 'Our Team'
+        // } else if (scrolled > 94 && scrolled < 110) {
+        //   document.getElementById('pageTitle').innerHTML = 'Advisor'
+        // }
       }
 
       function circleProgressBar() {
