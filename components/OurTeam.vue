@@ -3,9 +3,9 @@
     <div :class="$style.content">
       <h2 :class="$style.mainTitle">Our Team</h2>
       <p :class="$style.mainDescription">
-        Want to work with some of the best global talent and build a tool used
-        by all the companies you know and love? Join the Timeswap team and help
-        shape the future of Defi.
+        Our mission is to build the most capital efficient, secure &
+        permissionless money market protocol on web 3.0. Come join the Timeswap
+        team and help shape the future of DeFi
       </p>
       <div :class="$style.teamList">
         <div
@@ -85,7 +85,7 @@ export default {
           name: 'Harshita Singh',
           designation: 'Co-Founder',
           description:
-            'Previously Head of Supply Budgeting and Plannning Private Labels @Walmart-India',
+            'Previously Head of Supply Budgeting and Planning Private Labels @Walmart-India',
           socials: [
             {
               link: 'https://twitter.com/Harshita_125',
@@ -135,7 +135,7 @@ export default {
           name: 'Anupama Singh',
           designation: 'Operations Lead',
           description:
-            'Previously worked as an Assistant Professor of Engineering (PES University, JIMSEMTC IPU, Galgotia’s Group)',
+            'Previously worked as an Assistant Professor of Engineering',
           socials: [
             {
               link: 'https://twitter.com/Anupama77220271',
@@ -151,7 +151,7 @@ export default {
           image: 'keyur',
           name: 'Keyur Shah',
           designation: 'Finance & Legal',
-          description: 'Previously @Polygon (Matic Network)',
+          description: 'Previously VP-Finance & Treasury @Polygon',
           socials: [
             {
               link: 'https://twitter.com/keyur12392',
@@ -182,11 +182,11 @@ export default {
         {
           image: 'aditya',
           name: 'Aditya Gupta',
-          designation: 'Smart Contract Devloper',
-          description: '',
+          designation: 'Smart Contract Developer',
+          description: 'Previously Founder @HopOn, Blockchain Lead @ MSRIT',
           socials: [
             {
-              link: '',
+              link: 'https://twitter.com/thesoberguy13',
               image: 'twitter',
             },
             {
@@ -199,7 +199,7 @@ export default {
           image: 'antony',
           name: 'Emmanuel Antony',
           designation: 'Engineering Intern',
-          description: 'Rust Developer and FOSS Enthusiast anong other things.',
+          description: 'Rust Developer and FOSS Enthusiast',
           socials: [
             {
               link: 'https://twitter.com/EmmanuelAntony5',
@@ -230,7 +230,7 @@ export default {
         {
           image: 'satyarth',
           name: 'Satyarth Kumar',
-          designation: 'Smart Contract Developer Intern',
+          designation: 'Engineering Intern',
           description: '',
           socials: [
             {
@@ -246,7 +246,7 @@ export default {
         {
           image: 'jay',
           name: 'Jay Rank',
-          designation: 'Frontend Intern',
+          designation: 'Engineering Intern',
           description: '',
           socials: [
             {
