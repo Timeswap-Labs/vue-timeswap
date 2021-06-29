@@ -31,11 +31,8 @@
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 20px 20px 0;
-  }
-
-  @include media-breakpoint-down(xs) {
-    padding: 20px 15px 0;
+    padding: 20px 15px;
+    background: #101527;
   }
 
   .logo {

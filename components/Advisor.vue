@@ -25,6 +25,24 @@
           </div>
         </div>
       </div> -->
+      <div :class="$style.securityContent">
+        <h2 :class="$style.mainTitle">Security</h2>
+        <div :class="$style.securityBlockWrap">
+          <div :class="$style.securityBlock">
+            <h4 :class="$style.securityTitle">
+              Timeswap contracts have been audited by
+            </h4>
+            <div :class="$style.btnGrp">
+              <div :class="$style.btn">
+                <img src="@/assets/images/peakshield.svg" alt />
+              </div>
+              <div :class="$style.btn">
+                <img src="@/assets/images/quentstep.svg" alt />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div :class="[$style.advisorForm, 'animateMe zoomIn']">
         <div :class="$style.formInfo">
           <div :class="$style.logo">
@@ -128,18 +146,18 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 600px !important;
-  max-width: 600px !important;
+  flex: 0 0 1400px !important;
+  max-width: 1400px !important;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 0 600px !important;
-    max-width: 600px !important;
+    flex: 0 0 1400px !important;
+    max-width: 1400px !important;
     padding-left: 100px;
   }
 
   @include media-breakpoint-down(md) {
-    flex: 0 0 600px !important;
-    max-width: 600px !important;
+    flex: 0 0 1400px !important;
+    max-width: 1400px !important;
     padding: 80px 50px;
     padding-right: 0;
   }
@@ -156,7 +174,7 @@ export default {
 
   .advisorRow {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
 
     @include media-breakpoint-down(sm) {
@@ -397,6 +415,105 @@ export default {
             border: 0;
             &:focus {
               box-shadow: 0 0 0 2px #007bff40;
+            }
+          }
+        }
+      }
+    }
+
+    .securityContent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 20px;
+      }
+
+      .mainTitle {
+        font-family: $hk_bold;
+        line-height: 1.2;
+        color: $white;
+        margin-bottom: 0;
+        justify-self: flex-start;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .securityBlockWrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 40px;
+        }
+
+        .securityBlock {
+          max-width: 735px;
+          width: 100%;
+          background: #191d3a;
+          border-radius: 8px;
+          padding: 40px;
+          position: relative;
+
+          @include media-breakpoint-down(sm) {
+            padding: 20px;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 171px;
+            height: 100%;
+            background: url('@/assets/images/security.svg');
+            background-size: cover;
+            z-index: 0;
+
+            @include media-breakpoint-down(sm) {
+              width: 120px;
+            }
+
+            @include media-breakpoint-down(xs) {
+              width: 71px;
+            }
+          }
+
+          .securityTitle {
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            margin-bottom: 18px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+          }
+
+          .btnGrp {
+            display: flex;
+            position: relative;
+            z-index: 1;
+
+            .btn {
+              display: flex;
+              align-items: center;
+              justify-self: center;
+              margin-right: 30px;
+
+              @include media-breakpoint-down(sm) {
+                max-width: 200px;
+                margin-right: 15px;
+              }
+
+              img {
+                display: block;
+                max-width: 100%;
+              }
             }
           }
         }

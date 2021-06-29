@@ -2,7 +2,7 @@
   <section :class="$style.secondPage">
     <div :class="$style.content">
       <h5 :class="$style.mainTitle">
-        Timeswap is the first fully decentralized, oracle-less,
+        Timeswap is the first fully permissionless, oracle-less,
         non-liquiditable, fixed maturity lending/borrowing protocol.
       </h5>
       <p :class="$style.paragraph">
@@ -68,7 +68,6 @@
 
     .paragraph {
       line-height: 1.5;
-      opacity: 0.6;
       color: $white;
       padding: 10px 15px;
       position: relative;

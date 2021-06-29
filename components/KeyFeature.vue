@@ -34,7 +34,7 @@ export default {
           image: 'key-icon-1',
           title: 'Flexible interest rate & collateral factors',
           description:
-            'Users have the flexibility to decide their risk-return profile by selecting custom Interest rates and collateral factors based on prevailing market conditions for greater capital efficiency',
+            'Users have the flexibility to decide their risk-return profile by selecting custom interest rates and collateral factors based on prevailing market conditions for greater capital efficiency',
         },
         {
           image: 'key-icon-4',

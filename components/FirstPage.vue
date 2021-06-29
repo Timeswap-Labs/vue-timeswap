@@ -2,9 +2,11 @@
   <section :class="$style.firstPage">
     <div :class="$style.content">
       <h1 id="bigtitle" :class="$style.mainTitle">
-        Fully decentralized AMM based money market protocol
+        First fully decentralized AMM based money market protocol
       </h1>
-      <div :class="$style.commingTxt">POWERED BY ETHEREUM</div>
+      <div :class="$style.commingTxt">
+        Powered by <img src="@/assets/images/etharium.svg" alt />
+      </div>
     </div>
   </section>
 </template>
@@ -172,8 +174,17 @@
 
     .commingTxt {
       color: $white;
-      opacity: 0.6;
-      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.5);
+
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+      }
+
+      img {
+        margin-left: 10px;
+      }
     }
   }
 }
