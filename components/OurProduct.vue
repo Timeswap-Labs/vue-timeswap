@@ -33,7 +33,7 @@ export default {
             'Timeswap allows anyone to do fixed maturity lending & borrowing of any ERC-20 token with any ERC20 token as collateral',
         },
         {
-          title: 'Non-Liquiditable Loans',
+          title: 'Non-Liquidatable Loans',
           description:
             'Timeswap takes away complexity for borrowers to constantly manage their health factors. No more liquidation penalty & dependency on liquidators',
         },
