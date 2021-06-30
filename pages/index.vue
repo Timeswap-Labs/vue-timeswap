@@ -157,19 +157,19 @@ export default {
 
         document.getElementById('myBar').style.width = scrolled + '%'
         document.getElementById('pageTitle').innerHTML = ''
-        // if (scrolled > 0 && scrolled < 25) {
-        //   document.getElementById('pageTitle').innerHTML = 'Introduction'
-        // } else if (scrolled > 26 && scrolled < 38) {
-        //   document.getElementById('pageTitle').innerHTML = 'Our Product'
-        // } else if (scrolled > 42 && scrolled < 61) {
-        //   document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
-        // } else if (scrolled > 62 && scrolled < 77) {
-        //   document.getElementById('pageTitle').innerHTML = 'Time Token'
-        // } else if (scrolled > 79 && scrolled < 93) {
-        //   document.getElementById('pageTitle').innerHTML = 'Our Team'
-        // } else if (scrolled > 94 && scrolled < 110) {
-        //   document.getElementById('pageTitle').innerHTML = 'Advisor'
-        // }
+        if (scrolled > 0 && scrolled < 25) {
+          document.getElementById('pageTitle').innerHTML = 'Introduction'
+        } else if (scrolled > 26 && scrolled < 41) {
+          document.getElementById('pageTitle').innerHTML = 'Our Offerings'
+        } else if (scrolled > 42 && scrolled < 56) {
+          document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
+        } else if (scrolled > 57 && scrolled < 70) {
+          document.getElementById('pageTitle').innerHTML = 'Time Token'
+        } else if (scrolled > 71 && scrolled < 95) {
+          document.getElementById('pageTitle').innerHTML = 'Our Team'
+        } else if (scrolled > 96 && scrolled < 110) {
+          document.getElementById('pageTitle').innerHTML = 'Security'
+        }
       }
 
       function circleProgressBar() {

@@ -1,6 +1,6 @@
 <template>
   <footer :class="$style.footer">
-    <div id="pageTitle" :class="$style.introduction"></div>
+    <div id="pageTitle" :class="$style.introduction">Introduction</div>
     <div :class="$style.progressContainer">
       <div id="myBar" :class="$style.progressBar"></div>
     </div>
@@ -82,7 +82,7 @@ export default {
         },
         {
           image: 'ftr-four-icon',
-          link: 'https://discord.gg/VwZS8BVs',
+          link: 'https://discord.com/invite/CGwfqkh6FV',
         },
         {
           image: 'ftr-five-icon',

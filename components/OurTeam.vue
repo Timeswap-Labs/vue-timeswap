@@ -380,7 +380,7 @@ export default {
           }
 
           @include media-breakpoint-down(xs) {
-            height: 207px;
+            height: 270px;
           }
 
           .imgCaption {
@@ -463,6 +463,10 @@ export default {
                 @include media-breakpoint-down(md) {
                   font-size: 15px;
                 }
+
+                @include media-breakpoint-down(sm) {
+                  font-size: 13px;
+                }
               }
 
               .designation {
@@ -474,12 +478,22 @@ export default {
                 @include media-breakpoint-down(md) {
                   font-size: 15px;
                 }
+
+                @include media-breakpoint-down(sm) {
+                  font-size: 12px;
+                  margin-bottom: 8px;
+                }
               }
 
               .teamContent {
                 font-size: 14px;
                 color: $gray-900;
                 margin: 0;
+
+                @include media-breakpoint-down(sm) {
+                  font-size: 13px;
+                  line-height: 1.4;
+                }
               }
             }
 
