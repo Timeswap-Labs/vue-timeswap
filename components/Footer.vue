@@ -37,7 +37,6 @@
       </div>
     </div>
     <div :class="$style.copyRight">
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
@@ -49,9 +48,9 @@
           </a>
         </li>
       </ul>
+      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
     </div>
     <div :class="$style.mobileTerms">
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
@@ -63,6 +62,7 @@
           </a>
         </li>
       </ul>
+      <p :class="$style.copyrightTxt">Copyright © 2021 Timeswap.</p>
     </div>
   </footer>
 </template>
@@ -90,6 +90,10 @@ export default {
         },
       ],
       copyrights: [
+        {
+          link: 'https://app.gitbook.com/invite/timeswap?invite=-MIPYc1izEheF8tPQjun',
+          name: 'Docs',
+        },
         {
           link: '/terms',
           name: 'Terms of service',
@@ -336,6 +340,22 @@ export default {
       color: $white;
       opacity: 0.8;
       line-height: 17px;
+      padding-left: 15px;
+      margin-left: 10px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.8;
+        left: 0;
+        top: 7px;
+        position: absolute;
+        display: block;
+      }
     }
 
     .privacyMenu {
