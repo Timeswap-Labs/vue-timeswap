@@ -198,7 +198,7 @@ export default {
         {
           image: 'antony',
           name: 'Emmanuel Antony',
-          designation: 'Engineering Intern',
+          designation: 'Smart Contract Developer',
           description: 'Rust Developer and FOSS Enthusiast',
           socials: [
             {
@@ -214,7 +214,7 @@ export default {
         {
           image: 'varun',
           name: 'Varun Krishna',
-          designation: 'Engineering Intern',
+          designation: 'Smart Contract Developer',
           description: '',
           socials: [
             {
@@ -239,22 +239,6 @@ export default {
             },
             {
               link: 'https://www.linkedin.com/in/ksatyarth2/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
-          image: 'jay',
-          name: 'Jay Rank',
-          designation: 'Engineering Intern',
-          description: '',
-          socials: [
-            {
-              link: 'https://twitter.com/RankJay1',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/jay-rank-019909190/',
               image: 'linkedin',
             },
           ],

@@ -91,7 +91,7 @@ export default {
       ],
       copyrights: [
         {
-          link: 'https://app.gitbook.com/invite/timeswap?invite=-MIPYc1izEheF8tPQjun',
+          link: 'https://timeswap.gitbook.io/timeswap/',
           name: 'Docs',
         },
         {
