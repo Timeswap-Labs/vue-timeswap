@@ -17,7 +17,9 @@
 
       <OurTeam :class="$style.section" />
 
-      <Advisor :class="$style.section" />
+      <Investor :class="$style.section" />
+
+      <Media :class="$style.section" />
     </main>
 
     <Footer />
@@ -31,7 +33,8 @@ import OurProduct from '@/components/OurProduct.vue'
 import KeyFeature from '@/components/KeyFeature.vue'
 import TimeToken from '@/components/TimeToken.vue'
 import OurTeam from '@/components/OurTeam.vue'
-import Advisor from '@/components/Advisor.vue'
+import Investor from '@/components/Investor.vue'
+import Media from '@/components/Media.vue'
 
 export default {
   components: {
@@ -41,7 +44,8 @@ export default {
     KeyFeature,
     TimeToken,
     OurTeam,
-    Advisor,
+    Investor,
+    Media,
   },
 
   mounted() {
