@@ -124,7 +124,7 @@ export default {
           person: 'calvin',
           link: 'https://twitter.com/cjliu49',
           name: 'Calvin Liu',
-          designation: 'Strategy Lead, Compound Finance',
+          designation: 'Strategy Lead, Compound Labs',
         },
         {
           person: 'george',
@@ -136,7 +136,7 @@ export default {
           person: 'vaibhav',
           link: 'https://twitter.com/vasa_develop',
           name: 'Vaibhav',
-          designation: 'CEO, Genie',
+          designation: 'Founder, Genie',
         },
         {
           person: 'sina',
@@ -195,7 +195,7 @@ export default {
       return require(`../assets/images/${person}.png`)
     },
     getIconUrl(image) {
-      return require(`../assets/images/${image}.svg`)
+      return require(`../assets/images/${image}.png`)
     },
   },
 }
@@ -257,7 +257,7 @@ export default {
         font-family: $hk_bold;
         line-height: 1.2;
         color: $white;
-        margin-bottom: 90px;
+        margin-bottom: 60px;
 
         @include media-breakpoint-down(md) {
           margin-bottom: 40px;
@@ -279,7 +279,7 @@ export default {
 
         .investorSingle {
           width: 100%;
-          margin-bottom: 65px;
+          margin-bottom: 55px;
 
           @include media-breakpoint-down(sm) {
             max-width: 250px;
@@ -288,6 +288,7 @@ export default {
           img {
             max-width: 100%;
             display: block;
+            max-height: 70px;
           }
         }
       }
@@ -315,7 +316,7 @@ export default {
           max-width: 245px;
           width: 100%;
           margin-right: 32px;
-          margin-bottom: 32px;
+          margin-bottom: 24px;
           display: flex;
           align-items: center;
 

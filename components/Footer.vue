@@ -48,7 +48,7 @@
           </a>
         </li>
       </ul>
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <p :class="$style.copyrightTxt">Copyright © 2021 Timeswap.</p>
     </div>
     <div :class="$style.mobileTerms">
       <ul :class="$style.privacyMenu">

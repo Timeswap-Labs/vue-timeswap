@@ -22,7 +22,10 @@
             }"
           >
             <div :class="$style.imgCaption">
-              <h4 :class="$style.name">{{ team.name }}</h4>
+              <div :class="$style.nameWrap">
+                <h4 :class="$style.name">{{ team.name }}</h4>
+                <h4 :class="$style.name">{{ team.lname }}</h4>
+              </div>
               <p :class="$style.designation">{{ team.designation }}</p>
             </div>
             <div :class="$style.teamDetails">
@@ -67,7 +70,10 @@
               }"
             >
               <div :class="$style.imgCaption">
-                <h4 :class="$style.name">{{ advisor.name }}</h4>
+                <div :class="$style.nameWrap">
+                  <h4 :class="$style.name">{{ advisor.name }}</h4>
+                  <h4 :class="$style.name">{{ advisor.lname }}</h4>
+                </div>
                 <p :class="$style.designation">{{ advisor.designation }}</p>
               </div>
             </div>
@@ -85,7 +91,8 @@ export default {
       teams: [
         {
           image: 'ricsson',
-          name: 'Ricsson Ngo',
+          name: 'Ricsson',
+          lname: 'Ngo',
           designation: 'Founder',
           description:
             'Previously founder @Einstar. Master in Financial Mathematics from Ateneo de Manila University.',
@@ -102,7 +109,8 @@ export default {
         },
         {
           image: 'harshita',
-          name: 'Harshita Singh',
+          name: 'Harshita',
+          lname: 'Singh',
           designation: 'Co-Founder',
           description:
             'Previously Head of Supply Budgeting and Planning Private Labels @Walmart-India',
@@ -119,7 +127,8 @@ export default {
         },
         {
           image: 'ameeth',
-          name: 'Ameeth Devadas',
+          name: 'Ameeth',
+          lname: 'Devadas',
           designation: 'Co-Founder',
           description: 'Previously Head of Product & Technology @Aurigin',
           socials: [
@@ -135,7 +144,8 @@ export default {
         },
         {
           image: 'dalsukh',
-          name: 'Dalsukh Tapaniya',
+          name: 'Dalsukh',
+          lname: 'Tapaniya',
           designation: 'Design Lead',
           description:
             'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
@@ -152,7 +162,8 @@ export default {
         },
         {
           image: 'anupama',
-          name: 'Anupama Singh',
+          name: 'Anupama',
+          lname: 'Singh',
           designation: 'Operations Lead',
           description:
             'Previously worked as an Assistant Professor of Engineering',
@@ -169,7 +180,8 @@ export default {
         },
         {
           image: 'keyur',
-          name: 'Keyur Shah',
+          name: 'Keyur',
+          lname: 'Shah',
           designation: 'Finance & Legal',
           description: 'Previously VP-Finance & Treasury @Polygon',
           socials: [
@@ -185,7 +197,8 @@ export default {
         },
         {
           image: 'shruthi',
-          name: 'Shruthi G',
+          name: 'Shruthi',
+          lname: 'G',
           designation: 'Content Lead',
           description: '',
           socials: [
@@ -201,7 +214,8 @@ export default {
         },
         {
           image: 'aditya',
-          name: 'Aditya Gupta',
+          name: 'Aditya',
+          lname: 'Gupta',
           designation: 'Smart Contract Developer',
           description: 'Previously Founder @HopOn, Blockchain Lead @ MSRIT',
           socials: [
@@ -217,7 +231,8 @@ export default {
         },
         {
           image: 'antony',
-          name: 'Emmanuel Antony',
+          name: 'Emmanuel',
+          lname: 'Antony',
           designation: 'Smart Contract Developer',
           description: 'Rust Developer and FOSS Enthusiast',
           socials: [
@@ -233,7 +248,8 @@ export default {
         },
         {
           image: 'varun',
-          name: 'Varun Krishna',
+          name: 'Varun',
+          lname: 'Krishna',
           designation: 'Smart Contract Developer',
           description: '',
           socials: [
@@ -249,7 +265,8 @@ export default {
         },
         {
           image: 'satyarth',
-          name: 'Satyarth Kumar',
+          name: 'Satyarth',
+          lname: 'Kumar',
           designation: 'Engineering Intern',
           description: '',
           socials: [
@@ -265,7 +282,8 @@ export default {
         },
         {
           image: 'manvinder',
-          name: 'Manvinder Arora',
+          name: 'Manvinder',
+          lname: 'Arora',
           designation: 'Intern - Community Manager',
           description: 'Reader I Writer I Thinker',
           socials: [
@@ -281,7 +299,8 @@ export default {
         },
         {
           image: 'sounak',
-          name: 'Sounak Roy',
+          name: 'Sounak',
+          lname: 'Roy',
           designation: 'Intern - Community Manager',
           description: 'Working at the intersection of law and technology.',
           socials: [
@@ -293,8 +312,9 @@ export default {
         },
         {
           image: 'paarug',
-          name: 'Paarug Sethi',
-          designation: 'Community',
+          name: 'Paarug',
+          lname: 'Sethi',
+          designation: 'Intern - Community Manager',
           description: 'A curiosity-driven multitasker',
           socials: [
             {
@@ -311,15 +331,17 @@ export default {
       advisors: [
         {
           image: 'sandeep',
-          name: 'Sandeep Nailwal',
+          name: 'Sandeep',
+          lname: 'Nailwal',
           designation: 'Co-founder, Polygon',
-          link: 'https://twitter.com/Mathepreneur',
+          link: 'https://twitter.com/sandeepnailwal',
         },
         {
           image: 'jaynti',
-          name: 'Jaynti Kanani',
+          name: 'Jaynti',
+          lname: 'Kanani',
           designation: 'Co-founder, Polygon',
-          link: 'https://twitter.com/Mathepreneur',
+          link: 'https://twitter.com/_jdkanani',
         },
       ],
     }
@@ -381,9 +403,11 @@ export default {
       justify-content: start;
       grid-gap: 24px;
       margin-right: 250px;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(3, 140px);
 
       @include media-breakpoint-down(sm) {
-        width: 100%;
+        width: calc(100% + 16px);
         display: flex;
         flex-wrap: wrap;
         margin: 0 -8px;
@@ -457,17 +481,25 @@ export default {
               padding: 15px;
             }
 
-            .name {
-              font-size: 16px;
-              font-family: $hk_bold;
-              line-height: 1.3;
-              color: $white;
-              padding-right: 14px;
-              margin-bottom: 8px;
+            .nameWrap {
+              margin-bottom: 10px;
 
               @include media-breakpoint-down(xs) {
-                font-size: 14px;
                 margin-bottom: 1px;
+              }
+
+              .name {
+                font-size: 16px;
+                font-family: $hk_bold;
+                line-height: 1.3;
+                color: $white;
+                padding-right: 14px;
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(xs) {
+                  font-size: 14px;
+                  margin-bottom: 1px;
+                }
               }
             }
 
@@ -562,7 +594,7 @@ export default {
     }
 
     .advisorList {
-      max-width: 250px;
+      max-width: 314px;
       width: 100%;
 
       @include media-breakpoint-down(sm) {
@@ -591,7 +623,7 @@ export default {
         }
 
         .teamWrap {
-          max-width: 250px;
+          max-width: 314px;
           width: 100%;
           margin-bottom: 20px;
           display: inline-block;
@@ -608,39 +640,48 @@ export default {
             overflow: hidden;
             display: flex;
             align-items: center;
-            height: 140px;
+            height: 175px;
             background-size: cover;
             width: 100%;
             background-position: center;
+
+            @include media-breakpoint-down(sm) {
+              height: 140px;
+            }
 
             .imgCaption {
               width: 100%;
               padding: 16px 25px;
               max-width: 70%;
 
-              @include media-breakpoint-down(md) {
-                padding: 13px;
+              @include media-breakpoint-down(sm) {
+                padding: 15px;
               }
 
-              .name {
-                font-size: 16px;
-                font-family: $hk_bold;
-                line-height: 1.3;
-                color: $white;
-                padding-right: 14px;
-                margin-bottom: 8px;
-
-                @include media-breakpoint-down(md) {
-                  font-size: 15px;
-                  margin-bottom: 6px;
-                }
+              .nameWrap {
+                margin-bottom: 10px;
 
                 @include media-breakpoint-down(xs) {
-                  font-size: 13px;
                   margin-bottom: 1px;
                 }
-              }
 
+                .name {
+                  font-size: 16px;
+                  font-family: $hk_bold;
+                  line-height: 1.3;
+                  color: $white;
+                  padding-right: 14px;
+                  margin-bottom: 0;
+
+                  @include media-breakpoint-down(md) {
+                    font-size: 15px;
+                  }
+
+                  @include media-breakpoint-down(xs) {
+                    font-size: 13px;
+                  }
+                }
+              }
               .designation {
                 font-size: 14px;
                 line-height: 1.5;
