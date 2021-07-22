@@ -74,7 +74,7 @@
                   <h4 :class="$style.name">{{ advisor.name }}</h4>
                   <h4 :class="$style.name">{{ advisor.lname }}</h4>
                 </div>
-                <p :class="$style.designation">{{ advisor.designation }}</p>
+                <p v-html="advisor.designation" :class="$style.designation" />
               </div>
             </div>
           </a>
@@ -333,7 +333,7 @@ export default {
           image: 'sandeep',
           name: 'Sandeep',
           lname: 'Nailwal',
-          designation: 'Co-founder, Polygon',
+          designation: 'Founding Advisor<br/>Co-founder, Polygon',
           link: 'https://twitter.com/sandeepnailwal',
         },
         {
@@ -366,9 +366,9 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2500px !important;
-  max-width: 2500px !important;
-  padding-left: 100px;
+  flex: 0 0 2850px !important;
+  max-width: 2850px !important;
+  padding-left: 200px;
 
   @include media-breakpoint-down(lg) {
     padding-left: 100px;

@@ -160,18 +160,18 @@ export default {
         const scrolled = (winScroll / height) * 100
 
         document.getElementById('myBar').style.width = scrolled + '%'
-        document.getElementById('pageTitle').innerHTML = ''
-        if (scrolled > 0 && scrolled < 24) {
+        // document.getElementById('pageTitle').innerHTML = ''
+        if (scrolled > 0 && scrolled < 17) {
           document.getElementById('pageTitle').innerHTML = 'Introduction'
-        } else if (scrolled > 25 && scrolled < 37) {
+        } else if (scrolled > 18 && scrolled < 30) {
           document.getElementById('pageTitle').innerHTML = 'Our Offerings'
-        } else if (scrolled > 38 && scrolled < 48) {
-          document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
-        } else if (scrolled > 49 && scrolled < 58) {
+        } else if (scrolled > 31 && scrolled < 42) {
+          document.getElementById('pageTitle').innerHTML = 'Key Features'
+        } else if (scrolled > 43 && scrolled < 53) {
           document.getElementById('pageTitle').innerHTML = 'Time Token'
-        } else if (scrolled > 59 && scrolled < 80) {
+        } else if (scrolled > 54 && scrolled < 77) {
           document.getElementById('pageTitle').innerHTML = 'Our Team'
-        } else if (scrolled > 81 && scrolled < 98) {
+        } else if (scrolled > 78 && scrolled < 98) {
           document.getElementById('pageTitle').innerHTML = 'Investors'
         } else if (scrolled > 99 && scrolled < 120) {
           document.getElementById('pageTitle').innerHTML = 'Security'
