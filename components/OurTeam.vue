@@ -418,7 +418,7 @@ export default {
 
       .teamHeading {
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 4;
 
         @include media-breakpoint-down(sm) {
           width: 100%;
@@ -461,6 +461,24 @@ export default {
           max-width: 266px;
         }
 
+        // Founder Cards
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          grid-row-start: 2;
+          grid-row-end: 4;
+
+          .teamSingle {
+            height: 304px !important;
+            max-width: auto !important;
+            align-items: flex-end !important;
+
+            &.teamContent {
+              font-size: 16px !important;
+            }
+          }
+        }
+
         .teamSingle {
           border-radius: 10px;
           position: relative;
@@ -469,7 +487,7 @@ export default {
           align-items: center;
           height: 140px;
           background-size: cover;
-          width: 100%;
+          width: 250px;
           background-position: center;
 
           .imgCaption {
