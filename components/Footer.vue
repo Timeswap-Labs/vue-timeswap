@@ -37,7 +37,9 @@
       </div>
     </div>
     <div :class="$style.copyRight">
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
@@ -51,7 +53,9 @@
       </ul>
     </div>
     <div :class="$style.mobileTerms">
-      <p :class="$style.copyrightTxt">Copyright © 2020 Timeswap.</p>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
@@ -82,7 +86,7 @@ export default {
         },
         {
           image: 'ftr-four-icon',
-          link: 'https://discord.gg/VwZS8BVs',
+          link: 'https://discord.com/invite/CGwfqkh6FV',
         },
         {
           image: 'ftr-five-icon',
@@ -101,6 +105,10 @@ export default {
   methods: {
     getImgUrl(icon) {
       return require(`@/assets/images/icons/${icon}.svg`)
+    },
+
+    getCurrentYear() {
+      return new Date().getFullYear()
     },
   },
 }

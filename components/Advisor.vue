@@ -120,7 +120,7 @@ export default {
         },
         {
           image: 'discordr',
-          link: 'https://discord.gg/VwZS8BVs',
+          link: 'https://discord.com/invite/CGwfqkh6FV',
           name: 'Discord',
         },
       ],
