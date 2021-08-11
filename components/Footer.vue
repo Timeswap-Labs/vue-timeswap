@@ -82,7 +82,7 @@ export default {
         },
         {
           image: 'ftr-four-icon',
-          link: 'https://discord.gg/VwZS8BVs',
+          link: 'https://discord.com/invite/CGwfqkh6FV',
         },
         {
           image: 'ftr-five-icon',
