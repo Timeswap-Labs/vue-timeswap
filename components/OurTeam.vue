@@ -301,7 +301,7 @@ export default {
           image: 'manvinder',
           name: 'Manvinder',
           lname: 'Arora',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'Reader I Writer I Thinker',
           socials: [
             {
@@ -318,7 +318,7 @@ export default {
           image: 'sounak',
           name: 'Sounak',
           lname: 'Roy',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'Working at the intersection of law and technology.',
           socials: [
             {
@@ -331,7 +331,7 @@ export default {
           image: 'paarug',
           name: 'Paarug',
           lname: 'Sethi',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'A curiosity-driven multitasker',
           socials: [
             {
