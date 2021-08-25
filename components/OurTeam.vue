@@ -344,6 +344,23 @@ export default {
             },
           ],
         },
+        {
+          image: 'salman',
+          name: 'Salman',
+          lname: 'Ahmad',
+          designation: 'Intern - Community Manager',
+          description: '',
+          socials: [
+            {
+              link: 'https://mobile.twitter.com/OffScriptCrypto',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/salman-ahmad-100107151',
+              image: 'linkedin',
+            },
+          ],
+        },
       ],
       advisors: [
         {
@@ -382,8 +399,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2400px !important;
-  max-width: 2400px !important;
+  flex: 0 0 2600px !important;
+  max-width: 2600px !important;
   padding-left: 200px;
   @include media-breakpoint-down(lg) {
     padding-left: 100px;
