@@ -143,6 +143,24 @@ export default {
           ],
         },
         {
+          image: 'anupama',
+          name: 'Anupama',
+          lname: 'Singh',
+          designation: 'Operations Lead',
+          description:
+            'Previously worked as an Assistant Professor of Engineering',
+          socials: [
+            {
+              link: 'https://twitter.com/Anupama77220271',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
           image: 'dalsukh',
           name: 'Dalsukh',
           lname: 'Tapaniya',
@@ -161,19 +179,18 @@ export default {
           ],
         },
         {
-          image: 'anupama',
-          name: 'Anupama',
-          lname: 'Singh',
-          designation: 'Operations Lead',
-          description:
-            'Previously worked as an Assistant Professor of Engineering',
+          image: 'dipesh',
+          name: 'Dipesh',
+          lname: 'Sukhani',
+          designation: 'Senior Smart Contract Engineer',
+          description: '',
           socials: [
             {
-              link: 'https://twitter.com/Anupama77220271',
+              link: 'https://twitter.com/dipeshsukhani',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              link: 'https://www.linkedin.com/in/dipeshsukhani/',
               image: 'linkedin',
             },
           ],
@@ -196,23 +213,6 @@ export default {
           ],
         },
         {
-          image: 'shruthi',
-          name: 'Shruthi',
-          lname: 'G',
-          designation: 'Content Lead',
-          description: '',
-          socials: [
-            {
-              link: '',
-              image: 'twitter',
-            },
-            {
-              link: '',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'sharath',
           name: 'Sharath',
           lname: 'Nair',
@@ -225,6 +225,23 @@ export default {
             },
             {
               link: 'https://www.linkedin.com/in/sharath-nair-here/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'shruthi',
+          name: 'Shruthi',
+          lname: 'G',
+          designation: 'Content Lead',
+          description: '',
+          socials: [
+            {
+              link: '',
+              image: 'twitter',
+            },
+            {
+              link: '',
               image: 'linkedin',
             },
           ],
@@ -315,19 +332,6 @@ export default {
           ],
         },
         {
-          image: 'sounak',
-          name: 'Sounak',
-          lname: 'Roy',
-          designation: 'Community Manager',
-          description: 'Working at the intersection of law and technology.',
-          socials: [
-            {
-              link: 'https://twitter.com/AncapSansad',
-              image: 'twitter',
-            },
-          ],
-        },
-        {
           image: 'paarug',
           name: 'Paarug',
           lname: 'Sethi',
@@ -345,18 +349,31 @@ export default {
           ],
         },
         {
-          image: 'salman',
-          name: 'Salman',
-          lname: 'Ahmad',
-          designation: 'Intern - Community Manager',
-          description: '',
+          image: 'sounak',
+          name: 'Sounak',
+          lname: 'Roy',
+          designation: 'Community Manager',
+          description: 'Working at the intersection of law and technology.',
           socials: [
             {
-              link: 'https://mobile.twitter.com/OffScriptCrypto',
+              link: 'https://twitter.com/AncapSansad',
+              image: 'twitter',
+            },
+          ],
+        },
+        {
+          image: 'tanishq',
+          name: 'Tanishq',
+          lname: 'Singh',
+          designation: 'Creative Designer',
+          description: 'Living between art',
+          socials: [
+            {
+              link: 'https://twitter.com/PerryBerry1325',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/salman-ahmad-100107151',
+              link: '',
               image: 'linkedin',
             },
           ],
