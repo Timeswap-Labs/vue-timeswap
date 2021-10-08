@@ -230,23 +230,6 @@ export default {
           ],
         },
         {
-          image: 'shruthi',
-          name: 'Shruthi',
-          lname: 'G',
-          designation: 'Content Lead',
-          description: '',
-          socials: [
-            {
-              link: '',
-              image: 'twitter',
-            },
-            {
-              link: '',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'aditya',
           name: 'Aditya',
           lname: 'Gupta',
