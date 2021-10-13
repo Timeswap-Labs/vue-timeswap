@@ -24,10 +24,13 @@
             </h4>
             <div :class="$style.btnGrp">
               <div :class="$style.btn">
-                <img src="@/assets/images/peakshield.svg" alt />
+                <img src="@/assets/images/peckshield.svg" alt />
               </div>
               <div :class="$style.btn">
-                <img src="@/assets/images/quentstep.svg" alt />
+                <img src="@/assets/images/quantstamp.svg" alt />
+              </div>
+              <div :class="$style.btn">
+                <img src="@/assets/images/trailofbits.svg" alt />
               </div>
             </div>
           </div>
@@ -151,8 +154,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 1450px !important;
-  max-width: 1450px !important;
+  flex: 0 0 1550px !important;
+  max-width: 1550px !important;
 
   @include media-breakpoint-down(sm) {
     max-width: 100% !important;
@@ -467,8 +470,8 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 735px;
-      margin-right: 202px;
+      max-width: 882px;
+      margin-right: 105px;
 
       @include media-breakpoint-down(sm) {
         padding: 0 20px;
@@ -497,7 +500,7 @@ export default {
         }
 
         .securityBlock {
-          max-width: 735px;
+          max-width: 882px;
           width: 100%;
           background: #191d3a;
           border-radius: 8px;
@@ -536,12 +539,20 @@ export default {
             font-weight: 400;
             position: relative;
             z-index: 1;
+
+            @include media-breakpoint-down(xs) {
+              font-size: 12px;
+            }
           }
 
           .btnGrp {
             display: flex;
             position: relative;
             z-index: 1;
+
+            @include media-breakpoint-down(xs) {
+              flex-wrap: wrap;
+            }
 
             .btn {
               display: flex;
@@ -554,9 +565,17 @@ export default {
                 margin-right: 15px;
               }
 
+              @include media-breakpoint-down(xs) {
+                margin-bottom: 17px;
+              }
+
               img {
                 display: block;
                 max-width: 100%;
+
+                @include media-breakpoint-down(xs) {
+                  max-width: 175px;
+                }
               }
             }
           }
