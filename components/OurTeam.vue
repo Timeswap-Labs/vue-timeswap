@@ -37,9 +37,9 @@
               <ul :class="$style.socialLinks">
                 <li
                   v-for="(social, socialIndex) in team.socials"
+                  v-if="social.link"
                   :key="socialIndex"
                   class="list-inline-item"
-                  v-if="social.link"
                 >
                   <a :href="social.link" target="_blank">
                     <img :src="getIconUrl(social.image)" :alt="social.image" />
@@ -53,7 +53,7 @@
           <div :class="$style.join_us">Join us</div>
         </div>
       </div>
-      <div :class="$style.advisorList">
+      <!-- <div :class="$style.advisorList">
         <h2 :class="$style.mainTitle">Advisors</h2>
         <div :class="$style.teamWrapList">
           <a
@@ -74,12 +74,12 @@
                   <h4 :class="$style.name">{{ advisor.name }}</h4>
                   <h4 :class="$style.name">{{ advisor.lname }}</h4>
                 </div>
-                <p v-html="advisor.designation" :class="$style.designation" />
+                <p :class="$style.designation" v-html="advisor.designation" />
               </div>
             </div>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -143,6 +143,24 @@ export default {
           ],
         },
         {
+          image: 'anupama',
+          name: 'Anupama',
+          lname: 'Singh',
+          designation: 'Operations Lead',
+          description:
+            'Previously worked as an Assistant Professor of Engineering',
+          socials: [
+            {
+              link: 'https://twitter.com/Anupama77220271',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
           image: 'dalsukh',
           name: 'Dalsukh',
           lname: 'Tapaniya',
@@ -161,19 +179,18 @@ export default {
           ],
         },
         {
-          image: 'anupama',
-          name: 'Anupama',
-          lname: 'Singh',
-          designation: 'Operations Lead',
-          description:
-            'Previously worked as an Assistant Professor of Engineering',
+          image: 'dipesh',
+          name: 'Dipesh',
+          lname: 'Sukhani',
+          designation: 'Senior Smart Contract Engineer',
+          description: '',
           socials: [
             {
-              link: 'https://twitter.com/Anupama77220271',
+              link: 'https://twitter.com/dipeshsukhani',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              link: 'https://www.linkedin.com/in/dipeshsukhani/',
               image: 'linkedin',
             },
           ],
@@ -196,18 +213,18 @@ export default {
           ],
         },
         {
-          image: 'shruthi',
-          name: 'Shruthi',
-          lname: 'G',
-          designation: 'Content Lead',
-          description: '',
+          image: 'sharath',
+          name: 'Sharath',
+          lname: 'Nair',
+          designation: 'Lead - Front End Development',
+          description: 'Previously Frontend Module Lead @ Trilogy Software',
           socials: [
             {
-              link: '',
+              link: 'https://twitter.com/sharathrulz',
               image: 'twitter',
             },
             {
-              link: '',
+              link: 'https://www.linkedin.com/in/sharath-nair-here/',
               image: 'linkedin',
             },
           ],
@@ -284,7 +301,7 @@ export default {
           image: 'manvinder',
           name: 'Manvinder',
           lname: 'Arora',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'Reader I Writer I Thinker',
           socials: [
             {
@@ -298,10 +315,27 @@ export default {
           ],
         },
         {
+          image: 'paarug',
+          name: 'Paarug',
+          lname: 'Sethi',
+          designation: 'Community Manager',
+          description: 'A curiosity-driven multitasker',
+          socials: [
+            {
+              link: 'https://mobile.twitter.com/paarugsethi',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/paarugsethi',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
           image: 'sounak',
           name: 'Sounak',
           lname: 'Roy',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'Working at the intersection of law and technology.',
           socials: [
             {
@@ -311,18 +345,18 @@ export default {
           ],
         },
         {
-          image: 'paarug',
-          name: 'Paarug',
-          lname: 'Sethi',
-          designation: 'Intern - Community Manager',
-          description: 'A curiosity-driven multitasker',
+          image: 'tanishq',
+          name: 'Tanishq',
+          lname: 'Singh',
+          designation: 'Creative Designer',
+          description: 'Living between art',
           socials: [
             {
-              link: 'https://mobile.twitter.com/paarugsethi',
+              link: 'https://twitter.com/PerryBerry1325',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/paarugsethi',
+              link: '',
               image: 'linkedin',
             },
           ],
@@ -346,7 +380,6 @@ export default {
       ],
     }
   },
-
   methods: {
     getImgUrl(team) {
       return require(`../assets/images/${team}.png`)
@@ -366,28 +399,23 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2850px !important;
-  max-width: 2850px !important;
+  flex: 0 0 2600px !important;
+  max-width: 2600px !important;
   padding-left: 200px;
-
   @include media-breakpoint-down(lg) {
     padding-left: 100px;
   }
-
   @include media-breakpoint-down(md) {
     padding: 80px 50px;
   }
-
   @include media-breakpoint-down(sm) {
     max-width: 100% !important;
     flex: 0 0 100% !important;
     padding: 60px 24px 40px;
   }
-
   @include media-breakpoint-down(xs) {
     padding: 40px 24px 0;
   }
-
   .content {
     width: 100%;
     display: flex;
@@ -425,14 +453,12 @@ export default {
           padding: 0 8px;
           text-align: center;
         }
-
         .mainTitle {
           font-family: $hk_bold;
           line-height: 1.2;
           color: $white;
           margin-bottom: 16px;
         }
-
         .mainDescription {
           font-size: 14px;
           color: $white;
@@ -450,35 +476,29 @@ export default {
           }
         }
       }
-
       .teamWrap {
         max-width: 250px;
         width: 100%;
-
         @include media-breakpoint-down(sm) {
           margin-bottom: 20px;
           padding: 0 8px;
           max-width: 266px;
         }
-
         // Founder Cards
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(4) {
           grid-row-start: 2;
           grid-row-end: 4;
-
           .teamSingle {
             height: 304px !important;
             max-width: auto !important;
             align-items: flex-end !important;
-
             &.teamContent {
               font-size: 16px !important;
             }
           }
         }
-
         .teamSingle {
           border-radius: 10px;
           position: relative;
@@ -489,7 +509,6 @@ export default {
           background-size: cover;
           width: 250px;
           background-position: center;
-
           .imgCaption {
             width: 100%;
             padding: 16px 25px;
@@ -513,27 +532,23 @@ export default {
                 color: $white;
                 padding-right: 14px;
                 margin-bottom: 0;
-
                 @include media-breakpoint-down(xs) {
                   font-size: 14px;
                   margin-bottom: 1px;
                 }
               }
             }
-
             .designation {
               font-size: 14px;
               line-height: 1.5;
               color: $white;
               opacity: 0.6;
               margin-bottom: 0;
-
               @include media-breakpoint-down(xs) {
                 font-size: 13px;
               }
             }
           }
-
           .teamDetails {
             position: absolute;
             top: 0;
@@ -550,11 +565,9 @@ export default {
             transition: all 0.5s;
             transform: translateY(30px);
             border-radius: 10px;
-
             @include media-breakpoint-down(sm) {
               padding: 14px;
             }
-
             .info {
               .teamContent {
                 font-size: 12px;
@@ -562,7 +575,6 @@ export default {
                 margin: 0;
               }
             }
-
             .socialLinks {
               display: flex;
               width: 100%;
@@ -570,13 +582,11 @@ export default {
               margin: 0;
               padding: 0;
               list-style: none;
-
               li {
                 margin-right: 4px;
               }
             }
           }
-
           &:hover {
             .teamDetails {
               opacity: 1;
@@ -585,7 +595,6 @@ export default {
             }
           }
         }
-
         .join_us {
           width: 100%;
           color: $white;
@@ -598,11 +607,9 @@ export default {
           border-radius: 10px;
           cursor: pointer;
           display: none;
-
           @include media-breakpoint-down(md) {
             height: 270px;
           }
-
           @include media-breakpoint-down(xs) {
             height: 207px;
             font-size: 13px;
@@ -620,18 +627,15 @@ export default {
         max-width: 100%;
         margin-bottom: 50px;
       }
-
       .mainTitle {
         font-family: $hk_bold;
         line-height: 1.2;
         color: $white;
         margin-bottom: 50px;
-
         @include media-breakpoint-down(sm) {
           text-align: center;
         }
       }
-
       .teamWrapList {
         @include media-breakpoint-down(sm) {
           display: flex;
@@ -639,19 +643,16 @@ export default {
           margin: 0 -8px;
           justify-content: center;
         }
-
         .teamWrap {
           max-width: 314px;
           width: 100%;
           margin-bottom: 20px;
           display: inline-block;
-
           @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
             max-width: 266px;
             padding: 0 8px;
           }
-
           .teamSingle {
             border-radius: 10px;
             position: relative;
@@ -716,7 +717,6 @@ export default {
                 }
               }
             }
-
             .teamDetails {
               position: absolute;
               top: 0;
@@ -754,7 +754,6 @@ export default {
                     font-size: 13px;
                   }
                 }
-
                 .designation {
                   font-size: 16px;
                   line-height: 1.5;
@@ -770,19 +769,16 @@ export default {
                     margin-bottom: 8px;
                   }
                 }
-
                 .teamContent {
                   font-size: 12px;
                   color: $gray-900;
                   margin: 0;
-
                   @include media-breakpoint-down(sm) {
                     font-size: 13px;
                     line-height: 1.4;
                   }
                 }
               }
-
               .socialLinks {
                 display: flex;
                 width: 100%;
@@ -790,13 +786,11 @@ export default {
                 margin: 0;
                 padding: 0;
                 list-style: none;
-
                 li {
                   margin-right: 4px;
                 }
               }
             }
-
             &:hover {
               .teamDetails {
                 opacity: 1;
@@ -805,7 +799,6 @@ export default {
               }
             }
           }
-
           .join_us {
             width: 100%;
             color: $white;

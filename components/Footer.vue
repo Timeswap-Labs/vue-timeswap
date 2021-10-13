@@ -48,7 +48,9 @@
           </a>
         </li>
       </ul>
-      <p :class="$style.copyrightTxt">Copyright © 2021 Timeswap.</p>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
     </div>
     <div :class="$style.mobileTerms">
       <ul :class="$style.privacyMenu">
@@ -62,7 +64,9 @@
           </a>
         </li>
       </ul>
-      <p :class="$style.copyrightTxt">Copyright © 2021 Timeswap.</p>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
     </div>
   </footer>
 </template>
@@ -105,6 +109,10 @@ export default {
   methods: {
     getImgUrl(icon) {
       return require(`@/assets/images/icons/${icon}.svg`)
+    },
+
+    getCurrentYear() {
+      return new Date().getFullYear()
     },
   },
 }
