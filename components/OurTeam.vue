@@ -143,19 +143,19 @@ export default {
           ],
         },
         {
-          image: 'anupama',
-          name: 'Anupama',
-          lname: 'Singh',
-          designation: 'Operations Lead',
+          image: 'dipesh',
+          name: 'Dipesh',
+          lname: 'Sukhani',
+          designation: 'Smart Contract Developer',
           description:
-            'Previously worked as an Assistant Professor of Engineering',
+            'Previously: Lead Blockchain Developer 1xchange Pte Ltd and Founder: Zapper.fi',
           socials: [
             {
-              link: 'https://twitter.com/Anupama77220271',
+              link: 'https://twitter.com/dipeshsukhani',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
+              link: 'https://www.linkedin.com/in/dipeshsukhani/',
               image: 'linkedin',
             },
           ],
@@ -179,18 +179,19 @@ export default {
           ],
         },
         {
-          image: 'dipesh',
-          name: 'Dipesh',
-          lname: 'Sukhani',
-          designation: 'Senior Smart Contract Engineer',
-          description: '',
+          image: 'anupama',
+          name: 'Anupama',
+          lname: 'Singh',
+          designation: 'Operations Lead',
+          description:
+            'Previously worked as an Assistant Professor of Engineering',
           socials: [
             {
-              link: 'https://twitter.com/dipeshsukhani',
+              link: 'https://twitter.com/Anupama77220271',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/dipeshsukhani/',
+              link: 'https://www.linkedin.com/in/anupama-singh-855619a1/',
               image: 'linkedin',
             },
           ],
