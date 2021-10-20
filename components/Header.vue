@@ -4,8 +4,26 @@
       <img src="@/assets/images/timeswap-logo.svg" alt />
     </a>
     <div :class="$style.info">
-      <span :class="$style.text">whitepaper</span>
-      <button type="button" class="btn">App</button>
+      <a
+        :class="$style.text"
+        href="https://timeswap.gitbook.io/timeswap/"
+        target="_blank"
+      >
+        Gitbook
+      </a>
+      <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
+        Whitepaper
+      </a>
+      <button
+        type="button"
+        class="btn"
+        data-toggle="tooltip"
+        data-placement="top"
+        data-html="true"
+        title="COMING SOON!"
+      >
+        App
+      </button>
     </div>
   </header>
 </template>
@@ -49,20 +67,21 @@
   }
 
   .info {
-    display: none;
+    // display: none;
     align-items: center;
   }
 
   .text {
     font-size: 14px;
-    opacity: 0.6;
+    opacity: 0.8;
     color: $white;
-    padding-right: 24px;
+    margin-right: 24px;
+    letter-spacing: 0.6px;
     text-transform: capitalize;
 
     @include media-breakpoint-down(sm) {
       font-size: 12px;
-      padding-right: 12px;
+      margin-right: 12px;
     }
   }
 }
