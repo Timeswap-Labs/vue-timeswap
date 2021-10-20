@@ -1,5 +1,5 @@
 <template>
-  <header :class="$style.header">
+  <header id="header" :class="$style.header">
     <a href="/" :class="$style.logo">
       <img src="@/assets/images/timeswap-logo.svg" alt />
     </a>
@@ -31,6 +31,7 @@ export default {
     return {
       tooltipData: {
         title: '<em><b>COMING SOON!</b></em></u> <br> <em>Stay Tuned</em>',
+        container: '#header',
       },
     }
   },
