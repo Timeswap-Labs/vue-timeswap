@@ -41,7 +41,7 @@
         <li
           v-for="(copyright, index) in copyrights"
           :key="index"
-          :class="$style.privacyMenuLink"
+          :class="[$style.privacyMenuLink, $style[copyright.class]]"
         >
           <a :href="copyright.link">
             {{ copyright.name }}
@@ -97,6 +97,7 @@ export default {
         {
           link: 'https://timeswap.gitbook.io/timeswap/',
           name: 'Docs',
+          class: 'docs-link',
         },
         {
           link: '/terms',
@@ -389,6 +390,10 @@ export default {
           top: 7px;
           position: absolute;
           display: block;
+
+          @include media-breakpoint-up(xs) {
+            display: none;
+          }
         }
 
         &:first-child {
@@ -397,6 +402,10 @@ export default {
           &:before {
             display: none;
           }
+        }
+
+        &.docs-link {
+          display: none;
         }
 
         a {

@@ -211,7 +211,7 @@ export default {
   align-items: center;
   flex: 0 0 2600px !important;
   max-width: 2600px !important;
-  background: #191d3a;
+  background: rgba(25, 29, 58, 0.7);
 
   @include media-breakpoint-down(lg) {
     padding-left: 100px;

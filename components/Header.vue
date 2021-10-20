@@ -5,7 +5,7 @@
     </a>
     <div :class="$style.info">
       <a
-        :class="$style.text"
+        :class="[$style.text, $style.documentation]"
         href="https://timeswap.gitbook.io/timeswap/"
         target="_blank"
       >
@@ -15,12 +15,9 @@
         Whitepaper
       </a>
       <button
+        v-b-tooltip.hover.focus.html="tooltipData"
         type="button"
         class="btn"
-        data-toggle="tooltip"
-        data-placement="top"
-        data-html="true"
-        title="COMING SOON!"
       >
         App
       </button>
@@ -28,12 +25,25 @@
   </header>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      tooltipData: {
+        title: '<em><b>COMING SOON!</b></em></u> <br> <em>Stay Tuned</em>',
+      },
+    }
+  },
+}
+</script>
+
 <style lang="scss" module>
 .header {
   position: relative;
   padding: 35px 160px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,7 +77,6 @@
   }
 
   .info {
-    // display: none;
     align-items: center;
   }
 
@@ -82,6 +91,12 @@
     @include media-breakpoint-down(sm) {
       font-size: 12px;
       margin-right: 12px;
+    }
+  }
+
+  .documentation {
+    @include media-breakpoint-down(xs) {
+      display: none;
     }
   }
 }
