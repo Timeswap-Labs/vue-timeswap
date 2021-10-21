@@ -295,7 +295,7 @@ export default {
     }
 
     .investorPContent {
-      padding-top: 100px;
+      padding-top: 15px;
 
       @include media-breakpoint-down(sm) {
         padding-top: 0px;

@@ -53,7 +53,7 @@
           <div :class="$style.join_us">Join us</div>
         </div>
       </div>
-      <!-- <div :class="$style.advisorList">
+      <div :class="$style.advisorList">
         <h2 :class="$style.mainTitle">Advisors</h2>
         <div :class="$style.teamWrapList">
           <a
@@ -79,7 +79,7 @@
             </div>
           </a>
         </div>
-      </div> -->
+      </div>
     </div>
   </section>
 </template>
@@ -98,7 +98,7 @@ export default {
             'Previously founder @Einstar. Master in Financial Mathematics from Ateneo de Manila University.',
           socials: [
             {
-              link: 'https://twitter.com/Mathepreneur',
+              link: 'https://twitter.com/TimelordEth',
               image: 'twitter',
             },
             {
@@ -400,8 +400,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2600px !important;
-  max-width: 2600px !important;
+  flex: 0 0 3100px !important;
+  max-width: 3100px !important;
   padding-left: 200px;
   @include media-breakpoint-down(lg) {
     padding-left: 100px;
@@ -431,7 +431,7 @@ export default {
       grid-template-columns: repeat(6, 250px);
       justify-content: start;
       grid-gap: 24px;
-      margin-right: 250px;
+      margin-right: 275px;
       grid-auto-flow: column;
       grid-template-rows: repeat(3, 140px);
 
