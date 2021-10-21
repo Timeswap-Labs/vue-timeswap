@@ -96,7 +96,7 @@ export default {
       copyrights: [
         {
           link: 'https://timeswap.gitbook.io/timeswap/',
-          name: 'Docs',
+          name: 'Gitbook',
           class: 'docs-link',
         },
         {
