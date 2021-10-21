@@ -1,6 +1,6 @@
 <template>
   <footer :class="$style.footer">
-    <div id="pageTitle" :class="$style.introduction"></div>
+    <div id="pageTitle" :class="$style.introduction">Introduction</div>
     <div :class="$style.progressContainer">
       <div id="myBar" :class="$style.progressBar"></div>
     </div>
@@ -37,25 +37,22 @@
       </div>
     </div>
     <div :class="$style.copyRight">
-      <p :class="$style.copyrightTxt">
-        Copyright © {{ getCurrentYear() }} Timeswap.
-      </p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
           :key="index"
-          :class="$style.privacyMenuLink"
+          :class="[$style.privacyMenuLink, $style[copyright.class]]"
         >
           <a :href="copyright.link">
             {{ copyright.name }}
           </a>
         </li>
       </ul>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
     </div>
     <div :class="$style.mobileTerms">
-      <p :class="$style.copyrightTxt">
-        Copyright © {{ getCurrentYear() }} Timeswap.
-      </p>
       <ul :class="$style.privacyMenu">
         <li
           v-for="(copyright, index) in copyrights"
@@ -67,6 +64,9 @@
           </a>
         </li>
       </ul>
+      <p :class="$style.copyrightTxt">
+        Copyright © {{ getCurrentYear() }} Timeswap.
+      </p>
     </div>
   </footer>
 </template>
@@ -94,6 +94,11 @@ export default {
         },
       ],
       copyrights: [
+        {
+          link: 'https://timeswap.gitbook.io/timeswap/',
+          name: 'Gitbook',
+          class: 'docs-link',
+        },
         {
           link: '/terms',
           name: 'Terms of service',
@@ -344,6 +349,22 @@ export default {
       color: $white;
       opacity: 0.8;
       line-height: 17px;
+      padding-left: 15px;
+      margin-left: 10px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.8;
+        left: 0;
+        top: 7px;
+        position: absolute;
+        display: block;
+      }
     }
 
     .privacyMenu {
@@ -369,6 +390,10 @@ export default {
           top: 7px;
           position: absolute;
           display: block;
+
+          @include media-breakpoint-up(xs) {
+            display: none;
+          }
         }
 
         &:first-child {
@@ -377,6 +402,10 @@ export default {
           &:before {
             display: none;
           }
+        }
+
+        &.docs-link {
+          display: none;
         }
 
         a {

@@ -17,7 +17,9 @@
 
       <OurTeam :class="$style.section" />
 
-      <Advisor :class="$style.section" />
+      <Investor :class="$style.section" />
+
+      <Media :class="$style.section" />
     </main>
 
     <Footer />
@@ -31,7 +33,8 @@ import OurProduct from '@/components/OurProduct.vue'
 import KeyFeature from '@/components/KeyFeature.vue'
 import TimeToken from '@/components/TimeToken.vue'
 import OurTeam from '@/components/OurTeam.vue'
-import Advisor from '@/components/Advisor.vue'
+import Investor from '@/components/Investor.vue'
+import Media from '@/components/Media.vue'
 
 export default {
   components: {
@@ -41,7 +44,8 @@ export default {
     KeyFeature,
     TimeToken,
     OurTeam,
-    Advisor,
+    Investor,
+    Media,
   },
 
   mounted() {
@@ -156,20 +160,22 @@ export default {
         const scrolled = (winScroll / height) * 100
 
         document.getElementById('myBar').style.width = scrolled + '%'
-        document.getElementById('pageTitle').innerHTML = ''
-        // if (scrolled > 0 && scrolled < 25) {
-        //   document.getElementById('pageTitle').innerHTML = 'Introduction'
-        // } else if (scrolled > 26 && scrolled < 38) {
-        //   document.getElementById('pageTitle').innerHTML = 'Our Product'
-        // } else if (scrolled > 42 && scrolled < 61) {
-        //   document.getElementById('pageTitle').innerHTML = 'Key Fetatures'
-        // } else if (scrolled > 62 && scrolled < 77) {
-        //   document.getElementById('pageTitle').innerHTML = 'Time Token'
-        // } else if (scrolled > 79 && scrolled < 93) {
-        //   document.getElementById('pageTitle').innerHTML = 'Our Team'
-        // } else if (scrolled > 94 && scrolled < 110) {
-        //   document.getElementById('pageTitle').innerHTML = 'Advisor'
-        // }
+        // document.getElementById('pageTitle').innerHTML = ''
+        if (scrolled > 0 && scrolled < 17) {
+          document.getElementById('pageTitle').innerHTML = 'Introduction'
+        } else if (scrolled > 18 && scrolled < 30) {
+          document.getElementById('pageTitle').innerHTML = 'Our Offerings'
+        } else if (scrolled > 31 && scrolled < 42) {
+          document.getElementById('pageTitle').innerHTML = 'Key Features'
+        } else if (scrolled > 43 && scrolled < 53) {
+          document.getElementById('pageTitle').innerHTML = 'Time Token'
+        } else if (scrolled > 54 && scrolled < 77) {
+          document.getElementById('pageTitle').innerHTML = 'Our Team'
+        } else if (scrolled > 78 && scrolled < 98) {
+          document.getElementById('pageTitle').innerHTML = 'Investors'
+        } else if (scrolled > 99 && scrolled < 120) {
+          document.getElementById('pageTitle').innerHTML = 'Security'
+        }
       }
 
       function circleProgressBar() {

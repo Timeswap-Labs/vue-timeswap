@@ -1,30 +1,20 @@
 <template>
-  <section :class="$style.advisorPage">
-    <div :class="$style.advisorRow">
-      <!-- <div :class="$style.content">
+  <section :class="$style.mediaPage">
+    <div :class="$style.mediaRow">
+      <div :class="$style.mediaContent">
         <h2 :class="$style.mainTitle">Media Coverage</h2>
-        <div :class="$style.advisorList">
-          <div
-            v-for="(advisor, index) in advisors"
+        <div :class="$style.mediaList">
+          <a
+            v-for="(media, index) in mediaCoverage"
             :key="index"
-            :class="[$style.advisor_wrap, 'animateMe']"
+            :class="$style.mediaSingle"
+            :href="media.link"
+            target="_blank"
           >
-            <div
-              :class="$style.advisorSingle"
-              :style="{
-                backgroundImage: `url(${getImgUrl(
-                  advisor.image
-                )}), linear-gradient(to right, #a0d2eb 15%, #7b78ff 78%)`,
-              }"
-            >
-              <div :class="$style.imgCaption">
-                <h4 :class="$style.name">{{ advisor.name }}</h4>
-                <p :class="$style.designation">{{ advisor.designation }}</p>
-              </div>
-            </div>
-          </div>
+            <img :src="getIconUrl(media.image)" :alt="media.image" />
+          </a>
         </div>
-      </div> -->
+      </div>
       <div :class="$style.securityContent">
         <h2 :class="$style.mainTitle">Security</h2>
         <div :class="$style.securityBlockWrap">
@@ -34,16 +24,19 @@
             </h4>
             <div :class="$style.btnGrp">
               <div :class="$style.btn">
-                <img src="@/assets/images/peakshield.svg" alt />
+                <img src="@/assets/images/peckshield.svg" alt />
               </div>
               <div :class="$style.btn">
-                <img src="@/assets/images/quentstep.svg" alt />
+                <img src="@/assets/images/quantstamp.svg" alt />
+              </div>
+              <div :class="$style.btn">
+                <img src="@/assets/images/trailofbits.svg" alt />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div :class="[$style.advisorForm, 'animateMe zoomIn']">
+      <div :class="[$style.mediaForm, 'animateMe zoomIn']">
         <div :class="$style.formInfo">
           <div :class="$style.logo">
             <img src="@/assets/images/timeswap-slogo.svg" alt />
@@ -95,18 +88,6 @@
 export default {
   data() {
     return {
-      advisors: [
-        {
-          image: 'Sandeep',
-          name: 'Sandeep Nailwal',
-          designation: 'Advisor',
-        },
-        {
-          image: 'JD',
-          name: 'Jaynti Kanani',
-          designation: 'Advisor',
-        },
-      ],
       socialIcons: [
         {
           image: 'twitterr',
@@ -124,12 +105,39 @@ export default {
           name: 'Discord',
         },
       ],
+
+      mediaCoverage: [
+        {
+          image: 'media',
+          link: '#',
+        },
+        {
+          image: 'media',
+          link: '#',
+        },
+        {
+          image: 'media',
+          link: '#',
+        },
+        {
+          image: 'media',
+          link: '#',
+        },
+        {
+          image: 'media',
+          link: '#',
+        },
+        {
+          image: 'media',
+          link: '#',
+        },
+      ],
     }
   },
 
   methods: {
-    getImgUrl(advisor) {
-      return require(`../assets/images/${advisor}.jpg`)
+    getImgUrl(media) {
+      return require(`../assets/images/${media}.jpg`)
     },
     getIconUrl(image) {
       return require(`../assets/images/${image}.svg`)
@@ -139,46 +147,82 @@ export default {
 </script>
 
 <style lang="scss" module>
-.advisorPage {
+.mediaPage {
   position: relative;
   width: 100%;
-  padding: 100px 50px;
+  padding: 100px 150px;
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 1400px !important;
-  max-width: 1400px !important;
-
-  @include media-breakpoint-down(lg) {
-    flex: 0 0 1400px !important;
-    max-width: 1400px !important;
-    padding-left: 100px;
-  }
-
-  @include media-breakpoint-down(md) {
-    flex: 0 0 1400px !important;
-    max-width: 1400px !important;
-    padding: 80px 50px;
-    padding-right: 0;
-  }
+  flex: 0 0 1550px !important;
+  max-width: 1550px !important;
 
   @include media-breakpoint-down(sm) {
     max-width: 100% !important;
     flex: 0 0 100% !important;
-    padding: 40px 0 0;
+    padding: 40px 0px 0;
   }
 
   @include media-breakpoint-down(xs) {
     padding: 40px 0 0;
   }
 
-  .advisorRow {
+  .mediaRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
+    }
+
+    .mediaContent {
+      max-width: 700px;
+      width: 100%;
+      margin-right: 165px;
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 0 24px;
+      }
+
+      .mainTitle {
+        font-family: $hk_bold;
+        line-height: 1.2;
+        color: $white;
+        margin-bottom: 90px;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .mediaList {
+        display: flex;
+        flex-wrap: wrap;
+        @include media-breakpoint-down(sm) {
+          margin: 0 -8px;
+        }
+
+        .mediaSingle {
+          max-width: 160px;
+          width: 100%;
+          margin-right: 69px;
+          margin-bottom: 66px;
+
+          @include media-breakpoint-down(sm) {
+            margin: 0;
+            padding: 0 15px;
+            margin-bottom: 20px;
+          }
+
+          img {
+            max-width: 100%;
+            display: block;
+          }
+        }
+      }
     }
 
     .content {
@@ -199,7 +243,7 @@ export default {
         }
       }
 
-      .advisorList {
+      .mediaList {
         width: 100%;
         margin: 0 -15px;
         display: flex;
@@ -211,7 +255,7 @@ export default {
           width: auto;
         }
 
-        .advisor_wrap {
+        .media_wrap {
           padding: 0 15px;
           max-width: 245px;
           width: 100%;
@@ -229,7 +273,7 @@ export default {
             max-width: 50%;
           }
 
-          .advisorSingle {
+          .mediaSingle {
             border-radius: 10px;
             position: relative;
             overflow: hidden;
@@ -313,7 +357,7 @@ export default {
       }
     }
 
-    .advisorForm {
+    .mediaForm {
       max-width: 410px;
       width: 100%;
 
@@ -426,9 +470,12 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 882px;
+      margin-right: 105px;
 
       @include media-breakpoint-down(sm) {
         padding: 0 20px;
+        margin: 0;
       }
 
       .mainTitle {
@@ -453,7 +500,7 @@ export default {
         }
 
         .securityBlock {
-          max-width: 735px;
+          max-width: 882px;
           width: 100%;
           background: #191d3a;
           border-radius: 8px;
@@ -492,12 +539,20 @@ export default {
             font-weight: 400;
             position: relative;
             z-index: 1;
+
+            @include media-breakpoint-down(xs) {
+              font-size: 12px;
+            }
           }
 
           .btnGrp {
             display: flex;
             position: relative;
             z-index: 1;
+
+            @include media-breakpoint-down(xs) {
+              flex-wrap: wrap;
+            }
 
             .btn {
               display: flex;
@@ -510,9 +565,17 @@ export default {
                 margin-right: 15px;
               }
 
+              @include media-breakpoint-down(xs) {
+                margin-bottom: 17px;
+              }
+
               img {
                 display: block;
                 max-width: 100%;
+
+                @include media-breakpoint-down(xs) {
+                  max-width: 175px;
+                }
               }
             }
           }

@@ -421,9 +421,11 @@ export default {
     width: 100%;
     display: flex;
     align-items: flex-start;
+
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
     }
+
     .teamList {
       display: grid;
       grid-template-columns: repeat(6, 250px);
@@ -432,6 +434,7 @@ export default {
       margin-right: 250px;
       grid-auto-flow: column;
       grid-template-rows: repeat(3, 140px);
+
       @include media-breakpoint-down(sm) {
         width: calc(100% + 16px);
         display: flex;
@@ -441,9 +444,11 @@ export default {
         margin-bottom: 50px;
         justify-content: center;
       }
+
       .teamHeading {
         grid-column-start: 1;
         grid-column-end: 4;
+
         @include media-breakpoint-down(sm) {
           width: 100%;
           padding: 0 8px;
@@ -462,9 +467,11 @@ export default {
           line-height: 1.5;
           margin-bottom: 0;
           max-width: 900px;
+
           @include media-breakpoint-down(lg) {
             margin-bottom: 30px;
           }
+
           @include media-breakpoint-down(xs) {
             max-width: 100%;
           }
@@ -507,14 +514,18 @@ export default {
             width: 100%;
             padding: 16px 25px;
             max-width: 70%;
+
             @include media-breakpoint-down(sm) {
               padding: 15px;
             }
+
             .nameWrap {
               margin-bottom: 10px;
+
               @include media-breakpoint-down(xs) {
                 margin-bottom: 1px;
               }
+
               .name {
                 font-size: 16px;
                 font-family: $hk_bold;
@@ -607,9 +618,11 @@ export default {
         }
       }
     }
+
     .advisorList {
       max-width: 314px;
       width: 100%;
+
       @include media-breakpoint-down(sm) {
         width: 100%;
         max-width: 100%;
@@ -651,21 +664,27 @@ export default {
             background-size: cover;
             width: 100%;
             background-position: center;
+
             @include media-breakpoint-down(sm) {
               height: 140px;
             }
+
             .imgCaption {
               width: 100%;
               padding: 16px 25px;
               max-width: 70%;
+
               @include media-breakpoint-down(sm) {
                 padding: 15px;
               }
+
               .nameWrap {
                 margin-bottom: 10px;
+
                 @include media-breakpoint-down(xs) {
                   margin-bottom: 1px;
                 }
+
                 .name {
                   font-size: 16px;
                   font-family: $hk_bold;
@@ -673,9 +692,11 @@ export default {
                   color: $white;
                   padding-right: 14px;
                   margin-bottom: 0;
+
                   @include media-breakpoint-down(md) {
                     font-size: 15px;
                   }
+
                   @include media-breakpoint-down(xs) {
                     font-size: 13px;
                   }
@@ -687,9 +708,11 @@ export default {
                 color: $white;
                 opacity: 0.6;
                 margin-bottom: 0;
+
                 @include media-breakpoint-down(md) {
                   font-size: 15px;
                 }
+
                 @include media-breakpoint-down(xs) {
                   font-size: 12px;
                 }
@@ -711,9 +734,11 @@ export default {
               transition: all 0.5s;
               transform: translateY(30px);
               border-radius: 10px;
+
               @include media-breakpoint-down(md) {
                 padding: 15px;
               }
+
               .info {
                 .name {
                   font-size: 16px;
@@ -721,9 +746,11 @@ export default {
                   line-height: 1.5;
                   color: $gray-900;
                   margin-bottom: 0;
+
                   @include media-breakpoint-down(md) {
                     font-size: 15px;
                   }
+
                   @include media-breakpoint-down(sm) {
                     font-size: 13px;
                   }
@@ -733,9 +760,11 @@ export default {
                   line-height: 1.5;
                   color: $gray-900;
                   margin-bottom: 16px;
+
                   @include media-breakpoint-down(md) {
                     font-size: 15px;
                   }
+
                   @include media-breakpoint-down(sm) {
                     font-size: 12px;
                     margin-bottom: 8px;
@@ -783,9 +812,11 @@ export default {
             border-radius: 10px;
             cursor: pointer;
             display: none;
+
             @include media-breakpoint-down(md) {
               height: 270px;
             }
+
             @include media-breakpoint-down(xs) {
               height: 207px;
               font-size: 13px;
