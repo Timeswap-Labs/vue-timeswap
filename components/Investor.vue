@@ -160,7 +160,7 @@ export default {
           person: 'ajit',
           link: 'https://twitter.com/chainyoda',
           name: 'Ajit Tripathi',
-          designation: 'Head of Instituional Business, Aave',
+          designation: 'Head of Institutional Business, Aave',
         },
         {
           person: 'min',
