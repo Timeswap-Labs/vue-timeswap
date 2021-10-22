@@ -148,19 +148,19 @@ export default {
           person: 'tanmay',
           link: 'https://twitter.com/thetanmay',
           name: 'Tanmay Bhat',
-          designation: 'Co-founder, Superpumped',
+          designation: 'Co-founder, Superteam DAO',
         },
         {
           person: 'akshay',
           link: 'https://twitter.com/akshaybd',
           name: 'Akshay BD',
-          designation: 'Co-founder, Superpumped',
+          designation: 'Co-founder, Superteam DAO',
         },
         {
           person: 'ajit',
           link: 'https://twitter.com/chainyoda',
           name: 'Ajit Tripathi',
-          designation: 'Head of Instituional Business, Aave',
+          designation: 'Head of Institutional Business, Aave',
         },
         {
           person: 'min',
