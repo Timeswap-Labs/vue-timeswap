@@ -46,9 +46,9 @@ export default {
   modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: true, // Or `bvCSS: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
     components: [],
-    directives: ['VBToggle', 'VBTooltip'],
+    directives: ['VBToggle'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
