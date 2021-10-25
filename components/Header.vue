@@ -14,29 +14,12 @@
       <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
         Whitepaper
       </a>
-      <button
-        v-b-tooltip.hover.focus.html="tooltipData"
-        type="button"
-        class="btn"
-      >
+      <a href="https://app.timeswap.io" class="btn app-btn" target="_blank">
         App
-      </button>
+      </a>
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      tooltipData: {
-        title: '<em><b>COMING SOON!</b></em></u> <br> <em>Stay Tuned</em>',
-        container: '#header',
-      },
-    }
-  },
-}
-</script>
 
 <style lang="scss" module>
 .header {
@@ -79,6 +62,12 @@ export default {
 
   .info {
     align-items: center;
+  }
+
+  .app-btn {
+    &:hover {
+      color: #fff;
+    }
   }
 
   .text {
