@@ -231,23 +231,6 @@ export default {
           ],
         },
         {
-          image: 'aditya',
-          name: 'Aditya',
-          lname: 'Gupta',
-          designation: 'Smart Contract Developer',
-          description: 'Previously Founder @HopOn, Blockchain Lead @ MSRIT',
-          socials: [
-            {
-              link: 'https://twitter.com/thesoberguy13',
-              image: 'twitter',
-            },
-            {
-              link: '',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'antony',
           name: 'Emmanuel',
           lname: 'Antony',
@@ -283,10 +266,11 @@ export default {
         },
         {
           image: 'satyarth',
-          name: 'Satyarth',
-          lname: 'Kumar',
+          name: 'Kumar',
+          lname: 'Satyarth',
           designation: 'Engineering Intern',
-          description: '',
+          description:
+            'Super Shadowy Coder | Community Enthusiast | Wanderlust',
           socials: [
             {
               link: 'https://twitter.com/ksatyarth2',
