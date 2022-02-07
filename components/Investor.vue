@@ -136,7 +136,7 @@ export default {
           person: 'vaibhav',
           link: 'https://twitter.com/vasa_develop',
           name: 'Vaibhav',
-          designation: 'Founder, Genie',
+          designation: 'Founder, gem.xyz',
         },
         {
           person: 'sina',
@@ -163,12 +163,6 @@ export default {
           designation: 'Head of Institutional Business, Aave',
         },
         {
-          person: 'min',
-          link: 'https://twitter.com/minittowinit?lang=en',
-          name: 'Min Kim',
-          designation: 'CMO, Polygon',
-        },
-        {
           person: 'sanket',
           link: 'https://twitter.com/sourcex44',
           name: 'Sanket Shah',
@@ -185,6 +179,12 @@ export default {
           link: 'https://twitter.com/AjeetK',
           name: 'Ajeet Khurana',
           designation: 'ex CEO - Zebpay / Angel Investor',
+        },
+        {
+          person: 'min',
+          link: 'https://twitter.com/minittowinit',
+          name: 'Min Kim',
+          designation: 'CMO, HBAR Foundation',
         },
       ],
     }
