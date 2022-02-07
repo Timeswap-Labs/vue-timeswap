@@ -268,7 +268,7 @@ export default {
           image: 'satyarth',
           name: 'Kumar',
           lname: 'Satyarth',
-          designation: 'Engineering Intern',
+          designation: 'Smart Contract Developer',
           description:
             'Super Shadowy Coder | Community Enthusiast | Wanderlust',
           socials: [
@@ -338,6 +338,23 @@ export default {
           socials: [
             {
               link: 'https://twitter.com/PerryBerry1325',
+              image: 'twitter',
+            },
+            {
+              link: '',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'krish',
+          name: 'Krish Arvind',
+          lname: 'Bhatt',
+          designation: 'Intern - Community Manager',
+          description: 'DeFi enthu. Shitposter. Little engineering.',
+          socials: [
+            {
+              link: 'https://twitter.com/ChiRho69',
               image: 'twitter',
             },
             {
