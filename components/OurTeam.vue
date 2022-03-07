@@ -303,7 +303,7 @@ export default {
           image: 'paarug',
           name: 'Paarug',
           lname: 'Sethi',
-          designation: 'Community Manager',
+          designation: 'Content Writer',
           description: 'A curiosity-driven multitasker',
           socials: [
             {
@@ -320,7 +320,7 @@ export default {
           image: 'sounak',
           name: 'Sounak',
           lname: 'Roy',
-          designation: 'Community Manager',
+          designation: 'Content Writer',
           description: 'Working at the intersection of law and technology.',
           socials: [
             {
@@ -350,11 +350,11 @@ export default {
           image: 'krish',
           name: 'Krish Arvind',
           lname: 'Bhatt',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'DeFi enthu. Shitposter. Little engineering.',
           socials: [
             {
-              link: 'https://twitter.com/ChiRho69',
+              link: '',
               image: 'twitter',
             },
             {

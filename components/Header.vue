@@ -14,6 +14,16 @@
       <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
         Whitepaper
       </a>
+      <span :class="[$style.careers, $style.documentation]">
+        <a
+          :class="[$style.text, $style.link]"
+          href="https://angel.co/company/timeswap-labs-3/jobs/"
+          target="_blank"
+        >
+          Careers
+        </a>
+        <span :class="$style.hiring">We're hiring</span>
+      </span>
       <a href="https://app.timeswap.io" class="btn app-btn" target="_blank">
         App
       </a>
@@ -87,6 +97,23 @@
   .documentation {
     @include media-breakpoint-down(xs) {
       display: none;
+    }
+  }
+
+  .careers {
+    margin-right: 24px;
+
+    .link {
+      margin-right: 5px;
+    }
+
+    .hiring {
+      background: rgba(82, 204, 184, 0.12);
+      padding: 5px 10px;
+      color: rgba(82, 204, 184, 1);
+      font-size: 10px;
+      line-height: 20px;
+      border-radius: 28px;
     }
   }
 }
