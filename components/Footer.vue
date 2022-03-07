@@ -39,11 +39,11 @@
     <div :class="$style.copyRight">
       <ul :class="$style.privacyMenu">
         <li
-          v-for="(copyright, index) in copyrights"
+          v-for="(copyright, index) in getDesktopLinks(externalLinks)"
           :key="index"
           :class="[$style.privacyMenuLink, $style[copyright.class]]"
         >
-          <a :href="copyright.link">
+          <a :href="copyright.link" target="_blank">
             {{ copyright.name }}
           </a>
         </li>
@@ -55,11 +55,11 @@
     <div :class="$style.mobileTerms">
       <ul :class="$style.privacyMenu">
         <li
-          v-for="(copyright, index) in copyrights"
+          v-for="(copyright, index) in externalLinks"
           :key="index"
           :class="$style.privacyMenuLink"
         >
-          <a :href="copyright.link">
+          <a :href="copyright.link" target="_blank">
             {{ copyright.name }}
           </a>
         </li>
@@ -93,11 +93,21 @@ export default {
           link: 'https://timeswap.medium.com/',
         },
       ],
-      copyrights: [
+      externalLinks: [
         {
           link: 'https://timeswap.gitbook.io/timeswap/',
           name: 'Gitbook',
-          class: 'docs-link',
+          class: 'mobile-only',
+        },
+        {
+          link: 'https://angel.co/company/timeswap-labs/jobs/',
+          name: 'Careers',
+          class: 'mobile-only',
+        },
+        {
+          link:
+            'https://petal-cornflower-1db.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee/',
+          name: 'Brand Kit',
         },
         {
           link: '/terms',
@@ -114,6 +124,10 @@ export default {
 
     getCurrentYear() {
       return new Date().getFullYear()
+    },
+
+    getDesktopLinks(links) {
+      return links.filter((linkObj) => !linkObj.class)
     },
   },
 }
@@ -390,21 +404,18 @@ export default {
           top: 7px;
           position: absolute;
           display: block;
-
-          @include media-breakpoint-up(xs) {
-            display: none;
-          }
         }
 
         &:first-child {
           padding-left: 0;
           margin-left: 0px;
+
           &:before {
             display: none;
           }
         }
 
-        &.docs-link {
+        &.mobile-only {
           display: none;
         }
 

@@ -17,7 +17,7 @@
       <span :class="[$style.careers, $style.documentation]">
         <a
           :class="[$style.text, $style.link]"
-          href="https://angel.co/company/timeswap-labs-3/jobs/"
+          href="https://angel.co/company/timeswap-labs/jobs/"
           target="_blank"
         >
           Careers
