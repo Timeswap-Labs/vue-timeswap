@@ -5,7 +5,8 @@
         First fully decentralized AMM based money market protocol
       </h1>
       <div :class="$style.commingTxt">
-        Powered by <img src="@/assets/images/etharium.svg" alt />
+        Powered by
+        <img src="@/assets/images/polygon.svg" width="115px" alt />
       </div>
     </div>
   </section>
@@ -183,7 +184,8 @@
       }
 
       img {
-        margin-left: 10px;
+        margin-left: 5px;
+        margin-top: 3px;
       }
     }
   }
