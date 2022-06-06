@@ -99,11 +99,11 @@ export default {
           name: 'Gitbook',
           class: 'mobile-only',
         },
-        {
-          link: 'https://angel.co/company/timeswap-labs/jobs/',
-          name: 'Careers',
-          class: 'mobile-only',
-        },
+        // {
+        //   link: 'https://angel.co/company/timeswap-labs/jobs/',
+        //   name: 'Careers',
+        //   class: 'mobile-only',
+        // },
         {
           link:
             'https://petal-cornflower-1db.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee/',

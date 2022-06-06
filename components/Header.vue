@@ -14,7 +14,7 @@
       <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
         Whitepaper
       </a>
-      <span :class="[$style.careers, $style.documentation]">
+      <!-- <span :class="[$style.careers, $style.documentation]">
         <a
           :class="[$style.text, $style.link]"
           href="https://angel.co/company/timeswap-labs/jobs/"
@@ -23,7 +23,7 @@
           Careers
         </a>
         <span :class="$style.hiring">We're hiring</span>
-      </span>
+      </span> -->
       <a href="https://app.timeswap.io" class="btn app-btn" target="_blank">
         App
       </a>
