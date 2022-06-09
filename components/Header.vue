@@ -9,7 +9,7 @@
         href="https://timeswap.gitbook.io/timeswap/"
         target="_blank"
       >
-        Gitbook
+        Docs
       </a>
       <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
         Whitepaper
@@ -24,7 +24,20 @@
         </a>
         <span :class="$style.hiring">We're hiring</span>
       </span> -->
-      <a href="https://app.timeswap.io" class="btn app-btn" target="_blank">
+      <a
+        :class="$style.appBtn"
+        class="btn"
+        href="https://app.timeswap.io"
+        target="_blank"
+      >
+        Launch App
+      </a>
+      <a
+        :class="$style.appBtnMobile"
+        class="btn"
+        href="https://app.timeswap.io"
+        target="_blank"
+      >
         App
       </a>
     </div>
@@ -71,12 +84,25 @@
   }
 
   .info {
+    display: flex;
     align-items: center;
-  }
 
-  .app-btn {
-    &:hover {
-      color: #fff;
+    .appBtn {
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .appBtnMobile {
+      display: none;
+
+      @include media-breakpoint-only(xs) {
+        display: block;
+      }
     }
   }
 

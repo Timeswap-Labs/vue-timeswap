@@ -24,13 +24,16 @@
             </h4>
             <div :class="$style.btnGrp">
               <div :class="$style.btn">
+                <img src="@/assets/images/code4rena.svg" alt />
+              </div>
+              <div :class="$style.btn">
+                <img src="@/assets/images/trailofbits.svg" alt />
+              </div>
+              <div :class="$style.btn">
                 <img src="@/assets/images/peckshield.svg" alt />
               </div>
               <div :class="$style.btn">
                 <img src="@/assets/images/quantstamp.svg" alt />
-              </div>
-              <div :class="$style.btn">
-                <img src="@/assets/images/trailofbits.svg" alt />
               </div>
             </div>
           </div>
@@ -62,7 +65,7 @@
           </form>
         </div> -->
         <div :class="$style.form">
-          <h4 :class="$style.formTitle">Join us to get all updates</h4>
+          <h4 :class="$style.formTitle">Follow us</h4>
           <div :class="$style.socialWrap">
             <a
               v-for="(socialIcon, index) in socialIcons"
@@ -103,6 +106,11 @@ export default {
           image: 'discordr',
           link: 'https://discord.gg/YTUtTJfc6S',
           name: 'Discord',
+        },
+        {
+          image: 'mediumr',
+          link: 'https://timeswap.medium.com/',
+          name: 'Medium',
         },
       ],
 
@@ -395,7 +403,7 @@ export default {
 
       .form {
         background: $corn-flower;
-        padding: 57px 54px;
+        padding: 45px 54px;
 
         @include media-breakpoint-down(md) {
           padding: 40px 35px;
@@ -500,11 +508,11 @@ export default {
         }
 
         .securityBlock {
-          max-width: 882px;
+          max-width: 675px;
           width: 100%;
           background: #191d3a;
           border-radius: 8px;
-          padding: 40px;
+          padding: 40px 40px 20px 40px;
           position: relative;
 
           @include media-breakpoint-down(sm) {
@@ -515,11 +523,12 @@ export default {
             content: '';
             position: absolute;
             right: 0;
-            top: 0;
+            top: 10px;
             width: 171px;
             height: 100%;
             background: url('@/assets/images/security.svg');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             z-index: 0;
 
             @include media-breakpoint-down(sm) {
@@ -547,6 +556,7 @@ export default {
 
           .btnGrp {
             display: flex;
+            flex-wrap: wrap;
             position: relative;
             z-index: 1;
 
@@ -559,6 +569,7 @@ export default {
               align-items: center;
               justify-self: center;
               margin-right: 30px;
+              margin-bottom: 20px;
 
               @include media-breakpoint-down(sm) {
                 max-width: 200px;

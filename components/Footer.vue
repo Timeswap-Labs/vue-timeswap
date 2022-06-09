@@ -77,7 +77,7 @@ export default {
     return {
       socialIcons: [
         {
-          image: 'ftr-fb',
+          image: 'ftr-twitter',
           link: 'https://twitter.com/TimeswapLabs',
         },
         {
@@ -92,11 +92,27 @@ export default {
           image: 'ftr-five-icon',
           link: 'https://timeswap.medium.com/',
         },
+        {
+          image: 'ftr-github',
+          link: 'https://github.com/Timeswap-Labs',
+        },
+        {
+          image: 'ftr-youtube',
+          link: 'https://www.youtube.com/channel/UCY8rACVXfPNP-P3M0cCvuEw',
+        },
+        {
+          image: 'ftr-dune',
+          link: 'https://dune.com/ameeth/Timeswap',
+        },
+        {
+          image: 'ftr-defillama',
+          link: 'https://defillama.com/protocol/timeswap',
+        },
       ],
       externalLinks: [
         {
           link: 'https://timeswap.gitbook.io/timeswap/',
-          name: 'Gitbook',
+          name: 'Docs',
           class: 'mobile-only',
         },
         // {

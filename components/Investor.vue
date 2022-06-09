@@ -180,12 +180,6 @@ export default {
           name: 'Ajeet Khurana',
           designation: 'ex CEO - Zebpay / Angel Investor',
         },
-        {
-          person: 'min',
-          link: 'https://twitter.com/minittowinit',
-          name: 'Min Kim',
-          designation: 'CMO, HBAR Foundation',
-        },
       ],
     }
   },
