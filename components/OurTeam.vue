@@ -363,6 +363,40 @@ export default {
             },
           ],
         },
+        {
+          image: 'yashvik',
+          name: 'Yashvik',
+          lname: 'Naithani',
+          designation: 'Intern Smart Contract Developer',
+          description: 'EVM compatible degen',
+          socials: [
+            {
+              link: 'https://twitter.com/waverune',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/yashvik',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'heemank',
+          name: 'Heemank',
+          lname: 'Verma',
+          designation: 'Intern Front end Developer',
+          description: 'Frontend developer | IIITD 24',
+          socials: [
+            {
+              link: 'https://twitter.com/HeemankVerma',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/heemankv',
+              image: 'linkedin',
+            },
+          ],
+        },
       ],
       advisors: [
         {
