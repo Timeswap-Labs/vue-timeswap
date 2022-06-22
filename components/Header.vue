@@ -14,16 +14,16 @@
       <a :class="$style.text" href="/whitepaper.pdf" target="_blank">
         Whitepaper
       </a>
-      <!-- <span :class="[$style.careers, $style.documentation]">
+      <span :class="[$style.careers, $style.documentation]">
         <a
           :class="[$style.text, $style.link]"
-          href="https://angel.co/company/timeswap-labs/jobs/"
+          href="https://angel.co/l/2wHbN8"
           target="_blank"
         >
           Careers
         </a>
         <span :class="$style.hiring">We're hiring</span>
-      </span> -->
+      </span>
       <a
         :class="$style.appBtn"
         class="btn"
