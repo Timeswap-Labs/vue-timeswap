@@ -300,23 +300,6 @@ export default {
           ],
         },
         {
-          image: 'paarug',
-          name: 'Paarug',
-          lname: 'Sethi',
-          designation: 'Content Writer',
-          description: 'A curiosity-driven multitasker',
-          socials: [
-            {
-              link: 'https://mobile.twitter.com/paarugsethi',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/paarugsethi',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'sounak',
           name: 'Sounak',
           lname: 'Roy',
