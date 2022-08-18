@@ -316,7 +316,7 @@ export default {
           image: 'tanishq',
           name: 'Tanishq',
           lname: 'Singh',
-          designation: 'Creative Designer',
+          designation: 'Visual Designer',
           description: 'Living between art',
           socials: [
             {
