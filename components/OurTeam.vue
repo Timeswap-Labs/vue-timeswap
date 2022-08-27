@@ -350,7 +350,7 @@ export default {
           image: 'yashvik',
           name: 'Yashvik',
           lname: 'Naithani',
-          designation: 'Intern Smart Contract Developer',
+          designation: 'Smart Contract Developer',
           description: 'EVM compatible degen',
           socials: [
             {
@@ -367,7 +367,7 @@ export default {
           image: 'heemank',
           name: 'Heemank',
           lname: 'Verma',
-          designation: 'Intern Front end Developer',
+          designation: 'Front end Developer',
           description: 'Frontend developer | IIITD 24',
           socials: [
             {
