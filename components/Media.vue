@@ -81,6 +81,20 @@
               {{ socialIcon.name }}
             </a>
           </div>
+          <div :class="$style.carbonOffsetWrap">
+            <a
+              v-for="(carbonOffset, index) in carbonOffsets"
+              :key="index"
+              :class="$style.images"
+              :href="carbonOffset.link"
+              target="_blank"
+            >
+              <img
+                :src="getPngUrl(carbonOffset.image)"
+                :alt="carbonOffset.image"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +125,19 @@ export default {
           image: 'mediumr',
           link: 'https://timeswap.medium.com/',
           name: 'Medium',
+        },
+      ],
+
+      carbonOffsets: [
+        {
+          image: 'klimadao-pledge',
+          link:
+            'https://www.klimadao.finance/pledge/0xe67a921F5D1a55cfF2Ba34a6e96d1f3c1b93F823',
+        },
+        {
+          image: 'polygon-carbon-offset',
+          link:
+            'https://blog.polygon.technology/polygon-reaches-first-sustainability-milestone-by-achieving-carbon-neutrality/',
         },
       ],
 
@@ -146,6 +173,9 @@ export default {
   methods: {
     getImgUrl(media) {
       return require(`../assets/images/${media}.jpg`)
+    },
+    getPngUrl(media) {
+      return require(`../assets/images/${media}.png`)
     },
     getIconUrl(image) {
       return require(`../assets/images/${image}.svg`)
@@ -378,7 +408,7 @@ export default {
       }
 
       .formInfo {
-        padding: 32px 54px;
+        padding: 25px 45px;
         background: $dark-blue;
 
         @include media-breakpoint-down(md) {
@@ -403,10 +433,10 @@ export default {
 
       .form {
         background: $corn-flower;
-        padding: 45px 54px;
+        padding: 20px 45px;
 
         @include media-breakpoint-down(md) {
-          padding: 40px 35px;
+          padding: 20px 35px;
         }
 
         @include media-breakpoint-down(sm) {
@@ -427,7 +457,7 @@ export default {
 
         .socialWrap {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
 
           .icons {
             display: flex;
@@ -437,9 +467,30 @@ export default {
             margin-bottom: 10px;
             align-items: center;
             font-weight: 700;
+            width: 48%;
 
             img {
               margin-right: 8px;
+            }
+          }
+        }
+
+        .carbonOffsetWrap {
+          display: flex;
+          flex-direction: column;
+
+          .images {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-weight: 700;
+
+            &:first-child {
+              margin-left: -8px;
+            }
+
+            img {
+              max-width: 100%;
             }
           }
         }
