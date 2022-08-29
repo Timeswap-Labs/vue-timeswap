@@ -486,7 +486,7 @@ export default {
             font-weight: 700;
 
             &:first-child {
-              margin-left: -8px;
+              margin-left: -10px;
             }
 
             img {
