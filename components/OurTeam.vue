@@ -143,24 +143,6 @@ export default {
           ],
         },
         {
-          image: 'dipesh',
-          name: 'Dipesh',
-          lname: 'Sukhani',
-          designation: 'Smart Contract Developer',
-          description:
-            'Previously: Lead Blockchain Developer 1xchange Pte Ltd and Founder: Zapper.fi',
-          socials: [
-            {
-              link: 'https://twitter.com/dipeshsukhani',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/dipeshsukhani/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'dalsukh',
           name: 'Dalsukh',
           lname: 'Tapaniya',
