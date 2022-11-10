@@ -12,14 +12,10 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "bootstrap-vue": "^2.15.0",
+    "bootstrap-vue": "^2.23.0",
     "core-js": "^3.8.3",
     "dat.gui": "^0.7.7",
-    "nuxt": "^2.13.3",
-    "scss": "^0.2.4",
-    "vue": "^2.0.8",
-    "vue-server-renderer": "^2.1.8",
-    "vue-template-compiler": "^2.1.8"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/device": "^2.0.1",
@@ -33,7 +29,6 @@
     "eslint-plugin-vue": "^7.5.0",
     "prettier": "^2.2.1",
     "sass": "^1.56.1",
-    "sass-loader": "^10",
-    "webpack": "^4.46.0"
+    "sass-loader": "^10"
   }
 }
