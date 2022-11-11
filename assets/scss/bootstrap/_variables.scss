@@ -5,7 +5,7 @@
 
 // Color system
 
-@use "sass:math";
+@use 'sass:math';
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -70,7 +70,7 @@ $colors: map-merge(
 
 // Custom Color System for Devrel
 $gray-dark: #141e28;
-$dark-blue: #2f2f68;
+$dark-blue: #191d3a;
 $ldark-navy: #1c2134;
 $dark-navy: #0f1426;
 $light-navy: #7b78ff;
@@ -339,7 +339,7 @@ $h4-font-size: 26px !default;
 $h5-font-size: 24px !default;
 $h6-font-size: 20px !default;
 
-$headings-margin-bottom: math.div($spacer,2) !default;
+$headings-margin-bottom: math.div($spacer, 2) !default;
 $headings-font-family: 'hk_novaregular';
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -539,7 +539,7 @@ $input-height-inner-half: add(
 ) !default;
 $input-height-inner-quarter: add(
   $input-line-height * 0.25em,
-  math.div($input-padding-y,2)
+  math.div($input-padding-y, 2)
 ) !default;
 
 $input-height: add(
@@ -626,7 +626,10 @@ $custom-radio-indicator-border-radius: 50% !default;
 $custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
 $custom-switch-width: $custom-control-indicator-size * 1.75 !default;
-$custom-switch-indicator-border-radius: math.div($custom-control-indicator-size,2) !default;
+$custom-switch-indicator-border-radius: math.div(
+  $custom-control-indicator-size,
+  2
+) !default;
 $custom-switch-indicator-size: subtract(
   $custom-control-indicator-size,
   $custom-control-indicator-border-width * 4
