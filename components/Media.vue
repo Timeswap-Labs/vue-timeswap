@@ -45,8 +45,25 @@
             <img src="@/assets/images/timeswap-slogo.svg" alt />
           </div>
           <h4 :class="$style.formTitle">
-            World’s first fully decentralized AMM based money market protocol
+            World's first fully decentralized AMM based money market protocol
           </h4>
+
+          <hr :class="$style.separator" />
+
+          <div :class="$style.carbonOffsetWrap">
+            <a
+              v-for="(carbonOffset, index) in carbonOffsets"
+              :key="index"
+              :class="$style.images"
+              :href="carbonOffset.link"
+              target="_blank"
+            >
+              <img
+                :src="getPngUrl(carbonOffset.image)"
+                :alt="carbonOffset.image"
+              />
+            </a>
+          </div>
         </div>
         <!-- <div :class="$style.form">
           <h4 :class="$style.formTitle">Get early updates</h4>
@@ -64,7 +81,7 @@
             </div>
           </form>
         </div> -->
-        <div :class="$style.form">
+        <div :class="$style.socials">
           <h4 :class="$style.formTitle">Follow us</h4>
           <div :class="$style.socialWrap">
             <a
@@ -81,20 +98,16 @@
               {{ socialIcon.name }}
             </a>
           </div>
-          <div :class="$style.carbonOffsetWrap">
-            <a
-              v-for="(carbonOffset, index) in carbonOffsets"
-              :key="index"
-              :class="$style.images"
-              :href="carbonOffset.link"
-              target="_blank"
-            >
-              <img
-                :src="getPngUrl(carbonOffset.image)"
-                :alt="carbonOffset.image"
-              />
-            </a>
-          </div>
+
+          <iframe
+            src="https://discord.com/widget?id=756135419359395930&theme=dark"
+            width="314"
+            height="260"
+            footer="My enameee"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -131,13 +144,11 @@ export default {
       carbonOffsets: [
         {
           image: 'klimadao-pledge',
-          link:
-            'https://www.klimadao.finance/pledge/0xe67a921F5D1a55cfF2Ba34a6e96d1f3c1b93F823',
+          link: 'https://www.klimadao.finance/pledge/0xe67a921F5D1a55cfF2Ba34a6e96d1f3c1b93F823',
         },
         {
           image: 'polygon-carbon-offset',
-          link:
-            'https://blog.polygon.technology/polygon-reaches-first-sustainability-milestone-by-achieving-carbon-neutrality/',
+          link: 'https://blog.polygon.technology/polygon-reaches-first-sustainability-milestone-by-achieving-carbon-neutrality/',
         },
       ],
 
@@ -192,8 +203,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 1550px !important;
-  max-width: 1550px !important;
+  flex: 0 0 1900px !important;
+  max-width: 2000px !important;
 
   @include media-breakpoint-down(sm) {
     max-width: 100% !important;
@@ -396,23 +407,27 @@ export default {
     }
 
     .mediaForm {
-      max-width: 410px;
+      max-width: 832px;
+      max-height: 471px;
       width: 100%;
+      display: flex;
 
-      @include media-breakpoint-down(md) {
-        max-width: 350px;
-      }
-
-      @include media-breakpoint-down(sm) {
-        max-width: 100%;
+      @include media-breakpoint-down(xs) {
+        display: block;
+        max-height: 900px;
       }
 
       .formInfo {
-        padding: 25px 45px;
+        padding: 45px 45px 34px;
         background: $dark-blue;
+        max-width: 418px;
 
-        @include media-breakpoint-down(md) {
-          padding: 20px 35px;
+        @include media-breakpoint-down(sm) {
+          padding: 30px 24px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding: 30px 20px;
         }
 
         .logo {
@@ -429,11 +444,38 @@ export default {
           line-height: 1.2;
           padding-right: 20px;
         }
+
+        .separator {
+          opacity: 0.1;
+          border: 1px solid #ffffff;
+          margin: 38px 0;
+        }
+
+        .carbonOffsetWrap {
+          display: flex;
+          flex-direction: column;
+
+          .images {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-weight: 700;
+
+            &:first-child {
+              margin-left: -10px;
+            }
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
       }
 
-      .form {
-        background: $corn-flower;
-        padding: 20px 45px;
+      .socials {
+        background: linear-gradient(180deg, #a0d2eb 0%, #7b78ff 100%);
+        padding: 40px 45px;
+        max-width: 418px;
 
         @include media-breakpoint-down(md) {
           padding: 20px 35px;
@@ -456,6 +498,7 @@ export default {
         }
 
         .socialWrap {
+          margin-bottom: 24px;
           display: flex;
           flex-wrap: wrap;
 
@@ -471,26 +514,6 @@ export default {
 
             img {
               margin-right: 8px;
-            }
-          }
-        }
-
-        .carbonOffsetWrap {
-          display: flex;
-          flex-direction: column;
-
-          .images {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            font-weight: 700;
-
-            &:first-child {
-              margin-left: -10px;
-            }
-
-            img {
-              max-width: 100%;
             }
           }
         }
@@ -561,7 +584,7 @@ export default {
         .securityBlock {
           max-width: 675px;
           width: 100%;
-          background: #191d3a;
+          background: $dark-blue;
           border-radius: 8px;
           padding: 40px 40px 20px 40px;
           position: relative;
