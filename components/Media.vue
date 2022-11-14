@@ -100,10 +100,9 @@
           </div>
 
           <iframe
-            src="https://discord.com/widget?id=863092906516152332&theme=dark"
+            src="https://discord.com/widget?id=756135419359395930&theme=dark"
             width="314"
-            height="200"
-            theme="light"
+            height="260"
             footer="My enameee"
             allowtransparency="true"
             frameborder="0"
@@ -499,12 +498,9 @@ export default {
         }
 
         .socialWrap {
-          margin-bottom: 30px;
-
-          @include media-breakpoint-down(sm) {
-            display: flex;
-            flex-wrap: wrap;
-          }
+          margin-bottom: 24px;
+          display: flex;
+          flex-wrap: wrap;
 
           .icons {
             display: flex;
