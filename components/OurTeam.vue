@@ -213,23 +213,6 @@ export default {
           ],
         },
         {
-          image: 'antony',
-          name: 'Emmanuel',
-          lname: 'Antony',
-          designation: 'Smart Contract Developer',
-          description: 'Rust Developer and FOSS Enthusiast',
-          socials: [
-            {
-              link: 'https://twitter.com/EmmanuelAntony5',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/emmanuel-antony/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'varun',
           name: 'Varun',
           lname: 'Krishna',
@@ -400,9 +383,10 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 3100px !important;
-  max-width: 3100px !important;
+  flex: 0 0 2900px !important;
+  max-width: 2900px !important;
   padding-left: 200px;
+
   @include media-breakpoint-down(lg) {
     padding-left: 100px;
   }
@@ -417,6 +401,7 @@ export default {
   @include media-breakpoint-down(xs) {
     padding: 40px 24px 0;
   }
+
   .content {
     width: 100%;
     display: flex;
