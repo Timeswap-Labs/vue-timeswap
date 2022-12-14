@@ -350,7 +350,7 @@ export default {
           name: 'Heemank',
           lname: 'Verma',
           designation: 'Front end Developer',
-          description: 'Frontend developer | IIITD 24',
+          description: 'Frontend developer | Hackathons | DeFi',
           socials: [
             {
               link: 'https://twitter.com/HeemankVerma',
@@ -358,6 +358,23 @@ export default {
             },
             {
               link: 'https://www.linkedin.com/in/heemankv',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'harsha',
+          name: 'Harsha',
+          lname: 'Kakaraparthy',
+          designation: 'Intern - Community Manager',
+          description: 'Weeb | learnoor | tenacious',
+          socials: [
+            {
+              link: 'https://twitter.com/Harsha52173432',
+              image: 'twitter',
+            },
+            {
+              link: '',
               image: 'linkedin',
             },
           ],
