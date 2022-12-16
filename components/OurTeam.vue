@@ -302,7 +302,7 @@ export default {
           description: 'DeFi enthu. Shitposter. Little engineering.',
           socials: [
             {
-              link: 'https://twitter.com/krishbhatt',
+              link: 'https://twitter.com/krishbhatt_',
               image: 'twitter',
             },
             {
