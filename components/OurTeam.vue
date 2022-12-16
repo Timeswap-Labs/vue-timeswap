@@ -272,7 +272,7 @@ export default {
           description: 'Reader I Writer I Thinker',
           socials: [
             {
-              link: 'https://twitter.com/Manvinder02',
+              link: 'https://twitter.com/faithoormanvin1',
               image: 'twitter',
             },
             {
@@ -315,15 +315,15 @@ export default {
           image: 'krish',
           name: 'Krish Arvind',
           lname: 'Bhatt',
-          designation: 'Community Manager',
+          designation: 'Content Writer',
           description: 'DeFi enthu. Shitposter. Little engineering.',
           socials: [
             {
-              link: '',
+              link: 'https://twitter.com/krishbhatt',
               image: 'twitter',
             },
             {
-              link: '',
+              link: 'https://www.linkedin.com/in/krish-bhatt-9776b0234',
               image: 'linkedin',
             },
           ],
@@ -349,7 +349,7 @@ export default {
           image: 'heemank',
           name: 'Heemank',
           lname: 'Verma',
-          designation: 'Front end Developer',
+          designation: 'Front End Developer',
           description: 'Frontend developer | Hackathons | DeFi',
           socials: [
             {
