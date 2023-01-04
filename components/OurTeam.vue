@@ -362,6 +362,24 @@ export default {
             },
           ],
         },
+        {
+          image: 'shatabarto',
+          name: 'Shatabarto',
+          lname: 'Bhattacharya',
+          designation: 'Intern Smart Contract Developer',
+          description:
+            "GSoC'22 @MetaBrainz | Open-Source Contributor | AI Researcher | EVM Enjoyer",
+          socials: [
+            {
+              link: 'https://twitter.com/riksucks',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/shatabarto-bhattacharya-6bb6ba149/',
+              image: 'linkedin',
+            },
+          ],
+        },
       ],
       advisors: [
         {
