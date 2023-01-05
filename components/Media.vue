@@ -131,7 +131,7 @@ export default {
         },
         {
           image: 'discordr',
-          link: 'https://discord.gg/YTUtTJfc6S',
+          link: 'https://discord.GG/timeswap',
           name: 'Discord',
         },
         {

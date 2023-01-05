@@ -86,7 +86,7 @@ export default {
         },
         {
           image: 'ftr-four-icon',
-          link: 'https://discord.gg/YTUtTJfc6S',
+          link: 'https://discord.GG/timeswap',
         },
         {
           image: 'ftr-five-icon',
@@ -121,8 +121,7 @@ export default {
         //   class: 'mobile-only',
         // },
         {
-          link:
-            'https://petal-cornflower-1db.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee/',
+          link: 'https://petal-cornflower-1db.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee/',
           name: 'Brand Kit',
         },
         {

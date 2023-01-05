@@ -349,7 +349,7 @@ export default {
           image: 'harsha',
           name: 'Harsha',
           lname: 'Kakaraparthy',
-          designation: 'Intern - Community Manager',
+          designation: 'Community Manager',
           description: 'Weeb | learnoor | tenacious',
           socials: [
             {
