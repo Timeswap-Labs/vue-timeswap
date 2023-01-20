@@ -22,7 +22,7 @@
         >
           Careers
         </a>
-        <span :class="$style.hiring">We're hiring</span>
+        <!-- <span :class="$style.hiring">We're hiring</span> -->
       </span>
       <a
         :class="$style.appBtn"
