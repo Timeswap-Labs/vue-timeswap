@@ -97,12 +97,6 @@ export default {
           designation: 'Ex Consensys / Advisor - Polygon',
         },
         {
-          person: 'julien',
-          link: 'https://twitter.com/bneiluj',
-          name: 'Julien Bouteloup',
-          designation: 'Curve Finance / Stake DAO',
-        },
-        {
           person: 'larry',
           link: 'https://twitter.com/lawmaster',
           name: 'Larry Cermak',
