@@ -106,12 +106,12 @@ export default {
         },
         {
           image: 'ftr-defillama',
-          link: 'https://defillama.com/protocol/timeswap',
+          link: 'https://defillama.com/protocol/timeswap-v2',
         },
       ],
       externalLinks: [
         {
-          link: 'https://timeswap.gitbook.io/timeswap/',
+          link: 'https://timeswap.gitbook.io/timeswap-v2-money-market/timeswap-v2/introduction',
           name: 'Docs',
           class: 'mobile-only',
         },
