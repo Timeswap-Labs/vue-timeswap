@@ -6,7 +6,14 @@
       </h1>
       <div :class="$style.commingTxt">
         Powered by
-        <img src="@/assets/images/polygon.svg" width="115px" alt />
+        <div :class="$style.supportedChain">
+          <img src="@/assets/images/ETH.svg" width="24px" alt="ethereum" />
+          <span :class="$style.chainName">Ethereum</span>
+        </div>
+        <div :class="$style.supportedChain">
+          <img src="@/assets/images/MATIC.svg" width="24px" alt="polygon" />
+          <span :class="$style.chainName">Polygon</span>
+        </div>
       </div>
     </div>
   </section>
@@ -177,15 +184,27 @@
       color: $white;
       display: flex;
       align-items: center;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.88);
+      column-gap: 8px;
+
+      .supportedChain {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        padding-right: 11px;
+        column-gap: 5px;
+        border-radius: 17.5px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+
+        .chainName {
+          position: relative;
+          bottom: 1px;
+        }
+      }
 
       @include media-breakpoint-down(sm) {
         justify-content: center;
-      }
-
-      img {
-        margin-left: 5px;
-        margin-top: 3px;
       }
     }
   }
