@@ -6,18 +6,52 @@
       </h1>
       <div :class="$style.commingTxt">
         Powered by
-        <div :class="$style.supportedChain">
-          <img src="@/assets/images/ETH.svg" width="24px" alt="ethereum" />
-          <span :class="$style.chainName">Ethereum</span>
-        </div>
-        <div :class="$style.supportedChain">
-          <img src="@/assets/images/MATIC.svg" width="24px" alt="polygon" />
-          <span :class="$style.chainName">Polygon</span>
+
+        <div
+          v-for="(supportedChain, index) in supportedChains"
+          :key="index"
+          :class="$style.supportedChain"
+        >
+          <img
+            :src="getImgUrl(supportedChain.image)"
+            :alt="supportedChain.name"
+            height="24px"
+          />
+          <span :class="$style.chainName">{{ supportedChain.name }}</span>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      supportedChains: [
+        {
+          name: 'Ethereum',
+          image: 'ETH',
+        },
+        {
+          name: 'Polygon',
+          image: 'MATIC',
+        },
+        {
+          name: 'Arbitrum',
+          image: 'ARB',
+        },
+      ],
+    }
+  },
+
+  methods: {
+    getImgUrl(icon) {
+      return require(`@/assets/images/chains/${icon}.svg`)
+    },
+  },
+}
+</script>
 
 <style lang="scss" module>
 .firstPage {
