@@ -452,8 +452,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 3100px !important;
-  max-width: 3100px !important;
+  flex: 0 0 3300px !important;
+  max-width: 3300px !important;
   padding-left: 200px;
 
   @include media-breakpoint-down(lg) {
