@@ -333,7 +333,7 @@ export default {
           name: 'Heemank',
           lname: 'Verma',
           designation: 'Front End Developer',
-          description: 'Frontend developer | Hackathons | DeFi',
+          description: 'DeFi | Hackathons | Wanderlust',
           socials: [
             {
               link: 'https://twitter.com/HeemankVerma',
@@ -366,7 +366,7 @@ export default {
           image: 'shatabarto',
           name: 'Shatabarto',
           lname: 'Bhattacharya',
-          designation: 'Intern Smart Contract Developer',
+          designation: 'Smart Contract Developer',
           description:
             "GSoC'22 @MetaBrainz | Open-Source Contributor | AI Researcher | EVM Enjoyer",
           socials: [
@@ -376,6 +376,40 @@ export default {
             },
             {
               link: 'https://www.linkedin.com/in/shatabarto-bhattacharya-6bb6ba149/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'raveena',
+          name: 'Raveena',
+          lname: 'Bhasin',
+          designation: 'Intern Developer',
+          description: 'Google scholar | Generalist | Finance savvy',
+          socials: [
+            {
+              link: 'https://twitter.com/RaveenaBhasin',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/raveena-bhasin-15b9b6200/',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'domica',
+          name: 'Domica',
+          lname: 'Santoso',
+          designation: 'Growth Product Manager',
+          description: 'DeFi products and investments',
+          socials: [
+            {
+              link: 'https://twitter.com/mimiLFG',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/domica/',
               image: 'linkedin',
             },
           ],
