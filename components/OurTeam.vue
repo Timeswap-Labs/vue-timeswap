@@ -143,19 +143,18 @@ export default {
           ],
         },
         {
-          image: 'dalsukh',
-          name: 'Dalsukh',
-          lname: 'Tapaniya',
-          designation: 'Design Lead',
-          description:
-            'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
+          image: 'domica',
+          name: 'Domica',
+          lname: 'Santoso',
+          designation: 'Growth Product Manager',
+          description: 'DeFi products and investments',
           socials: [
             {
-              link: 'https://twitter.com/djtapaniya',
+              link: 'https://twitter.com/mimiLFG',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/dalsukhtapaniya/',
+              link: 'https://www.linkedin.com/in/domica/',
               image: 'linkedin',
             },
           ],
@@ -191,6 +190,24 @@ export default {
             },
             {
               link: '',
+              image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'dalsukh',
+          name: 'Dalsukh',
+          lname: 'Tapaniya',
+          designation: 'Design Lead',
+          description:
+            'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
+          socials: [
+            {
+              link: 'https://twitter.com/djtapaniya',
+              image: 'twitter',
+            },
+            {
+              link: 'https://www.linkedin.com/in/dalsukhtapaniya/',
               image: 'linkedin',
             },
           ],
@@ -393,23 +410,6 @@ export default {
             },
             {
               link: 'https://www.linkedin.com/in/raveena-bhasin-15b9b6200/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
-          image: 'domica',
-          name: 'Domica',
-          lname: 'Santoso',
-          designation: 'Growth Product Manager',
-          description: 'DeFi products and investments',
-          socials: [
-            {
-              link: 'https://twitter.com/mimiLFG',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/domica/',
               image: 'linkedin',
             },
           ],
