@@ -17,7 +17,7 @@
       <span :class="[$style.careers, $style.documentation]">
         <a
           :class="[$style.text, $style.link]"
-          href="https://angel.co/l/2wHbN8"
+          href="/TS-careers.pdf"
           target="_blank"
         >
           Careers
