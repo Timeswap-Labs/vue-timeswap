@@ -17,7 +17,7 @@
       <span :class="[$style.careers, $style.documentation]">
         <a
           :class="[$style.text, $style.link]"
-          href="/TS-careers.pdf"
+          href="https://timeswaplabs.notion.site/Hiring-at-Timeswap-Labs-38c5c8510984489db528c20184117e22"
           target="_blank"
         >
           Careers
