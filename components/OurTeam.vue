@@ -396,24 +396,7 @@ export default {
               image: 'linkedin',
             },
           ],
-        },
-        {
-          image: 'raveena',
-          name: 'Raveena',
-          lname: 'Bhasin',
-          designation: 'Intern Developer',
-          description: 'Google scholar | Generalist | Finance savvy',
-          socials: [
-            {
-              link: 'https://twitter.com/RaveenaBhasin',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/raveena-bhasin-15b9b6200/',
-              image: 'linkedin',
-            },
-          ],
-        },
+        }
       ],
       advisors: [
         {
@@ -452,8 +435,8 @@ export default {
   padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 3300px !important;
-  max-width: 3300px !important;
+  flex: 0 0 3100px !important;
+  max-width: 3100px !important;
   padding-left: 200px;
 
   @include media-breakpoint-down(lg) {
