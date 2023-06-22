@@ -102,7 +102,7 @@ export default {
         },
         {
           image: 'ftr-dune',
-          link: 'https://dune.com/ameeth/Timeswap',
+          link: 'https://dune.com/timeswap-labs/timeswap-v2-master-dashboard',
         },
         {
           image: 'ftr-defillama',
@@ -121,7 +121,7 @@ export default {
         //   class: 'mobile-only',
         // },
         {
-          link: 'https://petal-cornflower-1db.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee/',
+          link: 'https://timeswaplabs.notion.site/Timeswap-Media-Kit-01ae2de623e04ea291e331a336b1b3ee',
           name: 'Brand Kit',
         },
         {
