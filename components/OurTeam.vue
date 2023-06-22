@@ -133,7 +133,7 @@ export default {
           description: 'Previously Head of Product & Technology @Aurigin',
           socials: [
             {
-              link: 'https://twitter.com/0x42069',
+              link: 'https://twitter.com/0x42069x',
               image: 'twitter',
             },
             {
@@ -272,11 +272,11 @@ export default {
           description: 'Reader I Writer I Thinker',
           socials: [
             {
-              link: 'https://twitter.com/faithoormanvin1',
+              link: 'https://twitter.com/gracegobrr420',
               image: 'twitter',
             },
             {
-              link: 'https://www.linkedin.com/in/manvinder-arora-2520/',
+              link: 'https://www.linkedin.com/in/manvinderarora/',
               image: 'linkedin',
             },
           ],
@@ -319,7 +319,7 @@ export default {
           description: 'DeFi enthu. Shitposter. Little engineering.',
           socials: [
             {
-              link: 'https://twitter.com/krishbhatt_',
+              link: 'https://twitter.com/0xkrishb',
               image: 'twitter',
             },
             {
@@ -353,7 +353,7 @@ export default {
           description: 'DeFi | Hackathons | Wanderlust',
           socials: [
             {
-              link: 'https://twitter.com/HeemankVerma',
+              link: 'https://twitter.com/heemankv',
               image: 'twitter',
             },
             {
@@ -396,7 +396,7 @@ export default {
               image: 'linkedin',
             },
           ],
-        }
+        },
       ],
       advisors: [
         {
