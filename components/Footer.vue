@@ -111,7 +111,7 @@ export default {
       ],
       externalLinks: [
         {
-          link: 'https://timeswap.gitbook.io/timeswap-v2-money-market/timeswap-v2/introduction',
+          link: 'https://timeswap.gitbook.io/timeswap-v2/',
           name: 'Docs',
           class: 'mobile-only',
         },
