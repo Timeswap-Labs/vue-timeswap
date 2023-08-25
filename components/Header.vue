@@ -6,7 +6,7 @@
     <div :class="$style.info">
       <a
         :class="[$style.text, $style.documentation]"
-        href="https://timeswap.gitbook.io/timeswap-v2-money-market/timeswap-v2/introduction"
+        href="https://timeswap.gitbook.io/timeswap-v2"
         target="_blank"
       >
         Docs
