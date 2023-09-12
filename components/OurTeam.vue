@@ -285,7 +285,7 @@ export default {
           image: 'manvinder',
           name: 'Manvinder',
           lname: 'Arora',
-          designation: 'Community Manager',
+          designation: 'Marketing and Community Manager',
           description: 'Reader I Writer I Thinker',
           socials: [
             {
