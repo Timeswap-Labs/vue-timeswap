@@ -4,8 +4,8 @@
       <h1 id="bigtitle" :class="$style.mainTitle">
         First fully decentralized AMM based money market protocol
       </h1>
-      <div :class="$style.commingTxt">
-        Powered by
+      <div :class="$style.chainList">
+        <span style="width: 100%; margin-bottom: 8px">Powered by</span>
 
         <div
           v-for="(supportedChain, index) in supportedChains"
@@ -34,12 +34,24 @@ export default {
           image: 'ETH',
         },
         {
+          name: 'Arbitrum',
+          image: 'ARB',
+        },
+        {
           name: 'Polygon',
           image: 'MATIC',
         },
         {
-          name: 'Arbitrum',
-          image: 'ARB',
+          name: 'Base',
+          image: 'BASE',
+        },
+        {
+          name: 'Mantle',
+          image: 'MANTLE',
+        },
+        {
+          name: 'Polygon zkEVM',
+          image: 'zkEVM',
         },
       ],
     }
@@ -47,7 +59,7 @@ export default {
 
   methods: {
     getImgUrl(icon) {
-      return require(`@/assets/images/chains/${icon}.svg`)
+      return require(`@/assets/images/chains/${icon}.png`)
     },
   },
 }
@@ -214,12 +226,15 @@ export default {
       transition: all 0.6s ease-out 0.4s;
     }
 
-    .commingTxt {
+    .chainList {
       color: $white;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: flex-start;
       color: rgba(255, 255, 255, 0.88);
       column-gap: 8px;
+      row-gap: 8px;
 
       .supportedChain {
         display: flex;
