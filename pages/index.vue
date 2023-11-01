@@ -53,6 +53,13 @@ export default {
       this.setHorizontalScroll()
     }
     this.loadAnimation()
+
+    const safaryScript = document.createElement('script')
+    safaryScript.setAttribute(
+      'src',
+      'https://tag.safary.club/stag.js?id=prd_gxnIBZ83jN'
+    )
+    document.head.appendChild(safaryScript)
   },
 
   beforeMount() {
