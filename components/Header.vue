@@ -6,6 +6,13 @@
     <div :class="$style.info">
       <a
         :class="[$style.text, $style.documentation]"
+        href="https://analytics.timeswap.io/"
+        target="_blank"
+      >
+        Analytics
+      </a>
+      <a
+        :class="[$style.text, $style.documentation]"
         href="https://timeswap.gitbook.io/timeswap-v2"
         target="_blank"
       >
