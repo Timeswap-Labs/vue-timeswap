@@ -101,12 +101,8 @@ export default {
           link: 'https://www.youtube.com/channel/UCY8rACVXfPNP-P3M0cCvuEw',
         },
         {
-          image: 'ftr-dune',
-          link: 'https://dune.com/timeswap-labs/timeswap-v2-master-dashboard',
-        },
-        {
           image: 'ftr-defillama',
-          link: 'https://defillama.com/protocol/timeswap-v2',
+          link: 'https://defillama.com/protocol/timeswap',
         },
       ],
       externalLinks: [
