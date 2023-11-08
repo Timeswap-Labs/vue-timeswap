@@ -202,7 +202,7 @@ export default {
           description: 'Previously VP-Finance & Treasury @Polygon',
           socials: [
             {
-              link: 'https://twitter.com/keyur12392',
+              link: 'https://twitter.com/0x_Keyur',
               image: 'twitter',
             },
             {
@@ -257,10 +257,6 @@ export default {
               link: 'https://twitter.com/_vhawk19_',
               image: 'twitter',
             },
-            {
-              link: 'https://www.linkedin.com/in/vhawk19/',
-              image: 'linkedin',
-            },
           ],
         },
         {
@@ -289,7 +285,7 @@ export default {
           description: 'Reader I Writer I Thinker',
           socials: [
             {
-              link: 'https://twitter.com/gracegobrr420',
+              link: 'https://twitter.com/gracebrrr42069',
               image: 'twitter',
             },
             {
