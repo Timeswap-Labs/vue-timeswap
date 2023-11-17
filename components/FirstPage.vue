@@ -2,7 +2,7 @@
   <section :class="$style.firstPage">
     <div :class="$style.content">
       <h1 id="bigtitle" :class="$style.mainTitle">
-        First fully decentralized AMM based money market protocol
+        Non-liquidatable leverage for any asset
       </h1>
       <div :class="$style.chainList">
         <span style="width: 100%; margin-bottom: 8px">Powered by</span>

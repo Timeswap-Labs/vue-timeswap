@@ -24,16 +24,33 @@
             </h4>
             <div :class="$style.btnGrp">
               <div :class="$style.btn">
-                <img src="@/assets/images/code4rena.svg" alt />
+                <a
+                  href="https://app.timeswap.io/documents/Trust-audit-report.pdf"
+                  target="_blank"
+                >
+                  <img
+                    src="@/assets/images/trustsecurity.png"
+                    alt
+                    width="204px"
+                    height="71px"
+                  />
+                </a>
               </div>
               <div :class="$style.btn">
-                <img src="@/assets/images/trailofbits.svg" alt />
+                <a
+                  href="https://code4rena.com/reports/2023-01-timeswap/"
+                  target="_blank"
+                >
+                  <img src="@/assets/images/code4rena.svg" alt />
+                </a>
               </div>
               <div :class="$style.btn">
-                <img src="@/assets/images/peckshield.svg" alt />
-              </div>
-              <div :class="$style.btn">
-                <img src="@/assets/images/quantstamp.svg" alt />
+                <a
+                  href="https://app.timeswap.io/documents/PeckShield-audit-report.pdf"
+                  target="_blank"
+                >
+                  <img src="@/assets/images/peckshield.svg" alt />
+                </a>
               </div>
             </div>
           </div>
