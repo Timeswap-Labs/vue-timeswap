@@ -54,12 +54,12 @@ export default {
     }
     this.loadAnimation()
 
-    const safaryScript = document.createElement('script')
-    safaryScript.setAttribute(
-      'src',
-      'https://tag.safary.club/stag.js?id=prd_gxnIBZ83jN'
-    )
-    document.head.appendChild(safaryScript)
+    // const safaryScript = document.createElement('script')
+    // safaryScript.setAttribute(
+    //   'src',
+    //   'https://tag.safary.club/stag.js?id=prd_gxnIBZ83jN'
+    // )
+    // document.head.appendChild(safaryScript)
   },
 
   beforeMount() {
