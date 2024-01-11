@@ -306,23 +306,23 @@ export default {
             },
           ],
         },
-        {
-          image: 'tanishq',
-          name: 'Tanishq',
-          lname: 'Singh',
-          designation: 'Visual Designer',
-          description: 'Living between art',
-          socials: [
-            {
-              link: 'https://twitter.com/PerryBerry1325',
-              image: 'twitter',
-            },
-            {
-              link: '',
-              image: 'linkedin',
-            },
-          ],
-        },
+        // {
+        // image: 'tanishq',
+        //  name: 'Tanishq',
+        //  lname: 'Singh',
+        // designation: 'Visual Designer',
+        // description: 'Living between art',
+        // socials: [
+        //   {
+        //     link: 'https://twitter.com/PerryBerry1325',
+        //     image: 'twitter',
+        //   },
+        //   {
+        //     link: '',
+        //     image: 'linkedin',
+        //   },
+        // ],
+        //,
         {
           image: 'krish',
           name: 'Krish Arvind',
