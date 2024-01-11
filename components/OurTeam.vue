@@ -180,7 +180,7 @@ export default {
           image: 'anupama',
           name: 'Anupama',
           lname: 'Singh',
-          designation: 'Operations Lead',
+          designation: 'HR & Operations Lead',
           description:
             'Previously worked as an Assistant Professor of Engineering',
           socials: [
@@ -212,24 +212,6 @@ export default {
           ],
         },
         {
-          image: 'dalsukh',
-          name: 'Dalsukh',
-          lname: 'Tapaniya',
-          designation: 'Design Lead',
-          description:
-            'Making, Breaking and Building Stuff. Contributor @0xEthdesign, Community @EthIndiaco',
-          socials: [
-            {
-              link: 'https://twitter.com/djtapaniya',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/dalsukhtapaniya/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'sharath',
           name: 'Sharath',
           lname: 'Nair',
@@ -243,6 +225,23 @@ export default {
             {
               link: 'https://www.linkedin.com/in/sharath-nair-here/',
               image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'mostafa',
+          name: 'Mostafa',
+          lname: 'Abouzeid',
+          designation: 'Front End Developer',
+          description: 'Your Favorite T-Shaped Software Engineer',
+          socials: [
+            {
+              link: 'https://www.linkedin.com/in/mostafatalaat770/',
+              image: 'linkedin',
+            },
+            {
+              link: 'https://github.com/mostafatalaat770',
+              image: 'github',
             },
           ],
         },
