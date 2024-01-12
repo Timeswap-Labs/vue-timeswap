@@ -58,6 +58,22 @@ export default {
           image: 'definance',
           link: 'https://www.defiance.capital/',
         },
+        {
+          image: 'symbolic',
+          link: 'https://www.symbolic.capital/',
+        },
+        {
+          image: 'ldcap',
+          link: 'https://ldcap.com/',
+        },
+        {
+          image: 'sharding',
+          link: 'https://www.sharding.capital/',
+        },
+        {
+          image: 'lolcapital',
+          link: 'https://www.lolcapital.io/',
+        },
       ],
       investorPersons: [
         {
@@ -100,7 +116,7 @@ export default {
           person: 'larry',
           link: 'https://twitter.com/lawmaster',
           name: 'Larry Cermak',
-          designation: 'Director of Research, The Block',
+          designation: 'CEO - The Block',
         },
         {
           person: 'mika',
@@ -112,25 +128,25 @@ export default {
           person: 'kenzi',
           link: 'https://twitter.com/macrokenzi',
           name: 'Kenzi Wang',
-          designation: 'Co-Founder, Cere Network / AU21',
+          designation: 'Symbolic Capital / Beacon',
         },
         {
           person: 'calvin',
           link: 'https://twitter.com/cjliu49',
           name: 'Calvin Liu',
-          designation: 'Strategy Lead, Compound Labs',
+          designation: 'Eigen Layer / ex Compound',
         },
         {
           person: 'george',
           link: 'https://twitter.com/gpl_94',
           name: 'George Lambeth',
-          designation: 'Partner, Divergence Ventures',
+          designation: 'DAO5',
         },
         {
           person: 'vaibhav',
           link: 'https://twitter.com/vasa_develop',
           name: 'Vaibhav',
-          designation: 'Founder, gem.xyz',
+          designation: 'Co-Founder Opensea Pro / Gem',
         },
         {
           person: 'sina',
@@ -169,10 +185,58 @@ export default {
           designation: 'Founder & CTO, Biconomy',
         },
         {
-          person: 'ajeet',
-          link: 'https://twitter.com/AjeetK',
-          name: 'Ajeet Khurana',
-          designation: 'ex CEO - Zebpay / Angel Investor',
+          person: 'shreyansh_27',
+          link: 'https://twitter.com/shreyansh_27',
+          name: 'Shreyansh Singh',
+          designation: 'Polygon Ventures',
+        },
+        {
+          person: 'aniket_jindal08',
+          link: 'https://twitter.com/aniket_jindal08',
+          name: 'Aniket Jindal',
+          designation: 'Co Founder Biconomy',
+        },
+        {
+          person: 'ryanfang95',
+          link: 'https://twitter.com/ryanfang95',
+          name: 'Ryan Fang',
+          designation: 'Founder Ankr',
+        },
+        {
+          person: 'TakayamaJoe',
+          link: 'https://twitter.com/TakayamaJoe',
+          name: 'Joe Takayama',
+          designation: 'ex Morgan Stanley / Youtuber',
+        },
+        {
+          person: 'logo-wihout-text',
+          link: 'https://twitter.com/ryanfang95',
+          name: 'Todd Zhou',
+          designation: 'ex Sequoia China',
+        },
+        {
+          person: 'midcurve',
+          link: 'https://twitter.com/midcurve',
+          name: 'Midcurve',
+          designation: '',
+        },
+        {
+          person: 'dingalingts',
+          link: 'https://twitter.com/dingalingts',
+          name: 'Dinagling',
+          designation: 'Angel / ex Binance Labs',
+        },
+        {
+          person: 'CryptoGorillaYT',
+          link: 'https://twitter.com/CryptoGorillaYT',
+          name: 'Crypto Gorilla',
+          designation: 'Youtuber',
+        },
+        {
+          person: 'crypturco',
+          link: 'https://twitter.com/crypturco',
+          name: '3nes',
+          designation: '',
         },
       ],
     }
@@ -257,8 +321,9 @@ export default {
       }
 
       .investorList {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
 
         @include media-breakpoint-down(sm) {
           justify-content: center;
