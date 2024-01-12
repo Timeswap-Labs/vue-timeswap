@@ -53,6 +53,10 @@ export default {
           name: 'Polygon zkEVM',
           image: 'zkEVM',
         },
+        {
+          name: 'Optimism',
+          image: 'OP',
+        },
       ],
     }
   },
