@@ -215,7 +215,7 @@ export default {
           image: 'sharath',
           name: 'Sharath',
           lname: 'Nair',
-          designation: 'Lead - Front End Development',
+          designation: 'Lead - Front End Developer',
           description: 'Previously Frontend Module Lead @ Trilogy Software',
           socials: [
             {
@@ -422,7 +422,7 @@ export default {
           image: 'jaynti',
           name: 'Jaynti',
           lname: 'Kanani',
-          designation: 'Co-founder, Polygon',
+          designation: 'ex Co-founder, Polygon',
           link: 'https://twitter.com/_jdkanani',
         },
       ],
