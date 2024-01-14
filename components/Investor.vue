@@ -67,12 +67,12 @@ export default {
           link: 'https://ldcap.com/',
         },
         {
-          image: 'sharding',
-          link: 'https://www.sharding.capital/',
-        },
-        {
           image: 'lolcapital',
           link: 'https://www.lolcapital.io/',
+        },
+        {
+          image: 'sharding',
+          link: 'https://www.sharding.capital/',
         },
       ],
       investorPersons: [
@@ -93,6 +93,12 @@ export default {
           link: 'https://twitter.com/MihailoBjelic',
           name: 'Mihailo Bjelic',
           designation: 'Co-founder, Polygon',
+        },
+        {
+          person: 'sachin',
+          link: 'https://twitter.com/schin_tomar',
+          name: 'Sachin Tomar',
+          designation: 'Founder & CTO, Biconomy',
         },
         {
           person: 'ryan',
@@ -119,6 +125,36 @@ export default {
           designation: 'CEO - The Block',
         },
         {
+          person: 'vaibhav',
+          link: 'https://twitter.com/vasa_develop',
+          name: 'Vaibhav',
+          designation: 'Co-Founder Opensea Pro / Gem',
+        },
+        {
+          person: 'tanmay',
+          link: 'https://twitter.com/thetanmay',
+          name: 'Tanmay Bhat',
+          designation: 'Co-founder, Superteam DAO',
+        },
+        {
+          person: 'akshay',
+          link: 'https://twitter.com/akshaybd',
+          name: 'Akshay BD',
+          designation: 'Co-founder, Superteam DAO',
+        },
+        {
+          person: 'aniket_jindal08',
+          link: 'https://twitter.com/aniket_jindal08',
+          name: 'Aniket Jindal',
+          designation: 'Co-founder Biconomy',
+        },
+        {
+          person: 'ryanfang95',
+          link: 'https://twitter.com/ryanfang95',
+          name: 'Ryan Fang',
+          designation: 'Founder, Ankr',
+        },
+        {
           person: 'mika',
           link: 'https://twitter.com/mhonkasalo',
           name: 'Mika Honkasalo',
@@ -142,30 +178,14 @@ export default {
           name: 'George Lambeth',
           designation: 'DAO5',
         },
-        {
-          person: 'vaibhav',
-          link: 'https://twitter.com/vasa_develop',
-          name: 'Vaibhav',
-          designation: 'Co-Founder Opensea Pro / Gem',
-        },
+
         {
           person: 'sina',
           link: 'https://twitter.com/sinahab',
           name: 'Sina Habibian',
           designation: 'Ethereum Foundation',
         },
-        {
-          person: 'tanmay',
-          link: 'https://twitter.com/thetanmay',
-          name: 'Tanmay Bhat',
-          designation: 'Co-founder, Superteam DAO',
-        },
-        {
-          person: 'akshay',
-          link: 'https://twitter.com/akshaybd',
-          name: 'Akshay BD',
-          designation: 'Co-founder, Superteam DAO',
-        },
+
         {
           person: 'ajit',
           link: 'https://twitter.com/chainyoda',
@@ -178,30 +198,14 @@ export default {
           name: 'Sanket Shah',
           designation: 'Strategy Lead, Polygon',
         },
-        {
-          person: 'sachin',
-          link: 'https://twitter.com/schin_tomar',
-          name: 'Sachin Tomar',
-          designation: 'Founder & CTO, Biconomy',
-        },
+
         {
           person: 'shreyansh_27',
           link: 'https://twitter.com/shreyansh_27',
           name: 'Shreyansh Singh',
           designation: 'Polygon Ventures',
         },
-        {
-          person: 'aniket_jindal08',
-          link: 'https://twitter.com/aniket_jindal08',
-          name: 'Aniket Jindal',
-          designation: 'Co Founder Biconomy',
-        },
-        {
-          person: 'ryanfang95',
-          link: 'https://twitter.com/ryanfang95',
-          name: 'Ryan Fang',
-          designation: 'Founder Ankr',
-        },
+
         {
           person: 'TakayamaJoe',
           link: 'https://twitter.com/TakayamaJoe',
@@ -258,11 +262,10 @@ export default {
   position: relative;
   width: 100%;
   padding: 100px 200px;
-  padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2600px !important;
-  max-width: 2600px !important;
+  flex: 0 0 2900px !important;
+  max-width: 2900px !important;
   background: rgba(25, 29, 58, 0.7);
 
   @include media-breakpoint-down(lg) {
@@ -286,6 +289,7 @@ export default {
   .investorRow {
     display: flex;
     width: 100%;
+    gap: 80px;
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
@@ -293,13 +297,9 @@ export default {
     }
 
     .investorContent {
-      max-width: 370px;
-      width: 100%;
-      margin-right: 150px;
-
       @include media-breakpoint-down(sm) {
         max-width: 100%;
-        margin-right: 0;
+        margin-inline: auto;
         padding: 0 24px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         margin-bottom: 60px;
@@ -322,20 +322,25 @@ export default {
 
       .investorList {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 40px;
+        grid-gap: 20px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
+        align-items: center;
 
         @include media-breakpoint-down(sm) {
           justify-content: center;
           align-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-flow: row;
         }
 
         .investorSingle {
-          width: 100%;
+          width: 250px;
           margin-bottom: 55px;
 
           @include media-breakpoint-down(sm) {
-            max-width: 250px;
+            width: auto;
+            max-width: 150px;
           }
 
           img {
@@ -357,10 +362,15 @@ export default {
       }
 
       .investorPList {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-column-gap: 24px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: column;
 
         @include media-breakpoint-down(sm) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-flow: row;
+
           justify-content: center;
           margin: 0 -8px;
         }
