@@ -213,7 +213,7 @@ export default {
           designation: 'ex Morgan Stanley / Youtuber',
         },
         {
-          person: 'logo-wihout-text',
+          person: 'default-user',
           link: 'https://twitter.com/ryanfang95',
           name: 'Todd Zhou',
           designation: 'ex Sequoia China',
