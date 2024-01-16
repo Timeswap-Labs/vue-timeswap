@@ -67,10 +67,6 @@ export default {
           link: 'https://ldcap.com/',
         },
         {
-          image: 'lolcapital',
-          link: 'https://www.lolcapital.io/',
-        },
-        {
           image: 'sharding',
           link: 'https://www.sharding.capital/',
         },
@@ -86,7 +82,7 @@ export default {
           person: 'surojit',
           link: 'https://twitter.com/surojit',
           name: 'Surojit Chatterjee',
-          designation: 'CPO, Coinbase',
+          designation: 'ex CPO, Coinbase',
         },
         {
           person: 'mihailo',
@@ -114,7 +110,7 @@ export default {
         },
         {
           person: 'john',
-          link: 'https://twitter.com/JohnLilic',
+          link: '',
           name: 'John Lilic',
           designation: 'Ex Consensys / Advisor - Polygon',
         },
@@ -146,7 +142,7 @@ export default {
           person: 'aniket_jindal08',
           link: 'https://twitter.com/aniket_jindal08',
           name: 'Aniket Jindal',
-          designation: 'Co-founder Biconomy',
+          designation: 'Co-founder, Biconomy',
         },
         {
           person: 'ryanfang95',
@@ -162,7 +158,7 @@ export default {
         },
         {
           person: 'kenzi',
-          link: 'https://twitter.com/macrokenzi',
+          link: 'https://twitter.com/0xkenzi',
           name: 'Kenzi Wang',
           designation: 'Symbolic Capital / Beacon',
         },
@@ -187,10 +183,10 @@ export default {
         },
 
         {
-          person: 'ajit',
+          person: 'chainyoda',
           link: 'https://twitter.com/chainyoda',
           name: 'Ajit Tripathi',
-          designation: 'Head of Institutional Business, Aave',
+          designation: 'ex AAVE / Consensys / Goldman Sachs',
         },
         {
           person: 'sanket',
@@ -214,7 +210,7 @@ export default {
         },
         {
           person: 'default-user',
-          link: 'https://twitter.com/ryanfang95',
+          link: '',
           name: 'Todd Zhou',
           designation: 'ex Sequoia China',
         },
@@ -240,7 +236,13 @@ export default {
           person: 'crypturco',
           link: 'https://twitter.com/crypturco',
           name: '3nes',
-          designation: '',
+          designation: 'Shoe Ventures',
+        },
+        {
+          person: 'lei.eth',
+          link: 'https://twitter.com/snow949494',
+          name: 'lei.eth',
+          designation: 'Shoe Ventures',
         },
       ],
     }
