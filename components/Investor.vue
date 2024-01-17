@@ -17,24 +17,38 @@
       </div>
       <div :class="$style.investorPContent">
         <div :class="$style.investorPList">
-          <a
-            v-for="(investorPerson, index) in investorPersons"
-            :key="index"
-            :class="$style.investorPSingle"
-            :href="investorPerson.link"
-            target="_blank"
-          >
-            <img
-              :src="getImgUrl(investorPerson.person)"
-              :alt="investorPerson.person"
-            />
-            <div :class="$style.investorPContent">
-              <h4 :class="$style.name">{{ investorPerson.name }}</h4>
-              <p :class="$style.designation">
-                {{ investorPerson.designation }}
-              </p>
+          <template v-for="(investorPerson, index) in investorPersons">
+            <a
+              v-if="investorPerson.link"
+              :key="`a-${index}`"
+              :class="$style.investorPSingle"
+              :href="investorPerson.link"
+              target="_blank"
+            >
+              <img
+                :src="getImgUrl(investorPerson.person)"
+                :alt="investorPerson.person"
+              />
+              <div :class="$style.investorPContent">
+                <h4 :class="$style.name">{{ investorPerson.name }}</h4>
+                <p :class="$style.designation">
+                  {{ investorPerson.designation }}
+                </p>
+              </div>
+            </a>
+            <div v-else :key="`div-${index}`" :class="$style.investorPSingle">
+              <img
+                :src="getImgUrl(investorPerson.person)"
+                :alt="investorPerson.person"
+              />
+              <div :class="$style.investorPContent">
+                <h4 :class="$style.name">{{ investorPerson.name }}</h4>
+                <p :class="$style.designation">
+                  {{ investorPerson.designation }}
+                </p>
+              </div>
             </div>
-          </a>
+          </template>
         </div>
       </div>
     </div>
