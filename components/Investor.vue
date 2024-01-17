@@ -256,7 +256,7 @@ export default {
           person: 'lei.eth',
           link: 'https://twitter.com/snow949494',
           name: 'lei.eth',
-          designation: 'Shoe Ventures',
+          designation: '',
         },
       ],
     }
