@@ -250,7 +250,7 @@ export default {
           person: 'crypturco',
           link: 'https://twitter.com/crypturco',
           name: '3nes',
-          designation: 'Shoe Ventures',
+          designation: '',
         },
         {
           person: 'lei.eth',
