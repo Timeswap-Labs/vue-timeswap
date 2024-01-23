@@ -32,21 +32,21 @@ export default {
       features: [
         {
           image: 'key-icon-1',
-          title: 'Flexible interest rate & collateral factors',
+          title: 'Non-liquidatable leverage',
           description:
-            'Users have the flexibility to decide their risk-return profile by selecting custom interest rates and collateral factors based on prevailing market conditions for greater capital efficiency',
+            'Borrowers can access leverage without worrying about price based liquidations for the duration of the pool. ',
         },
         {
           image: 'key-icon-4',
-          title: 'Oracle-less & Gas Efficient',
+          title: 'Yield on any asset',
           description:
-            'Timeswap is brutally gas efficient and does not require oracles or liquidators',
+            "Earn yield on any token including long-tail assets, priced based on it's demand for leverage.",
         },
         {
           image: 'key-icon-6',
-          title: 'ERC20 agnostic',
+          title: 'Independent AMM',
           description:
-            'Anyone can create any ERC20 pool by providing necessary liquidity',
+            'Anyone can create a pool for any fungible token by providing necessary liquidity.',
         },
       ],
     }

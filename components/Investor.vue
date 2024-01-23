@@ -17,24 +17,38 @@
       </div>
       <div :class="$style.investorPContent">
         <div :class="$style.investorPList">
-          <a
-            v-for="(investorPerson, index) in investorPersons"
-            :key="index"
-            :class="$style.investorPSingle"
-            :href="investorPerson.link"
-            target="_blank"
-          >
-            <img
-              :src="getImgUrl(investorPerson.person)"
-              :alt="investorPerson.person"
-            />
-            <div :class="$style.investorPContent">
-              <h4 :class="$style.name">{{ investorPerson.name }}</h4>
-              <p :class="$style.designation">
-                {{ investorPerson.designation }}
-              </p>
+          <template v-for="(investorPerson, index) in investorPersons">
+            <a
+              v-if="investorPerson.link"
+              :key="`a-${index}`"
+              :class="$style.investorPSingle"
+              :href="investorPerson.link"
+              target="_blank"
+            >
+              <img
+                :src="getImgUrl(investorPerson.person)"
+                :alt="investorPerson.person"
+              />
+              <div :class="$style.investorPContent">
+                <h4 :class="$style.name">{{ investorPerson.name }}</h4>
+                <p :class="$style.designation">
+                  {{ investorPerson.designation }}
+                </p>
+              </div>
+            </a>
+            <div v-else :key="`div-${index}`" :class="$style.investorPSingle">
+              <img
+                :src="getImgUrl(investorPerson.person)"
+                :alt="investorPerson.person"
+              />
+              <div :class="$style.investorPContent">
+                <h4 :class="$style.name">{{ investorPerson.name }}</h4>
+                <p :class="$style.designation">
+                  {{ investorPerson.designation }}
+                </p>
+              </div>
             </div>
-          </a>
+          </template>
         </div>
       </div>
     </div>
@@ -58,6 +72,18 @@ export default {
           image: 'definance',
           link: 'https://www.defiance.capital/',
         },
+        {
+          image: 'symbolic',
+          link: 'https://www.symbolic.capital/',
+        },
+        {
+          image: 'ldcap',
+          link: 'https://ldcap.com/',
+        },
+        {
+          image: 'sharding',
+          link: 'https://www.sharding.capital/',
+        },
       ],
       investorPersons: [
         {
@@ -70,13 +96,19 @@ export default {
           person: 'surojit',
           link: 'https://twitter.com/surojit',
           name: 'Surojit Chatterjee',
-          designation: 'CPO, Coinbase',
+          designation: 'ex CPO, Coinbase',
         },
         {
           person: 'mihailo',
           link: 'https://twitter.com/MihailoBjelic',
           name: 'Mihailo Bjelic',
-          designation: 'Co-founder, Polygon',
+          designation: 'Founder, Polygon',
+        },
+        {
+          person: 'sachin',
+          link: 'https://twitter.com/schin_tomar',
+          name: 'Sachin Tomar',
+          designation: 'Founder & CTO, Biconomy',
         },
         {
           person: 'ryan',
@@ -92,7 +124,7 @@ export default {
         },
         {
           person: 'john',
-          link: 'https://twitter.com/JohnLilic',
+          link: '',
           name: 'John Lilic',
           designation: 'Ex Consensys / Advisor - Polygon',
         },
@@ -100,43 +132,13 @@ export default {
           person: 'larry',
           link: 'https://twitter.com/lawmaster',
           name: 'Larry Cermak',
-          designation: 'Director of Research, The Block',
-        },
-        {
-          person: 'mika',
-          link: 'https://twitter.com/mhonkasalo',
-          name: 'Mika Honkasalo',
-          designation: 'DeFi Research, The Block',
-        },
-        {
-          person: 'kenzi',
-          link: 'https://twitter.com/macrokenzi',
-          name: 'Kenzi Wang',
-          designation: 'Co-Founder, Cere Network / AU21',
-        },
-        {
-          person: 'calvin',
-          link: 'https://twitter.com/cjliu49',
-          name: 'Calvin Liu',
-          designation: 'Strategy Lead, Compound Labs',
-        },
-        {
-          person: 'george',
-          link: 'https://twitter.com/gpl_94',
-          name: 'George Lambeth',
-          designation: 'Partner, Divergence Ventures',
+          designation: 'CEO - The Block',
         },
         {
           person: 'vaibhav',
           link: 'https://twitter.com/vasa_develop',
           name: 'Vaibhav',
-          designation: 'Founder, gem.xyz',
-        },
-        {
-          person: 'sina',
-          link: 'https://twitter.com/sinahab',
-          name: 'Sina Habibian',
-          designation: 'Ethereum Foundation',
+          designation: 'Co-Founder Opensea Pro / Gem',
         },
         {
           person: 'tanmay',
@@ -151,10 +153,54 @@ export default {
           designation: 'Co-founder, Superteam DAO',
         },
         {
-          person: 'ajit',
+          person: 'aniket_jindal08',
+          link: 'https://twitter.com/aniket_jindal08',
+          name: 'Aniket Jindal',
+          designation: 'Co-founder, Biconomy',
+        },
+        {
+          person: 'ryanfang95',
+          link: 'https://twitter.com/ryanfang95',
+          name: 'Ryan Fang',
+          designation: 'Founder, Ankr',
+        },
+        {
+          person: 'mika',
+          link: 'https://twitter.com/mhonkasalo',
+          name: 'Mika Honkasalo',
+          designation: 'DeFi Research, The Block',
+        },
+        {
+          person: 'kenzi',
+          link: 'https://twitter.com/0xkenzi',
+          name: 'Kenzi Wang',
+          designation: 'Symbolic Capital / Beacon',
+        },
+        {
+          person: 'calvin',
+          link: 'https://twitter.com/cjliu49',
+          name: 'Calvin Liu',
+          designation: 'Eigen Layer / ex Compound',
+        },
+        {
+          person: 'george',
+          link: 'https://twitter.com/gpl_94',
+          name: 'George Lambeth',
+          designation: 'DAO5',
+        },
+
+        {
+          person: 'sina',
+          link: 'https://twitter.com/sinahab',
+          name: 'Sina Habibian',
+          designation: 'Ethereum Foundation',
+        },
+
+        {
+          person: 'chainyoda',
           link: 'https://twitter.com/chainyoda',
           name: 'Ajit Tripathi',
-          designation: 'Head of Institutional Business, Aave',
+          designation: 'ex AAVE / Consensys / Goldman Sachs',
         },
         {
           person: 'sanket',
@@ -162,17 +208,55 @@ export default {
           name: 'Sanket Shah',
           designation: 'Strategy Lead, Polygon',
         },
+
         {
-          person: 'sachin',
-          link: 'https://twitter.com/schin_tomar',
-          name: 'Sachin Tomar',
-          designation: 'Founder & CTO, Biconomy',
+          person: 'shreyansh_27',
+          link: 'https://twitter.com/shreyansh_27',
+          name: 'Shreyansh Singh',
+          designation: 'Polygon Ventures',
+        },
+
+        {
+          person: 'TakayamaJoe',
+          link: 'https://twitter.com/TakayamaJoe',
+          name: 'Joe Takayama',
+          designation: 'ex Morgan Stanley / Youtuber',
         },
         {
-          person: 'ajeet',
-          link: 'https://twitter.com/AjeetK',
-          name: 'Ajeet Khurana',
-          designation: 'ex CEO - Zebpay / Angel Investor',
+          person: 'default-user',
+          link: '',
+          name: 'Todd Zhou',
+          designation: 'ex Sequoia China',
+        },
+        {
+          person: 'midcurve',
+          link: 'https://twitter.com/midcurve',
+          name: 'Midcurve',
+          designation: '',
+        },
+        {
+          person: 'dingalingts',
+          link: 'https://twitter.com/dingalingts',
+          name: 'Dinagling',
+          designation: 'Angel / ex Binance Labs',
+        },
+        {
+          person: 'CryptoGorillaYT',
+          link: 'https://twitter.com/CryptoGorillaYT',
+          name: 'Crypto Gorilla',
+          designation: 'Youtuber',
+        },
+        {
+          person: 'crypturco',
+          link: 'https://twitter.com/crypturco',
+          name: '3nes',
+          designation: '',
+        },
+        {
+          person: 'lei.eth',
+          link: 'https://twitter.com/snow949494',
+          name: 'lei.eth',
+          designation: '',
         },
       ],
     }
@@ -194,11 +278,10 @@ export default {
   position: relative;
   width: 100%;
   padding: 100px 200px;
-  padding-right: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 2600px !important;
-  max-width: 2600px !important;
+  flex: 0 0 2900px !important;
+  max-width: 2900px !important;
   background: rgba(25, 29, 58, 0.7);
 
   @include media-breakpoint-down(lg) {
@@ -222,6 +305,7 @@ export default {
   .investorRow {
     display: flex;
     width: 100%;
+    gap: 80px;
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
@@ -229,13 +313,9 @@ export default {
     }
 
     .investorContent {
-      max-width: 370px;
-      width: 100%;
-      margin-right: 150px;
-
       @include media-breakpoint-down(sm) {
         max-width: 100%;
-        margin-right: 0;
+        margin-inline: auto;
         padding: 0 24px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         margin-bottom: 60px;
@@ -257,20 +337,26 @@ export default {
       }
 
       .investorList {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
+        align-items: center;
 
         @include media-breakpoint-down(sm) {
           justify-content: center;
           align-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-flow: row;
         }
 
         .investorSingle {
-          width: 100%;
+          width: 250px;
           margin-bottom: 55px;
 
           @include media-breakpoint-down(sm) {
-            max-width: 250px;
+            width: auto;
+            max-width: 150px;
           }
 
           img {
@@ -292,10 +378,15 @@ export default {
       }
 
       .investorPList {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-column-gap: 24px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: column;
 
         @include media-breakpoint-down(sm) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-flow: row;
+
           justify-content: center;
           margin: 0 -8px;
         }
