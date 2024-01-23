@@ -102,7 +102,7 @@ export default {
           person: 'mihailo',
           link: 'https://twitter.com/MihailoBjelic',
           name: 'Mihailo Bjelic',
-          designation: 'Co-founder, Polygon',
+          designation: 'Founder, Polygon',
         },
         {
           person: 'sachin',
