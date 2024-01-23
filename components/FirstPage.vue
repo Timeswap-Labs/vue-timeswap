@@ -2,10 +2,10 @@
   <section :class="$style.firstPage">
     <div :class="$style.content">
       <h1 id="bigtitle" :class="$style.mainTitle">
-        Non-liquidatable leverage for any asset
+        Non-liquidatable leverage for any token
       </h1>
       <div :class="$style.chainList">
-        <span style="width: 100%; margin-bottom: 8px">Powered by</span>
+        <span style="width: 100%; margin-bottom: 8px">Live on</span>
 
         <div
           v-for="(supportedChain, index) in supportedChains"

@@ -28,24 +28,24 @@ export default {
     return {
       products: [
         {
-          title: 'Permissionless fixed maturity lending & borrowing',
+          title: 'Fixed interest lending & borrowing',
           description:
-            'Timeswap allows anyone to do fixed maturity lending & borrowing of any ERC20 token with any other ERC20 token as collateral',
+            'Timeswap pools provide fixed rate lending/borrowing for the duration of the pool.',
         },
         {
           title: 'Non-Liquidatable Loans',
           description:
-            'Timeswap takes away complexity for borrowers to constantly manage their health factors. No more liquidation penalty & dependency on liquidators',
+            'Timeswap takes away complexity for borrowers to constantly manage their health factors. No more liquidation penalty & dependency on liquidators.',
         },
         {
-          title: 'Flexible Risk Profiles',
+          title: 'Isolated Risk Profiles',
           description:
-            'Timeswap offers flexibility for lenders and borrowers to decide their risk profile through flexible interest rates & collateral factors.',
+            'With Isolated pools, Timeswap offers flexibility for lenders and borrowers to decide their risk profile with interest rates & collateral factors.',
         },
         {
-          title: 'Permissionless Debt Financing',
+          title: 'Permissionless Pools',
           description:
-            'Timeswap enables projects to borrow debt with their native tokens as collateral. Ideal for funding fair launches & leveraged loans compared to equity financing',
+            'Timeswap AMM enables creation of fixed maturity lending & borrowing markets for any fungible token without dependency on external price feeds.',
         },
       ],
     }
