@@ -423,7 +423,7 @@ export default {
           name: 'Jaynti',
           lname: 'Kanani',
           designation: 'ex Co-founder, Polygon',
-          link: 'https://twitter.com/_jdkanani',
+          link: 'https://twitter.com/jdkanani',
         },
       ],
     }
