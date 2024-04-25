@@ -306,23 +306,21 @@ export default {
             },
           ],
         },
-        // {
-        // image: 'tanishq',
-        //  name: 'Tanishq',
-        //  lname: 'Singh',
-        // designation: 'Visual Designer',
-        // description: 'Living between art',
-        // socials: [
-        //   {
-        //     link: 'https://twitter.com/PerryBerry1325',
-        //     image: 'twitter',
-        //   },
-        //   {
-        //     link: '',
-        //     image: 'linkedin',
-        //   },
-        // ],
-        //,
+        {
+          image: 'mai',
+          name: 'Mai',
+          lname: 'Nguyen',
+          designation: 'Design Lead',
+          description:
+            'A Product Designer with over 6 years of experience in branding and designing in Crypto & Blockchain, eCommerce, SaaS web & app, and Design systems.',
+          socials: [
+            {
+              link: 'https://www.linkedin.com/in/mai-nguyen-2b3997305/',
+              image: 'linkedin',
+            },
+          ],
+        },
+
         {
           image: 'krish',
           name: 'Krish Arvind',
@@ -341,19 +339,15 @@ export default {
           ],
         },
         {
-          image: 'yashvik',
-          name: 'Yashvik',
-          lname: 'Naithani',
-          designation: 'Smart Contract Developer',
-          description: 'EVM compatible degen',
+          image: 'tanishq',
+          name: 'Tanishq',
+          lname: 'Singh',
+          designation: 'Visual Designer',
+          description: 'Living between art',
           socials: [
             {
-              link: 'https://twitter.com/waverune',
+              link: 'https://twitter.com/PerryBerry1325',
               image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/yashvik',
-              image: 'linkedin',
             },
           ],
         },
@@ -387,24 +381,6 @@ export default {
             },
             {
               link: '',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
-          image: 'shatabarto',
-          name: 'Shatabarto',
-          lname: 'Bhattacharya',
-          designation: 'Smart Contract Developer',
-          description:
-            "GSoC'22 @MetaBrainz | Open-Source Contributor | AI Researcher | EVM Enjoyer",
-          socials: [
-            {
-              link: 'https://twitter.com/riksucks',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/shatabarto-bhattacharya-6bb6ba149/',
               image: 'linkedin',
             },
           ],
