@@ -57,6 +57,10 @@ export default {
           name: 'Optimism',
           image: 'OP',
         },
+        {
+          name: 'Injective',
+          image: 'INJ',
+        },
       ],
     }
   },
