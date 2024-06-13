@@ -143,23 +143,6 @@ export default {
           ],
         },
         {
-          image: 'puneet',
-          name: 'Puneet',
-          lname: 'Kaura',
-          designation: 'Technical Product Manager',
-          description: 'Retired Web2 Engineer, Aspiring Web3 Degen.',
-          socials: [
-            {
-              link: ' https://twitter.com/pkaura',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/pkaura/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'domica',
           name: 'Domica',
           lname: 'Santoso',
@@ -212,27 +195,10 @@ export default {
           ],
         },
         {
-          image: 'sharath',
-          name: 'Sharath',
-          lname: 'Nair',
-          designation: 'Lead - Front End Developer',
-          description: 'Previously Frontend Module Lead @ Trilogy Software',
-          socials: [
-            {
-              link: 'https://twitter.com/sharathrulz',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/sharath-nair-here/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'mostafa',
           name: 'Mostafa',
           lname: 'Abouzeid',
-          designation: 'Front End Developer',
+          designation: 'Lead - Front End Engineer',
           description: 'Your Favorite T-Shaped Software Engineer',
           socials: [
             {
@@ -277,36 +243,6 @@ export default {
           ],
         },
         {
-          image: 'manvinder',
-          name: 'Manvinder',
-          lname: 'Arora',
-          designation: 'Marketing and Community Manager',
-          description: 'Reader I Writer I Thinker',
-          socials: [
-            {
-              link: 'https://twitter.com/gracebrrr42069',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/manvinderarora/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
-          image: 'sounak',
-          name: 'Sounak',
-          lname: 'Roy',
-          designation: 'Content Writer',
-          description: 'Working at the intersection of law and technology.',
-          socials: [
-            {
-              link: 'https://twitter.com/AncapSansad',
-              image: 'twitter',
-            },
-          ],
-        },
-        {
           image: 'mai',
           name: 'Mai',
           lname: 'Nguyen',
@@ -320,7 +256,6 @@ export default {
             },
           ],
         },
-
         {
           image: 'krish',
           name: 'Krish Arvind',
@@ -348,23 +283,6 @@ export default {
             {
               link: 'https://twitter.com/PerryBerry1325',
               image: 'twitter',
-            },
-          ],
-        },
-        {
-          image: 'heemank',
-          name: 'Heemank',
-          lname: 'Verma',
-          designation: 'Front End Developer',
-          description: 'DeFi | Hackathons | Wanderlust',
-          socials: [
-            {
-              link: 'https://twitter.com/heemankv',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/heemankv',
-              image: 'linkedin',
             },
           ],
         },
