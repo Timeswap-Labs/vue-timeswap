@@ -61,6 +61,10 @@ export default {
           name: 'Injective',
           image: 'INJ',
         },
+        {
+          name: 'X Layer',
+          image: 'XLAYER',
+        },
       ],
     }
   },
