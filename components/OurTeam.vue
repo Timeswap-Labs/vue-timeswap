@@ -303,6 +303,24 @@ export default {
             },
           ],
         },
+        {
+          image: 'mohit',
+          name: 'Mohit',
+          lname: 'Thakkar',
+          designation: 'Junior Engineer',
+          description:
+            'Web3 Dev | Traveler | Content Writer | Crypto & Stocks Trader',
+          socials: [
+            {
+              link: 'https://x.com/mohit_thakkar_',
+              image: 'twitter',
+            },
+            {
+              link: 'https://linkedin.com/in/mohit-thakkar-3008',
+              image: 'linkedin',
+            },
+          ],
+        },
       ],
       advisors: [
         {
