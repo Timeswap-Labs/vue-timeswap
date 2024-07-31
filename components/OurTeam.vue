@@ -225,24 +225,6 @@ export default {
           ],
         },
         {
-          image: 'satyarth',
-          name: 'Kumar',
-          lname: 'Satyarth',
-          designation: 'Smart Contract Developer',
-          description:
-            'Super Shadowy Coder | Community Enthusiast | Wanderlust',
-          socials: [
-            {
-              link: 'https://twitter.com/ksatyarth2',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/ksatyarth2/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'mai',
           name: 'Mai',
           lname: 'Nguyen',
