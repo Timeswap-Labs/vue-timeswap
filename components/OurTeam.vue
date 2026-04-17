@@ -191,23 +191,6 @@ export default {
           ],
         },
         {
-          image: 'muktanshu',
-          name: 'Muktanshu',
-          lname: 'Mishra',
-          designation: 'Lead Frontend Developer',
-          description: 'The FAFO Guy | Music | Games',
-          socials: [
-            {
-              link: 'https://x.com/MuktanshuM',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/muktanshu-mishra-278a85181/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'tanishq',
           name: 'Tanishq',
           lname: 'Singh',
@@ -238,42 +221,6 @@ export default {
           ],
         },
         {
-          image: 'jerry',
-          name: 'Jerry',
-          lname: 'Wong',
-          designation: 'Full Stack Developer',
-          description:
-            'Not Degen | Little Dev | Half Trader | Lib Finder | 今日本語専攻中 | Fatboy (try to lose weight)',
-          socials: [
-            {
-              link: 'https://x.com/zetai_moumantai',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/jerry-wong-676b6b284/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
-          image: 'soumik',
-          name: 'Soumik',
-          lname: 'Ghosh',
-          designation: 'Lead Backend Developer',
-          description:
-            'Startup enthusiast with 11 years of experience in system design, scalable architecture, blockchain, and machine learning, backed by strong academics.',
-          socials: [
-            {
-              link: 'https://x.com/GhoshSoumik',
-              image: 'twitter',
-            },
-            {
-              link: 'https://www.linkedin.com/in/soumik-ghosh-466b0956/',
-              image: 'linkedin',
-            },
-          ],
-        },
-        {
           image: 'nitish',
           name: 'Nitish',
           lname: 'Kumar',
@@ -287,6 +234,19 @@ export default {
             {
               link: 'https://www.linkedin.com/in/tecnicalnitish/',
               image: 'linkedin',
+            },
+          ],
+        },
+        {
+          image: 'yuvraj',
+          name: 'Yuvraj',
+          lname: 'Singh',
+          designation: 'Frontend Developer',
+          description: 'Frontend Dev | Web3 explorer',
+          socials: [
+            {
+              link: 'https://t.me/a2dopler',
+              image: 'telegram',
             },
           ],
         },
