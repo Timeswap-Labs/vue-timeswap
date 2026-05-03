@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "HK Nova";
+  src:
+    url("/fonts/hknova-medium-webfont.woff2") format("woff2"),
+    url("/fonts/hknova-medium-webfont.woff") format("woff"),
+    url("/fonts/HKNova-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HK Nova";
+  src:
+    url("/fonts/hknova-bold-webfont.woff2") format("woff2"),
+    url("/fonts/hknova-bold-webfont.woff") format("woff"),
+    url("/fonts/HKNova-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HK Nova";
+  src:
+    url("/fonts/hknova-regular-webfont.woff2") format("woff2"),
+    url("/fonts/hknova-regular-webfont.woff") format("woff"),
+    url("/fonts/HKNova-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "HK Nova", Inter, system-ui, sans-serif;
+  --font-display: "HK Nova", Inter, sans-serif;
+
+  --color-background: #04100e;
+  --color-foreground: #ffffff;
+
+  --color-ts-primary: #79ffea;
+  --color-ts-secondary: #12429f;
+  --color-ts-accent: #7b78ff;
+  --color-ts-muted: rgba(255, 255, 255, 0.6);
+  --color-ts-dark-green: #00332c;
+  --color-ts-deeper-green: #00281c;
+  --color-ts-surface: #000806;
+
+  /* Canonical Breakpoint Contract */
+  --breakpoint-ms: 0px;
+  --breakpoint-mm: 320px;
+  --breakpoint-ml: 375px;
+  --breakpoint-md: 480px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-xxxl: 2560px;
+
+  /* Custom Design Tokens */
+  --shadow-ts-teal: 12px 12px 20px 0px rgba(160, 210, 235, 0.12);
+  --shadow-ts-green: 12px 12px 17px 0px rgba(0, 136, 88, 0.15);
+  --shadow-ts-card: 12px 12px 20px 0px rgba(160, 210, 235, 0.08);
+
+  --background-ts-quote: linear-gradient(89deg, #00372f 0%, rgba(14, 36, 37, 0) 111%);
+  --background-ts-advisor: #00705e;
+
+  /* UI surface colors */
+  --color-ts-card-dark: #0f1426;
+  --color-ts-investor-bg: #0a1913;
+  --color-ts-border: #263a34;
+  --color-ts-footer-text: #e7e9ee;
+  --color-ts-advisor-overlay: #1d7e70;
+}
+
+:root {
+  --background: #04100e;
+  --foreground: #ffffff;
+}
+
+html,
+body,
+main,
+[data-component="HomePage"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(121, 255, 234, 0.15) 0%, transparent 70%);
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+  }
+  .delay-100,
+  .delay-200,
+  .delay-300 {
+    animation-delay: 0s;
+  }
+}
+
+.bg-portrait-gradient {
+  background: conic-gradient(from 180deg at 50% 50%, #40ffe1 0deg, #002520 360deg);
+}
+
+.bg-landscape-gradient {
+  background: linear-gradient(to right, #00332c 0%, #319d8c 100%);
+}
+
+.bg-core-gradient,
+.bg-team-gradient,
+.bg-ts-advisor {
+  background: linear-gradient(to right, #00332c 0%, #319d8c 100%);
+}
+
+.bg-hero-glow-top {
+  background: radial-gradient(
+    ellipse 60% 50% at 30% 40%,
+    rgba(121, 255, 234, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+.bg-hero-glow-mid {
+  background: radial-gradient(
+    ellipse 60% 50% at 30% 40%,
+    rgba(121, 255, 234, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+/* Section transition dividers */
+.section-divider-dark-to-deeper {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--color-background), var(--color-ts-surface));
+}
+
+.section-divider-deeper-to-green {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--color-ts-surface), var(--color-ts-deeper-green));
+}
+
+@media (min-width: 768px) {
+  .section-divider-dark-to-deeper,
+  .section-divider-deeper-to-green {
+    height: 150px;
+  }
+}
